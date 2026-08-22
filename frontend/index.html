@@ -12,17 +12,18 @@
         extend: {
           colors: {
             brand: {
-              bg: '#F8FAFC',
+              bg: '#FAFBFD',
               card: '#FFFFFF',
-              panel: '#F1F5F9',
-              border: '#E2E8F0',
-              primary: '#6366F1',
-              primaryHover: '#4F46E5',
-              violet: '#7C3AED',
+              panel: '#F8FAFC',
+              border: '#F1F5F9',
+              primary: '#F43F5E',
+              primaryHover: '#E11D48',
+              violet: '#8B5CF6',
+              lavender: '#EDE9FE',
               emerald: '#10B981',
               amber: '#F59E0B',
-              rose: '#EF4444',
-              indigo: '#6366F1'
+              rose: '#F43F5E',
+              coral: '#FB7185'
             }
           },
           fontFamily: {
@@ -30,10 +31,11 @@
             sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
           },
           boxShadow: {
-            'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04)',
-            'card': '0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.06)',
-            'panel': '0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05)',
-            'glow-purple': '0 0 15px -3px rgba(99, 102, 241, 0.25)'
+            'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.03)',
+            'card': '0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 2px 8px -2px rgba(15, 23, 42, 0.04)',
+            'panel': '0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.04)',
+            'glow-pink': '0 0 15px -3px rgba(244, 63, 94, 0.25)',
+            'glow-purple': '0 0 15px -3px rgba(139, 92, 246, 0.25)'
           }
         }
       }
@@ -43,7 +45,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
     
     body {
-      background-color: #F8FAFC;
+      background-color: #FAFBFD;
       color: #0F172A;
       font-family: 'Inter', sans-serif;
     }
@@ -52,24 +54,24 @@
       height: 5px;
     }
     .custom-scroll::-webkit-scrollbar-track {
-      background: #F8FAFC;
+      background: #FAFBFD;
     }
     .custom-scroll::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
+      background: #E2E8F0;
       border-radius: 3px;
     }
     .custom-scroll::-webkit-scrollbar-thumb:hover {
-      background: #94A3B8;
+      background: #CBD5E1;
     }
     .active-nav-pill {
-      background-color: #EEF2FF;
-      color: #4F46E5;
+      background-color: #FFF1F2;
+      color: #E11D48;
       font-weight: 600;
-      border: 1px solid #E0E7FF;
+      border: 1px solid #FFE4E6;
     }
   </style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-800 min-h-screen flex antialiased select-none custom-scroll">
+<body class="bg-[#FAFBFD] text-slate-800 min-h-screen flex antialiased select-none custom-scroll">
 
   <!-- ===================================================================== -->
   <!-- LEFT SIDEBAR                                                          -->
@@ -81,7 +83,7 @@
       
       <!-- Brand Logo -->
       <div class="flex items-center space-x-3 px-2 py-1">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-indigo-500/20">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-rose-500/20">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
@@ -95,7 +97,7 @@
       <!-- Navigation Links -->
       <nav class="space-y-1 text-xs font-medium">
         <button onclick="switchTab('control_room')" id="tab-control_room" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition active-nav-pill text-left">
-          <svg class="w-4 h-4 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-4 h-4 text-rose-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="7" height="7"></rect>
             <rect x="14" y="3" width="7" height="7"></rect>
             <rect x="14" y="14" width="7" height="7"></rect>
@@ -148,7 +150,7 @@
         </button>
 
         <!-- Judge Demo Access -->
-        <button onclick="switchTab('judge')" id="tab-judge" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition text-indigo-700 bg-indigo-50/70 hover:bg-indigo-100/70 border border-indigo-100 text-left font-semibold mt-2">
+        <button onclick="switchTab('judge')" id="tab-judge" class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition text-rose-700 bg-rose-50/70 hover:bg-rose-100/70 border border-rose-100 text-left font-semibold mt-2">
           <span>⚖️</span>
           <span>Judge Demo Mode</span>
         </button>
@@ -248,7 +250,7 @@
             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
           </svg>
         </button>
-        <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs shadow-sm">
+        <div class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-xs shadow-sm shadow-rose-600/20">
           RP
         </div>
       </div>
@@ -336,7 +338,7 @@
                 </div>
                 <!-- Sparkline SVG -->
                 <div class="h-6 w-full mt-2">
-                  <svg class="w-full h-full text-indigo-500" viewBox="0 0 100 25" preserveAspectRatio="none">
+                  <svg class="w-full h-full text-rose-500" viewBox="0 0 100 25" preserveAspectRatio="none">
                     <path d="M0 20 Q 20 18, 35 12 T 70 8 T 100 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
                   </svg>
                 </div>
@@ -459,13 +461,13 @@
 
                 <!-- Node 4: GUARD (Active node in reference) -->
                 <div class="flex flex-col items-center space-y-1.5 relative z-10 scale-105">
-                  <div class="w-12 h-12 rounded-2xl bg-indigo-50 border-2 border-indigo-500 text-indigo-600 flex items-center justify-center shadow-glow-purple">
+                  <div class="w-12 h-12 rounded-2xl bg-rose-50 border-2 border-rose-500 text-rose-600 flex items-center justify-center shadow-glow-pink">
                     <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
                   </div>
-                  <div class="font-bold text-xs text-indigo-700">GUARD</div>
-                  <div class="text-[9px] text-indigo-600 font-semibold leading-tight">Deterministic Rules</div>
+                  <div class="font-bold text-xs text-rose-700">GUARD</div>
+                  <div class="text-[9px] text-rose-600 font-semibold leading-tight">Deterministic Rules</div>
                 </div>
 
                 <!-- Node 5: EXECUTE -->
