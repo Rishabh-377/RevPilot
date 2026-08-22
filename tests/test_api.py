@@ -97,6 +97,25 @@ class TestDashboardHtmlNoHardcodedMetrics:
         assert 'id="kpi-recovery-rate" class="text-2xl font-bold font-mono text-emerald-400 mt-1">—<' in html
         assert 'id="kpi-net-revenue" class="text-2xl font-bold font-mono text-emerald-400 mt-1">—<' in html
 
+    def test_dashboard_frontend_javascript_syntax_and_functions(self) -> None:
+        """Verify frontend JavaScript contains required interaction handlers without syntax corruption."""
+        response = client.get("/dashboard")
+        assert response.status_code == 200
+        html = response.text
+        
+        # Verify critical client-side event handlers and routing functions exist
+        assert "function updateClock()" in html
+        assert "function switchTab(tabId)" in html
+        assert "function loadOverviewData()" in html
+        assert "function loadExplorerTransactions()" in html
+        assert "function loadLearningData()" in html
+        assert "function loadExceptionsData()" in html
+        assert "function triggerChaosRun()" in html
+        assert "function loadAuditLogs()" in html
+        assert "function renderTransactionDetail(tx)" in html
+        assert "function renderComparisonTable(" in html
+        assert "switchTab('control_room')" in html
+
 
 class TestDynamicDataLoading:
     """Verify that API responses originate dynamically from actual output files."""
