@@ -15,7 +15,7 @@ RevPilot was developed not through cosmetic feature assembly, but through advers
 - **Why it was dangerous**: If the strategy engine peeks at the simulator's hidden true success probability matrix, its high recovery rate is an illusion caused by information leakage rather than real learning.
 - **Detection**: Hostile audit identified simulator objects being passed across the decision boundary.
 - **Root Cause**: Lack of an explicit architectural barrier between the simulation environment and the controller.
-- **Fix**: Created an explicit `SimEvent` vs `PaymentFailureEvent` boundary. The controller only receives raw error strings (`raw_gateway_error`), timestamp, amount, and payment method. The strategy engine's Thompson Sampling maintains its own Beta distributions initialized with weakly informative priors ($lpha=1.0, eta=1.0$).
+- **Fix**: Created an explicit `SimEvent` vs `PaymentFailureEvent` boundary. The controller only receives raw error strings (`raw_gateway_error`), timestamp, amount, and payment method. The strategy engine's Thompson Sampling maintains its own Beta distributions initialized with weakly informative priors ($\alpha=1.0, \beta=1.0$).
 - **Regression Test**: `tests/test_information_barrier.py::test_strategy_engine_view_excludes_failure_class`, `tests/test_strategy.py::test_strategy_independent_of_ground_truth`.
 - **Final Status**: **VERIFIED FROZEN**.
 
@@ -30,7 +30,7 @@ RevPilot was developed not through cosmetic feature assembly, but through advers
 
 ### C-3: Fabricated / Static Dashboard Metrics
 - **What broke**: Frontend HTML initially contained placeholder metric values that could be mistaken for actual live results if API was down.
-- **Why it was dangerous**: Violated the core fintech principle of end-to-end telemetry traceability (UI $ightarrow$ API $ightarrow$ Backend Engine $ightarrow$ Audit Log).
+- **Why it was dangerous**: Violated the core fintech principle of end-to-end telemetry traceability (UI → API → Backend Engine → Audit Log).
 - **Detection**: Static code scan on dashboard HTML templates.
 - **Root Cause**: Hardcoded initial prototype placeholder values.
 - **Fix**: Removed all hardcoded KPI metrics from HTML. Initialized all elements with neutral placeholders (`—`). All metric values are loaded dynamically from `/api/v1/dashboard/overview`, `/api/v1/dashboard/learning`, and `/api/v1/dashboard/transactions` which read actual batch results and database state.
