@@ -4,8 +4,8 @@
   "operational": {
     "events": 500,
     "processed": 500,
-    "throughput_eps": 4898.27,
-    "latency_ms": 0.1893,
+    "throughput_eps": 8190.81,
+    "latency_ms": 0.1127,
     "unresolved_exceptions": 0
   },
   "diagnosis": {
@@ -14,100 +14,100 @@
     "low_confidence_rate": 0.15
   },
   "financial": {
-    "successful_recoveries": 192,
-    "recovery_rate": 0.384,
-    "gross_recovered_revenue_inr": 2705633.22,
-    "action_cost_inr": 1332.0,
-    "friction_cost_inr": 848.0,
-    "friction_cost_units": 848.0,
-    "total_cost_inr": 2180.0,
-    "net_recovered_revenue_inr": 2703453.22
+    "successful_recoveries": 152,
+    "recovery_rate": 0.304,
+    "gross_recovered_revenue_inr": 1552825.49,
+    "action_cost_inr": 1142.5,
+    "friction_cost_inr": 796.0,
+    "friction_cost_units": 796.0,
+    "total_cost_inr": 1938.5,
+    "net_recovered_revenue_inr": 1550886.99
   },
   "safety": {
-    "allowed": 340,
-    "human_review": 45,
-    "blocked": 115,
-    "unsafe_attempt_count": 23,
+    "allowed": 321,
+    "human_review": 46,
+    "blocked": 133,
+    "unsafe_attempt_count": 62,
     "unsafe_execution_count": 0,
     "duplicate_execution_count": 0
   },
   "learning": {
     "initial_posterior_sample": {
       "TIMEOUT_TRANSIENT+LOW": {
-        "IMMEDIATE_RETRY": 0.8,
-        "DELAYED_RETRY": 0.6,
-        "PAYMENT_LINK": 0.4,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.5,
+        "DELAYED_RETRY": 0.5,
+        "PAYMENT_LINK": 0.5,
+        "SWITCH_METHOD": 0.5,
+        "HUMAN_ESCALATION": 0.5
       },
       "TIMEOUT_TRANSIENT+MID": {
-        "IMMEDIATE_RETRY": 0.8,
-        "DELAYED_RETRY": 0.6,
-        "PAYMENT_LINK": 0.4,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.5,
+        "DELAYED_RETRY": 0.5,
+        "PAYMENT_LINK": 0.5,
+        "SWITCH_METHOD": 0.5,
+        "HUMAN_ESCALATION": 0.5
       },
       "TIMEOUT_TRANSIENT+HIGH": {
-        "IMMEDIATE_RETRY": 0.8,
-        "DELAYED_RETRY": 0.6,
-        "PAYMENT_LINK": 0.4,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.5,
+        "DELAYED_RETRY": 0.5,
+        "PAYMENT_LINK": 0.5,
+        "SWITCH_METHOD": 0.5,
+        "HUMAN_ESCALATION": 0.5
       },
       "HARD_FUNDS_ISSUE+LOW": {
-        "IMMEDIATE_RETRY": 0.05,
-        "DELAYED_RETRY": 0.2857142857142857,
+        "IMMEDIATE_RETRY": 0.5,
+        "DELAYED_RETRY": 0.5,
         "PAYMENT_LINK": 0.5,
-        "SWITCH_METHOD": 0.2,
-        "HUMAN_ESCALATION": 0.1
+        "SWITCH_METHOD": 0.5,
+        "HUMAN_ESCALATION": 0.5
       },
       "HARD_FUNDS_ISSUE+MID": {
-        "IMMEDIATE_RETRY": 0.05,
-        "DELAYED_RETRY": 0.2857142857142857,
+        "IMMEDIATE_RETRY": 0.5,
+        "DELAYED_RETRY": 0.5,
         "PAYMENT_LINK": 0.5,
-        "SWITCH_METHOD": 0.2,
-        "HUMAN_ESCALATION": 0.1
+        "SWITCH_METHOD": 0.5,
+        "HUMAN_ESCALATION": 0.5
       }
     },
     "final_posterior_sample": {
       "TIMEOUT_TRANSIENT+LOW": {
-        "IMMEDIATE_RETRY": 0.8611111111111112,
-        "DELAYED_RETRY": 0.5714285714285714,
-        "PAYMENT_LINK": 0.4,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.8846153846153846,
+        "DELAYED_RETRY": 0.625,
+        "PAYMENT_LINK": 0.3333333333333333,
+        "SWITCH_METHOD": 0.3333333333333333,
+        "HUMAN_ESCALATION": 0.5
       },
       "TIMEOUT_TRANSIENT+MID": {
-        "IMMEDIATE_RETRY": 0.7352941176470589,
-        "DELAYED_RETRY": 0.5,
-        "PAYMENT_LINK": 0.5714285714285714,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.8421052631578947,
+        "DELAYED_RETRY": 0.7142857142857143,
+        "PAYMENT_LINK": 0.75,
+        "SWITCH_METHOD": 0.4,
+        "HUMAN_ESCALATION": 0.5
       },
       "TIMEOUT_TRANSIENT+HIGH": {
-        "IMMEDIATE_RETRY": 0.8695652173913043,
-        "DELAYED_RETRY": 0.8181818181818182,
-        "PAYMENT_LINK": 0.3333333333333333,
-        "SWITCH_METHOD": 0.3,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.625,
+        "DELAYED_RETRY": 0.6363636363636364,
+        "PAYMENT_LINK": 0.25,
+        "SWITCH_METHOD": 0.375,
+        "HUMAN_ESCALATION": 0.5
       },
       "HARD_FUNDS_ISSUE+LOW": {
-        "IMMEDIATE_RETRY": 0.05,
-        "DELAYED_RETRY": 0.2222222222222222,
-        "PAYMENT_LINK": 0.45714285714285713,
-        "SWITCH_METHOD": 0.2727272727272727,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.16666666666666666,
+        "DELAYED_RETRY": 0.16666666666666666,
+        "PAYMENT_LINK": 0.3333333333333333,
+        "SWITCH_METHOD": 0.4,
+        "HUMAN_ESCALATION": 0.5
       },
       "HARD_FUNDS_ISSUE+MID": {
-        "IMMEDIATE_RETRY": 0.05,
-        "DELAYED_RETRY": 0.43478260869565216,
-        "PAYMENT_LINK": 0.45,
-        "SWITCH_METHOD": 0.25,
-        "HUMAN_ESCALATION": 0.1
+        "IMMEDIATE_RETRY": 0.16666666666666666,
+        "DELAYED_RETRY": 0.2,
+        "PAYMENT_LINK": 0.42857142857142855,
+        "SWITCH_METHOD": 0.2222222222222222,
+        "HUMAN_ESCALATION": 0.5
       }
     },
     "policy_changes": 0,
-    "exploration_count": 156,
+    "exploration_count": 281,
     "learning_summary": "Evaluated 500 events with Bayesian Thompson Sampling and deterministic guardrails."
   },
   "exceptions": []

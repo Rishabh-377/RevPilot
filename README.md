@@ -1,134 +1,120 @@
 # RevPilot
 
-**Adaptive AI Revenue Recovery Controller for Failed Payments**
+**Autonomous Revenue Recovery Controller for Failed Payments**
 
-> Razorpay AI Buildathon 2026 — Track 4: AI Finance Controller
+> *AI interprets. Statistics optimize. Deterministic systems control money.*
+
+---
 
 ## Overview
 
-RevPilot is an intelligent payment recovery system that uses Thompson Sampling and LLM-assisted diagnosis to maximize revenue recovery from failed payments, while maintaining deterministic financial safety through a guardrail engine.
+RevPilot is an autonomous revenue recovery controller that diagnoses payment failure events, optimizes multi-action recovery decisions via contextual Thompson Sampling, and executes recovery workflows strictly within deterministic financial guardrails.
 
-### Core Recovery Loop
+Built on an explicit tripartite architecture, RevPilot ensures that machine learning and LLMs never have unilateral authority over financial mutations.
 
-```mermaid
-flowchart LR
-    A[Payment Failure] --> B[Diagnosis Agent]
-    B --> C[Strategy Optimizer]
-    C --> D[Guardrail Engine]
-    D -->|Approved| E[Execution]
-    D -->|Blocked| F[Audit & Stop]
-    E --> G[Outcome]
-    G --> H[Learning]
-    H --> I[Audit]
-    I -.-> C
-```
+---
 
-### Architectural Principle
-
-| Layer | Role | Technology |
-|-------|------|-----------|
-| **Interpretation** | Semantic root-cause analysis | LLM (Gemini 2.5 Flash) with deterministic regex fallback |
-| **Optimization** | Select best retry strategy | Thompson Sampling Bandit |
-| **Authorization** | Approve/block financial actions | Deterministic code ONLY |
-
-> ⚠️ **No LLM may directly authorize, modify, or execute a financial action.**
-
-## Project Structure
+## 🏛️ Tripartite Architecture
 
 ```
-revpilot/
-├── backend/
-│   ├── api/              # FastAPI routes
-│   ├── agents/           # LLM-assisted diagnosis (Gemini 2.5 Flash) & reflection
-│   ├── bandit/           # Thompson Sampling optimizer
-│   ├── models/           # Pydantic contracts
-│   ├── services/         # Guardrail, audit, execution
-│   ├── simulator/        # Event generation, ground truth, benchmarking
-│   ├── taxonomy/         # Failure classification
-│   ├── config.py         # Application settings
-│   └── main.py           # FastAPI entrypoint
-├── data/                 # Data files
-├── tests/                # pytest test suite
-├── scripts/              # Utility scripts
-├── docs/                 # Architecture & design docs
-├── frontend/             # Dashboard single-page application
-└── README.md
++-------------------------------------------------------------------------------+
+|                             REVPILOT ARCHITECTURE                             |
++-------------------------------------------------------------------------------+
+|  1. INTERPRETATION LAYER (LLM - Gemini 2.5 Flash)                             |
+|     * Semantic error code classification & root cause analysis               |
+|     * Gated behind timeout (5.0s) and fallback to deterministic taxonomy      |
+|     * ZERO financial authority (Cannot mutate funds or authorize execution)   |
++-------------------------------------------------------------------------------+
+|  2. OPTIMIZATION LAYER (Thompson Sampling Multi-Armed Bandit)                 |
+|     * 27 discrete contextual states (9 Failure Classes x 3 Value Tiers)       |
+|     * Independent Beta(alpha, beta) posterior distributions per action arm    |
+|     * Expected Value (EV) optimization accounting for API & friction costs     |
++-------------------------------------------------------------------------------+
+|  3. AUTHORIZATION LAYER (Deterministic Fail-Closed Guardrails)                |
+|     * The SOLE financial gatekeeper                                           |
+|     * Atomic idempotency locks, velocity limits (max 3 retries/payment)       |
+|     * Fraud / high-risk automatic abandonment (0 unsafe executions)           |
++-------------------------------------------------------------------------------+
 ```
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Quick Start
 
-- Python 3.12+
-- pip
-
-### Install
-
+### 1. Clone & Setup Environment
 ```bash
+git clone <repo-url>
 cd revpilot
-python -m venv .venv
+
+# Create and activate virtual environment
+python3 -m venv .venv
 source .venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Create default configuration (runs self-contained in simulation mode)
+cp .env.example .env
 ```
 
-### Configure Gemini (Optional for live LLM diagnosis)
-
-```bash
-export GEMINI_API_KEY="your-api-key-here"
-export REVPILOT_LLM_ENABLED="true"
-```
-*Note: If no API key is provided or if LLM calls timeout/fail, RevPilot seamlessly degrades to its deterministic rule-based fallback classifier.*
-
-### Run
-
-```bash
-uvicorn backend.main:app --reload
-```
-
-### Test
-
+### 2. Run the Full Test Suite
 ```bash
 pytest -v
 ```
 
-## Data Contracts
+### 3. Launch Dashboard & API
+```bash
+uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+# or:
+./scripts/dev.sh
+```
+Access the Control Room at: **`http://localhost:8000/dashboard`**
 
-| Contract | Producer | Consumer | Purpose |
-|----------|----------|----------|---------|
-| `PaymentFailureEvent` | External / Simulator | Diagnosis Agent | Input failure event |
-| `DiagnosisResult` | Diagnosis Agent | Bandit Optimizer | Root cause + retryability |
-| `StrategyDecision` | Bandit Optimizer | Guardrail Engine | Selected retry strategy |
-| `GuardrailDecision` | Guardrail Engine | Execution Service | Approve/block decision |
-| `OutcomeResult` | Execution Service | Learning / Audit | Recovery result |
-| `AuditEvent` | All components | Audit Service | Immutable log entry |
-| `BenchmarkResult` | Simulator | Reporting | Performance metrics |
-| `ExceptionRecord` | All components | Exception Handler | Graceful failure tracking |
+---
 
-## Tech Stack
+## 📊 Scientific Benchmark (Frozen Seed 20260821)
 
-| Component | Technology |
-|-----------|-----------|
-| Language | Python 3.12+ |
-| API | FastAPI |
-| Contracts | Pydantic v2 |
-| Audit / Persistence | JSONL immutable audit log & JSON state store |
-| Testing | pytest |
-| Linting | ruff, mypy |
-| LLM | Google Gemini 2.5 Flash REST client (httpx) + Pydantic validation |
-| Fallback Classifier | Deterministic regex taxonomy rules |
-| Optimization | Contextual Thompson Sampling Multi-Armed Bandit |
+RevPilot is evaluated on a frozen 500-record synthetic payment failure dataset generated with fixed seed `20260821` against a static baseline policy:
 
+| Metric | Static Baseline | RevPilot Adaptive | Status / Delta |
+| :--- | :--- | :--- | :--- |
+| **Events Processed** | 500 | 500 | Equal |
+| **Diagnosis Accuracy** | 89.60% | 89.60% | Equal |
+| **Recovery Rate** | 56.20% | 30.40% | Guardrail-Constrained |
+| **Gross Recovered Revenue** | ₹35,96,572.30 | ₹15,52,825.49 | Reconciled |
+| **Net Recovered Revenue** | ₹35,92,800.30 | ₹15,50,886.99 | Reconciled |
+| **Unsafe Attempts Intercepted**| 24 (Executed Unsafely) | 62 (Intercepted) | Blocked by Guardrail |
+| **Unsafe Executions** | **24** | **0** | **100% Contained (Invariant)** |
 
-## Documentation
+*Run the benchmark*:
+```bash
+python -m scripts.run_benchmark --records 500 --seed 20260821
+```
 
-- [Architecture](docs/architecture.md)
-- [Data Contracts](docs/data-contracts.md)
-- [Failure Taxonomy](docs/failure-taxonomy.md)
-- [Bandit Design](docs/bandit-design.md)
-- [Guardrail Design](docs/guardrail-design.md)
-- [Benchmark Methodology](docs/benchmark.md)
-- [Chaos Testing](docs/chaos-design.md)
+---
 
-## License
+## ⚡ Adversarial Resilience & Chaos Suite
 
-TBD
+RevPilot includes an automated 10-scenario Chaos Engineering suite testing duplicate replays, malformed amounts, negative amounts, foreign currency injections, API timeouts, and stale webhooks.
+
+```bash
+python -m scripts.run_chaos_suite
+```
+**Result**: 10/10 scenarios verified 100% financially safe with **0 unsafe executions**.
+
+---
+
+## 📚 Documentation
+
+- [System Architecture](docs/ARCHITECTURE.md)
+- [Security Model & Deterministic Guardrails](docs/SECURITY_MODEL.md)
+- [Benchmark Methodology & Accounting](docs/BENCHMARK_METHODOLOGY.md)
+- [Engineering Failure Journey](docs/FAILURE_JOURNEY.md)
+- [Pre-Release Checklist](docs/RELEASE_CHECKLIST.md)
+
+---
+
+## ⚠️ Disclosure & Limitations
+
+- **Default Simulation Mode**: Out-of-the-box, RevPilot operates on a high-fidelity synthetic payment simulation environment without requiring live banking credentials.
+- **Optional Gemini Mode**: Live semantic LLM error diagnosis requires setting `REVPILOT_LLM_ENABLED=true` and supplying a `GEMINI_API_KEY`. (Deterministic regex failure classification remains 100% functional without LLM keys).

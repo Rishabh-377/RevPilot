@@ -4,8 +4,8 @@
   "operational": {
     "events": 500,
     "processed": 500,
-    "throughput_eps": 26537.17,
-    "latency_ms": 0.001,
+    "throughput_eps": 47684.71,
+    "latency_ms": 0.0006,
     "unresolved_exceptions": 0
   },
   "diagnosis": {
