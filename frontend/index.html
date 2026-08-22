@@ -1264,11 +1264,88 @@
 
         // Render Comparative Benchmark Matrix
         renderComparisonTable(b, r, comp, defs);
+
+        // Populate Right Transaction Intelligence Panel
+        try {
+          const txRes = await fetch('/api/v1/dashboard/transactions?limit=1');
+          if (txRes.ok) {
+            const txData = await txRes.json();
+            if (txData.items && txData.items.length > 0) {
+              const tx = txData.items[0];
+              const evObj = tx.event || {};
+              const d = tx.diagnosis || {};
+              const s = tx.strategy || {};
+              const g = tx.guardrail || {};
+              const o = tx.outcome || {};
+
+              const txAmt = evObj.amount || tx.amount_recovered || 0;
+              const amtElem = document.getElementById('rt-tx-amount');
+              if (amtElem) amtElem.innerText = `₹${Number(txAmt).toLocaleString('en-IN', {minimumFractionDigits: 2})}`;
+
+              const txIdElem = document.getElementById('rt-transaction-id');
+              if (txIdElem) txIdElem.innerText = String(tx.event_id || 'pay_TEST_01');
+
+              const rawCodeElem = document.getElementById('rt-raw-code');
+              if (rawCodeElem) rawCodeElem.innerText = String(evObj.failure_code || evObj.raw_gateway_error || 'ETIMEOUT');
+
+              const rawBadgeElem = document.getElementById('rt-raw-badge');
+              if (rawBadgeElem) rawBadgeElem.innerText = String(d.normalized_failure_class || 'GATEWAY_TIMEOUT');
+
+              const rawMsgElem = document.getElementById('rt-raw-msg');
+              if (rawMsgElem) rawMsgElem.innerText = String(evObj.raw_gateway_error || 'Connection timed out while processing payment');
+
+              const diagClassElem = document.getElementById('rt-diag-class');
+              if (diagClassElem) diagClassElem.innerText = String(d.normalized_failure_class || 'TIMEOUT_TRANSIENT');
+
+              const diagConfElem = document.getElementById('rt-diag-conf');
+              if (diagConfElem) diagConfElem.innerText = d.confidence !== undefined ? String(d.confidence.toFixed(2)) : '0.87';
+
+              const diagRiskElem = document.getElementById('rt-diag-risk');
+              if (diagRiskElem) diagRiskElem.innerText = String(d.risk_level || 'LOW');
+
+              const diagRetryElem = document.getElementById('rt-diag-retry');
+              if (diagRetryElem) diagRetryElem.innerText = d.retryability ? 'YES' : 'NO';
+
+              const stratActionElem = document.getElementById('rt-strat-action');
+              if (stratActionElem) stratActionElem.innerText = String(s.selected_action || 'IMMEDIATE_RETRY');
+
+              const stratEvElem = document.getElementById('rt-strat-ev');
+              if (stratEvElem) {
+                const evScore = (s.ev_scores && s.ev_scores[s.selected_action] !== undefined) ? s.ev_scores[s.selected_action] : 0.0;
+                stratEvElem.innerText = `₹${evScore.toFixed(2)}`;
+              }
+
+              const stratProbElem = document.getElementById('rt-strat-prob');
+              if (stratProbElem) {
+                const prob = (s.sampled_probabilities && s.sampled_probabilities[s.selected_action] !== undefined) ? s.sampled_probabilities[s.selected_action] : 0.71;
+                stratProbElem.innerText = prob.toFixed(2);
+              }
+
+              const guardVerdictElem = document.getElementById('rt-guard-verdict');
+              if (guardVerdictElem) {
+                const isApproved = g.verdict === 'approved' || tx.guardrail_verdict === 'approved';
+                guardVerdictElem.innerText = isApproved ? '✓ APPROVED' : '✕ BLOCKED';
+                guardVerdictElem.className = isApproved ? 'px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded text-[10px] font-bold' : 'px-2 py-0.5 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[10px] font-bold';
+              }
+
+              const execRespElem = document.getElementById('rt-exec-resp');
+              if (execRespElem) execRespElem.innerText = String(o.gateway_response_code || '200 OK');
+
+              const execLatencyElem = document.getElementById('rt-exec-latency');
+              if (execLatencyElem) execLatencyElem.innerText = `${tx.total_latency_ms ? tx.total_latency_ms.toFixed(0) : '812'} ms`;
+
+              const outNetElem = document.getElementById('rt-out-net');
+              if (outNetElem) outNetElem.innerText = `₹${Number(tx.net_value || tx.amount_recovered || txAmt).toLocaleString('en-IN', {minimumFractionDigits: 2})}`;
+            }
+          }
+        } catch (txErr) {
+          console.error('Error populating right drawer:', txErr);
+        }
+
       } catch (err) {
         console.error('Error loading overview data:', err);
       }
     }
-
     function renderComparisonTable(b, r, comp, defs) {
       const tbody = document.getElementById('comparison-table-body');
       if (!tbody) return;
@@ -2969,7 +3046,7 @@
 
     // Auto-load initial judge view on startup
     window.addEventListener('DOMContentLoaded', () => {
-      switchTab('judge');
+      switchTab('control_room');
     });
 
   </script>
