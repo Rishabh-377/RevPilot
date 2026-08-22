@@ -43,7 +43,7 @@ Built on an explicit tripartite architecture, RevPilot ensures that machine lear
 
 ### 1. Clone & Setup Environment
 ```bash
-git clone <repo-url>
+git clone https://github.com/Rishabh-377/RevPilot.git
 cd revpilot
 
 # Create and activate virtual environment

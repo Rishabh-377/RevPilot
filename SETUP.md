@@ -12,7 +12,7 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/revpilot.git
+git clone https://github.com/Rishabh-377/RevPilot.git
 cd revpilot
 ```
 
