@@ -1,0 +1,47 @@
+{
+  "evaluation_summary": {
+    "benchmark_seed": 20260821,
+    "total_records": 500
+  },
+  "metrics_comparison": {
+    "recovery_rate": {
+      "static_baseline": "56.20%",
+      "revpilot": "38.40%",
+      "delta": "-17.80%"
+    },
+    "gross_recovered_revenue_inr": {
+      "static_baseline": 3596572.3,
+      "revpilot": 2705633.22,
+      "delta_inr": -890939.08
+    },
+    "action_cost_inr": {
+      "static_baseline": 2588.0,
+      "revpilot": 1332.0,
+      "cost_saved_inr": 1256.0
+    },
+    "friction_cost_inr": {
+      "static_baseline": 1184.0,
+      "revpilot": 848.0,
+      "delta_inr": -336.0
+    },
+    "net_recovered_revenue_inr": {
+      "static_baseline": 3592800.3,
+      "revpilot": 2703453.22,
+      "delta_inr": -889347.08,
+      "lift_percentage": "-24.75%"
+    },
+    "safety_guardrails": {
+      "baseline_unsafe_attempts": 24,
+      "revpilot_unsafe_attempts": 23,
+      "baseline_unsafe_executions": 24,
+      "revpilot_unsafe_executions": 0,
+      "blocked_by_guardrails": 115,
+      "escalated_for_human_review": 45
+    },
+    "learning_and_adaptivity": {
+      "policy_shifts_observed": 0,
+      "thompson_explorations": 156,
+      "reflection_insight": "Evaluated 500 events with Bayesian Thompson Sampling and deterministic guardrails."
+    }
+  }
+}

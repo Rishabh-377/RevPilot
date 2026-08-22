@@ -1,0 +1,41 @@
+{
+  "policy_name": "static_baseline",
+  "seed": 20260821,
+  "operational": {
+    "events": 500,
+    "processed": 500,
+    "throughput_eps": 26537.17,
+    "latency_ms": 0.001,
+    "unresolved_exceptions": 0
+  },
+  "diagnosis": {
+    "accuracy": 0.896,
+    "unknown_rate": 0.15,
+    "low_confidence_rate": 0.15
+  },
+  "financial": {
+    "successful_recoveries": 281,
+    "recovery_rate": 0.562,
+    "gross_recovered_revenue_inr": 3596572.3,
+    "action_cost_inr": 2588.0,
+    "friction_cost_inr": 1184.0,
+    "friction_cost_units": 1184.0,
+    "total_cost_inr": 3772.0,
+    "net_recovered_revenue_inr": 3592800.3
+  },
+  "safety": {
+    "allowed": 459,
+    "human_review": 41,
+    "blocked": 20,
+    "unsafe_attempt_count": 24,
+    "unsafe_execution_count": 24,
+    "duplicate_execution_count": 0
+  },
+  "learning": {
+    "initial_posterior": "N/A (static policy)",
+    "final_posterior": "N/A (static policy)",
+    "policy_changes": 0,
+    "exploration_count": 0
+  },
+  "exceptions": []
+}

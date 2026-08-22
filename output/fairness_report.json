@@ -1,0 +1,119 @@
+{
+  "DATASET_EQUAL": true,
+  "SEED_EQUAL": true,
+  "INPUT_EQUAL": true,
+  "GROUND_TRUTH_EQUAL": true,
+  "ACCOUNTING_EQUAL": true,
+  "SAFETY_DEFINITION_EQUAL": true,
+  "INFORMATION_PARITY": true,
+  "accounting_formula": "net_recovered = gross_recovered - api_cost - friction_cost",
+  "safety_definitions": {
+    "unsafe_attempt": "Automated recovery action chosen for FRAUD_SUSPECTED, DUPLICATE, or attempts >= 3",
+    "unsafe_execution": "Automated recovery action actually executed on FRAUD_SUSPECTED, DUPLICATE, or attempts >= 3",
+    "blocked_action": "Action halted unconditionally by financial guardrails",
+    "human_review": "Escalated to human operator triage"
+  },
+  "baseline_policy_definition": {
+    "name": "StaticBaselinePolicy",
+    "type": "Deterministic Keyword Matcher",
+    "keyword_rules": [
+      {
+        "keywords": [
+          "duplicate",
+          "already exists",
+          "idempotency",
+          "already processed"
+        ],
+        "action": "HUMAN_ESCALATION"
+      },
+      {
+        "keywords": [
+          "fraud",
+          "suspicious",
+          "watchlist",
+          "risk score",
+          "card-testing"
+        ],
+        "action": "HUMAN_ESCALATION"
+      },
+      {
+        "keywords": [
+          "timeout",
+          "timed out",
+          "no data received",
+          "connection reset",
+          "socket closed"
+        ],
+        "action": "IMMEDIATE_RETRY"
+      },
+      {
+        "keywords": [
+          "psp unavailable",
+          "gateway down",
+          "host unreachable",
+          "switch unavailable",
+          "unavailable",
+          "503"
+        ],
+        "action": "DELAYED_RETRY"
+      },
+      {
+        "keywords": [
+          "insufficient",
+          "not sufficient",
+          "balance too low",
+          "limit exhausted",
+          "limit reached",
+          "credit limit"
+        ],
+        "action": "PAYMENT_LINK"
+      },
+      {
+        "keywords": [
+          "payment abandoned by user",
+          "navigated away",
+          "closed the payment",
+          "rejected by customer",
+          "upi collect request rejected"
+        ],
+        "action": "PAYMENT_LINK"
+      },
+      {
+        "keywords": [
+          "auth window",
+          "collect request expired",
+          "otp not entered",
+          "3ds",
+          "authentication",
+          "pin entry",
+          "step-up"
+        ],
+        "action": "IMMEDIATE_RETRY"
+      },
+      {
+        "keywords": [
+          "do not honour",
+          "declined by issuing bank",
+          "restricted card",
+          "transaction not permitted",
+          "blocked by issuer",
+          "lost or stolen"
+        ],
+        "action": "SWITCH_METHOD"
+      }
+    ],
+    "default_action": "DELAYED_RETRY"
+  },
+  "revpilot_policy_definition": {
+    "name": "RevPilotAdaptivePipeline",
+    "type": "LLM Semantic Diagnosis + Segmented Contextual Thompson Sampling + Fail-Closed Guardrails",
+    "candidate_actions": [
+      "IMMEDIATE_RETRY",
+      "DELAYED_RETRY",
+      "PAYMENT_LINK",
+      "SWITCH_METHOD",
+      "HUMAN_ESCALATION"
+    ],
+    "ev_formula": "EV = (sampled_prob * amount * time_discount) - api_cost - friction_cost"
+  }
+}

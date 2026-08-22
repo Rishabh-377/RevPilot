@@ -1,0 +1,34 @@
+{
+  "benchmark_id": "non_stationary_adaptation_bench",
+  "target_context": "TIMEOUT_TRANSIENT+MID",
+  "phase_a_records": 150,
+  "phase_b_records": 150,
+  "policy_before": {
+    "context": "TIMEOUT_TRANSIENT+MID",
+    "preferred_action": "IMMEDIATE_RETRY",
+    "posterior_mean": 0.7864,
+    "alpha": 81.0,
+    "beta": 22.0,
+    "expected_value": 1176.61
+  },
+  "environment_shift": {
+    "target_failure_class": "TIMEOUT_TRANSIENT",
+    "target_value_tier": "MID",
+    "action_degraded": "IMMEDIATE_RETRY",
+    "prob_before": 0.8,
+    "prob_after": 0.12,
+    "description": "Downstream gateway queue congestion causes immediate retries to fail, while delayed retries remain highly effective."
+  },
+  "policy_after": {
+    "context": "TIMEOUT_TRANSIENT+MID",
+    "preferred_action": "DELAYED_RETRY",
+    "posterior_mean": 0.6584,
+    "alpha": 106.0,
+    "beta": 55.0,
+    "expected_value": 962.33
+  },
+  "adaptation_verified": true,
+  "policy_shifted": true,
+  "posterior_delta": -0.1933,
+  "learning_statement": "In context TIMEOUT_TRANSIENT+MID, environment shifted P(IMMEDIATE_RETRY) from 0.80 to 0.12. Strategy engine observed outcomes, driving posterior mean from 0.79 down to 0.59. Optimal policy adapted from IMMEDIATE_RETRY to DELAYED_RETRY."
+}
