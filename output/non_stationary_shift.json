@@ -6,10 +6,10 @@
   "policy_before": {
     "context": "TIMEOUT_TRANSIENT+MID",
     "preferred_action": "IMMEDIATE_RETRY",
-    "posterior_mean": 0.7864,
-    "alpha": 81.0,
-    "beta": 22.0,
-    "expected_value": 1176.61
+    "posterior_mean": 0.8211,
+    "alpha": 78.0,
+    "beta": 17.0,
+    "expected_value": 1228.58
   },
   "environment_shift": {
     "target_failure_class": "TIMEOUT_TRANSIENT",
@@ -22,13 +22,13 @@
   "policy_after": {
     "context": "TIMEOUT_TRANSIENT+MID",
     "preferred_action": "DELAYED_RETRY",
-    "posterior_mean": 0.6584,
-    "alpha": 106.0,
-    "beta": 55.0,
-    "expected_value": 962.33
+    "posterior_mean": 0.6216,
+    "alpha": 69.0,
+    "beta": 42.0,
+    "expected_value": 908.28
   },
   "adaptation_verified": true,
   "policy_shifted": true,
-  "posterior_delta": -0.1933,
-  "learning_statement": "In context TIMEOUT_TRANSIENT+MID, environment shifted P(IMMEDIATE_RETRY) from 0.80 to 0.12. Strategy engine observed outcomes, driving posterior mean from 0.79 down to 0.59. Optimal policy adapted from IMMEDIATE_RETRY to DELAYED_RETRY."
+  "posterior_delta": -0.2692,
+  "learning_statement": "In context TIMEOUT_TRANSIENT+MID, environment shifted P(IMMEDIATE_RETRY) from 0.80 to 0.12. Strategy engine observed outcomes, driving posterior mean from 0.82 down to 0.55. Optimal policy adapted from IMMEDIATE_RETRY to DELAYED_RETRY."
 }

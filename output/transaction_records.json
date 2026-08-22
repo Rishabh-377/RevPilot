@@ -21,7 +21,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0044,
+      "latency_ms": 0.004,
       "exception": null
     },
     {
@@ -65,7 +65,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0017,
+      "latency_ms": 0.0013,
       "exception": null
     },
     {
@@ -87,7 +87,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 3294.33,
-      "latency_ms": 0.0012,
+      "latency_ms": 0.001,
       "exception": null
     },
     {
@@ -197,7 +197,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 96.38,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -219,7 +219,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -241,7 +241,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 39862.41,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -263,7 +263,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -307,7 +307,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 15427.11,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -329,7 +329,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -351,7 +351,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -395,7 +395,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -439,7 +439,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -461,7 +461,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -483,7 +483,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1686.55,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -527,7 +527,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 59310.62,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -549,7 +549,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 3422.93,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -615,7 +615,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 51896.71,
-      "latency_ms": 0.0008,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -637,7 +637,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -659,7 +659,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 91.01,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -681,7 +681,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0009,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -703,7 +703,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -769,7 +769,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 504.79,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -791,7 +791,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 559.58,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -835,7 +835,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -857,7 +857,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -879,7 +879,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 57.66,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -923,7 +923,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1971.34,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -945,7 +945,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 899.33,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1033,7 +1033,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1143,7 +1143,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1187,7 +1187,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4475.45,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0008,
       "exception": null
     },
     {
@@ -1209,7 +1209,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4375.7,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -1231,7 +1231,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -1319,7 +1319,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1341,7 +1341,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 68403.91,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1385,7 +1385,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2420.82,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1495,7 +1495,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1517,7 +1517,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 433.57,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1561,7 +1561,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1583,7 +1583,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 436.22,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1627,7 +1627,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 97630.1,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1649,7 +1649,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1737,7 +1737,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 76163.67,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -1781,7 +1781,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1098.41,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -1913,7 +1913,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4278.2,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -1935,7 +1935,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -1957,7 +1957,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2152.58,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2001,7 +2001,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2023,7 +2023,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 454.14,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2067,7 +2067,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2111,7 +2111,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2133,7 +2133,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2265,7 +2265,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 325.51,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2331,7 +2331,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0008,
       "exception": null
     },
     {
@@ -2375,7 +2375,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 230.72,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2419,7 +2419,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2441,7 +2441,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 52865.33,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2463,7 +2463,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2551,7 +2551,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 397.58,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2595,7 +2595,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 63.43,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -2749,7 +2749,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2793,7 +2793,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 24665.07,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2837,7 +2837,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -2881,7 +2881,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 325.33,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -2991,7 +2991,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1707.64,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -3035,7 +3035,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 68923.92,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3079,7 +3079,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -3101,7 +3101,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3145,7 +3145,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3189,7 +3189,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3211,7 +3211,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 922.86,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0021,
       "exception": null
     },
     {
@@ -3233,7 +3233,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4934.86,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0012,
       "exception": null
     },
     {
@@ -3255,7 +3255,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4596.81,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0009,
       "exception": null
     },
     {
@@ -3277,7 +3277,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 57812.53,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0008,
       "exception": null
     },
     {
@@ -3299,7 +3299,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3321,7 +3321,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3343,7 +3343,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 53.03,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3365,7 +3365,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3387,7 +3387,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3409,7 +3409,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 178.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3431,7 +3431,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3453,7 +3453,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 33634.28,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3475,7 +3475,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 13195.21,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0009,
       "exception": null
     },
     {
@@ -3497,7 +3497,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3519,7 +3519,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 366.57,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3563,7 +3563,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3585,7 +3585,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1727.79,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3607,7 +3607,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 129.85,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3651,7 +3651,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -3673,7 +3673,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3695,7 +3695,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 1296.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3717,7 +3717,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3761,7 +3761,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3805,7 +3805,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2437.07,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3827,7 +3827,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 154.82,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -3893,7 +3893,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 304.79,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3937,7 +3937,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -3959,7 +3959,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4003,7 +4003,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -4179,7 +4179,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 146.65,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4223,7 +4223,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4245,7 +4245,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 931.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4289,7 +4289,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3843.97,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -4377,7 +4377,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 200.36,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -4487,7 +4487,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4509,7 +4509,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4276.05,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4575,7 +4575,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 3327.92,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0009,
       "exception": null
     },
     {
@@ -4663,7 +4663,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 12887.25,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -4707,7 +4707,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4580.19,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -4751,7 +4751,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 225.38,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -4795,7 +4795,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 328.98,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4817,7 +4817,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 193.74,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4861,7 +4861,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4883,7 +4883,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4927,7 +4927,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -4971,7 +4971,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 40487.62,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -5037,7 +5037,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4071.26,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -5059,7 +5059,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 148.08,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5081,7 +5081,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 321.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5103,7 +5103,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -5125,7 +5125,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 313.42,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5147,7 +5147,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 33164.46,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5235,7 +5235,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 304.39,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -5279,7 +5279,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 437.71,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5367,7 +5367,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5477,7 +5477,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5499,7 +5499,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 674.29,
-      "latency_ms": 0.0008,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5521,7 +5521,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 45697.46,
-      "latency_ms": 0.0028,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5543,7 +5543,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 292.51,
-      "latency_ms": 0.001,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5565,7 +5565,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2995.73,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -5587,7 +5587,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5631,7 +5631,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 414.94,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -5719,7 +5719,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 427.01,
-      "latency_ms": 0.0008,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5741,7 +5741,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2293.65,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5763,7 +5763,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2487.01,
-      "latency_ms": 0.0008,
+      "latency_ms": 0.0009,
       "exception": null
     },
     {
@@ -5785,7 +5785,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 42218.85,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -5829,7 +5829,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5873,7 +5873,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 53479.93,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5895,7 +5895,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 168.51,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5917,7 +5917,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -5961,7 +5961,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6005,7 +6005,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2484.72,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6027,7 +6027,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6071,7 +6071,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2757.02,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6093,7 +6093,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 75854.22,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6137,7 +6137,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -6159,7 +6159,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 3200.43,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6181,7 +6181,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -6203,7 +6203,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 297.96,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6247,7 +6247,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6269,7 +6269,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 941.38,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6401,7 +6401,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6423,7 +6423,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6445,7 +6445,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6467,7 +6467,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6511,7 +6511,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 202.56,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6533,7 +6533,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 227.99,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6555,7 +6555,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 19589.4,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6577,7 +6577,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6643,7 +6643,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 21965.71,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6665,7 +6665,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6687,7 +6687,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 48375.15,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6709,7 +6709,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 36204.94,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6753,7 +6753,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6775,7 +6775,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -6797,7 +6797,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 260.08,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6841,7 +6841,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 3470.07,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6885,7 +6885,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 365.9,
-      "latency_ms": 0.001,
+      "latency_ms": 0.0011,
       "exception": null
     },
     {
@@ -6929,7 +6929,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3602.62,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -6995,7 +6995,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7061,7 +7061,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1399.23,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7083,7 +7083,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -7149,7 +7149,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7171,7 +7171,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 49223.31,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7193,7 +7193,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 58.9,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7215,7 +7215,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 73504.88,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7347,7 +7347,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7369,7 +7369,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 252.47,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7391,7 +7391,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -7435,7 +7435,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4502.65,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7501,7 +7501,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 352.23,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7567,7 +7567,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 71.23,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7589,7 +7589,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 426.74,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7655,7 +7655,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7677,7 +7677,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7699,7 +7699,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 851.13,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7743,7 +7743,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 938.97,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7765,7 +7765,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7787,7 +7787,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 25481.73,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7831,7 +7831,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7853,7 +7853,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2790.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7875,7 +7875,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7897,7 +7897,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7919,7 +7919,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 78266.76,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -7963,7 +7963,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 235.42,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8029,7 +8029,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8095,7 +8095,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8117,7 +8117,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 40652.57,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8139,7 +8139,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 99929.0,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8205,7 +8205,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 66.92,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -8271,7 +8271,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 61961.84,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8315,7 +8315,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 48213.14,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8337,7 +8337,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 76021.86,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8359,7 +8359,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8469,7 +8469,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8535,7 +8535,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8623,7 +8623,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4559.13,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -8645,7 +8645,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8755,7 +8755,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1705.55,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8777,7 +8777,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0008,
       "exception": null
     },
     {
@@ -8799,7 +8799,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 210.64,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -8843,7 +8843,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 4188.37,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8865,7 +8865,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 55.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8909,7 +8909,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 360.95,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8931,7 +8931,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8953,7 +8953,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 446.57,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8975,7 +8975,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 91902.44,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -8997,7 +8997,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 3583.83,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9019,7 +9019,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -9085,7 +9085,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 453.47,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9151,7 +9151,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 115.94,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -9239,7 +9239,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 81910.52,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9261,7 +9261,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9283,7 +9283,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9371,7 +9371,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -9393,7 +9393,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1426.05,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9415,7 +9415,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 267.65,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9437,7 +9437,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9547,7 +9547,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -9569,7 +9569,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 13551.72,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9591,7 +9591,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9613,7 +9613,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -9657,7 +9657,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9679,7 +9679,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 71402.83,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9723,7 +9723,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 2910.74,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9855,7 +9855,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -9943,7 +9943,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 4420.26,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -10009,7 +10009,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 840.81,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10075,7 +10075,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 419.07,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10119,7 +10119,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 401.19,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -10141,7 +10141,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1476.83,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10185,7 +10185,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 7001.63,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10207,7 +10207,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 719.76,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10229,7 +10229,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 15786.14,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10295,7 +10295,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -10317,7 +10317,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": -30.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10339,7 +10339,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 368.44,
-      "latency_ms": 0.0008,
+      "latency_ms": 0.0007,
       "exception": null
     },
     {
@@ -10361,7 +10361,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2192.81,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -10405,7 +10405,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10515,7 +10515,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10537,7 +10537,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 1174.1,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -10559,7 +10559,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 430.3,
-      "latency_ms": 0.0006,
+      "latency_ms": 0.0005,
       "exception": null
     },
     {
@@ -10581,7 +10581,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10647,7 +10647,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 453.48,
-      "latency_ms": 0.0007,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10735,7 +10735,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10845,7 +10845,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10889,7 +10889,7 @@
       "friction_cost": 5.0,
       "total_cost": 30.0,
       "net_recovered": 1691.03,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10911,7 +10911,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 147.6,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -10955,7 +10955,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1982.9,
-      "latency_ms": 0.0005,
+      "latency_ms": 0.0006,
       "exception": null
     },
     {
@@ -11023,7 +11023,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.2208,
+      "latency_ms": 0.2187,
       "exception": null
     },
     {
@@ -11045,7 +11045,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1807.25,
-      "latency_ms": 0.1578,
+      "latency_ms": 0.1582,
       "exception": null
     },
     {
@@ -11067,7 +11067,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1168,
       "exception": null
     },
     {
@@ -11089,7 +11089,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.121,
+      "latency_ms": 0.1229,
       "exception": null
     },
     {
@@ -11111,7 +11111,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1204,
+      "latency_ms": 0.1182,
       "exception": null
     },
     {
@@ -11133,7 +11133,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1087,
+      "latency_ms": 0.1098,
       "exception": null
     },
     {
@@ -11155,7 +11155,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1034,
+      "latency_ms": 0.1043,
       "exception": null
     },
     {
@@ -11177,7 +11177,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1163,
+      "latency_ms": 0.1178,
       "exception": null
     },
     {
@@ -11199,7 +11199,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1105,
+      "latency_ms": 0.1108,
       "exception": null
     },
     {
@@ -11221,7 +11221,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1069,
+      "latency_ms": 0.108,
       "exception": null
     },
     {
@@ -11243,7 +11243,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1058,
+      "latency_ms": 0.1067,
       "exception": null
     },
     {
@@ -11265,7 +11265,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.113,
+      "latency_ms": 0.1137,
       "exception": null
     },
     {
@@ -11287,7 +11287,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2306.83,
-      "latency_ms": 0.1137,
+      "latency_ms": 0.1154,
       "exception": null
     },
     {
@@ -11309,7 +11309,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0982,
+      "latency_ms": 0.099,
       "exception": null
     },
     {
@@ -11331,7 +11331,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1029,
+      "latency_ms": 0.1022,
       "exception": null
     },
     {
@@ -11353,7 +11353,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 51407.05,
-      "latency_ms": 0.1168,
+      "latency_ms": 0.1178,
       "exception": null
     },
     {
@@ -11375,7 +11375,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2890.27,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1075,
       "exception": null
     },
     {
@@ -11397,7 +11397,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.105,
+      "latency_ms": 0.1045,
       "exception": null
     },
     {
@@ -11419,7 +11419,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0954,
+      "latency_ms": 0.0955,
       "exception": null
     },
     {
@@ -11441,7 +11441,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1115,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -11463,7 +11463,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 161.57,
-      "latency_ms": 0.115,
+      "latency_ms": 0.1345,
       "exception": null
     },
     {
@@ -11485,7 +11485,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1125,
+      "latency_ms": 0.1152,
       "exception": null
     },
     {
@@ -11507,7 +11507,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0925,
+      "latency_ms": 0.0933,
       "exception": null
     },
     {
@@ -11529,7 +11529,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0968,
+      "latency_ms": 0.0943,
       "exception": null
     },
     {
@@ -11551,7 +11551,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1097,
+      "latency_ms": 0.1085,
       "exception": null
     },
     {
@@ -11573,7 +11573,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1113,
+      "latency_ms": 0.1135,
       "exception": null
     },
     {
@@ -11595,7 +11595,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1052,
+      "latency_ms": 0.1269,
       "exception": null
     },
     {
@@ -11617,7 +11617,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 51896.71,
-      "latency_ms": 0.1173,
+      "latency_ms": 0.1185,
       "exception": null
     },
     {
@@ -11639,7 +11639,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1143,
       "exception": null
     },
     {
@@ -11661,7 +11661,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.102,
+      "latency_ms": 0.1019,
       "exception": null
     },
     {
@@ -11683,7 +11683,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0943,
+      "latency_ms": 0.0946,
       "exception": null
     },
     {
@@ -11705,7 +11705,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 4418.32,
-      "latency_ms": 0.1148,
+      "latency_ms": 0.1159,
       "exception": null
     },
     {
@@ -11727,7 +11727,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1205,
+      "latency_ms": 0.1092,
       "exception": null
     },
     {
@@ -11749,7 +11749,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1823,
+      "latency_ms": 0.1152,
       "exception": null
     },
     {
@@ -11771,7 +11771,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 502.29,
-      "latency_ms": 0.1373,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -11793,7 +11793,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1298,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -11815,7 +11815,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1103,
+      "latency_ms": 0.0963,
       "exception": null
     },
     {
@@ -11837,7 +11837,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1524,
+      "latency_ms": 0.1155,
       "exception": null
     },
     {
@@ -11859,7 +11859,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1385,
+      "latency_ms": 0.1072,
       "exception": null
     },
     {
@@ -11881,7 +11881,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.12,
+      "latency_ms": 0.1117,
       "exception": null
     },
     {
@@ -11903,7 +11903,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1164,
+      "latency_ms": 0.1111,
       "exception": null
     },
     {
@@ -11925,7 +11925,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 1966.34,
-      "latency_ms": 0.1165,
+      "latency_ms": 0.1172,
       "exception": null
     },
     {
@@ -11947,7 +11947,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 894.33,
-      "latency_ms": 0.1179,
+      "latency_ms": 0.1169,
       "exception": null
     },
     {
@@ -11969,7 +11969,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1188,
       "exception": null
     },
     {
@@ -11991,7 +11991,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1108,
+      "latency_ms": 0.1107,
       "exception": null
     },
     {
@@ -12013,7 +12013,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 21078.92,
-      "latency_ms": 0.1167,
+      "latency_ms": 0.1179,
       "exception": null
     },
     {
@@ -12035,7 +12035,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1257,
+      "latency_ms": 0.1128,
       "exception": null
     },
     {
@@ -12057,7 +12057,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 4674.28,
-      "latency_ms": 0.1157,
+      "latency_ms": 0.1162,
       "exception": null
     },
     {
@@ -12079,7 +12079,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 102.43,
-      "latency_ms": 0.1072,
+      "latency_ms": 0.1095,
       "exception": null
     },
     {
@@ -12101,7 +12101,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.2547,
+      "latency_ms": 0.2452,
       "exception": null
     },
     {
@@ -12123,7 +12123,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 125.41,
-      "latency_ms": 0.1113,
+      "latency_ms": 0.1127,
       "exception": null
     },
     {
@@ -12145,7 +12145,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1175,
+      "latency_ms": 0.1188,
       "exception": null
     },
     {
@@ -12167,7 +12167,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1062,
+      "latency_ms": 0.1078,
       "exception": null
     },
     {
@@ -12189,7 +12189,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 4472.95,
-      "latency_ms": 0.1142,
+      "latency_ms": 0.1148,
       "exception": null
     },
     {
@@ -12211,7 +12211,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1095,
+      "latency_ms": 0.1238,
       "exception": null
     },
     {
@@ -12233,7 +12233,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1155,
+      "latency_ms": 0.1182,
       "exception": null
     },
     {
@@ -12255,7 +12255,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1024,
+      "latency_ms": 0.1218,
       "exception": null
     },
     {
@@ -12299,7 +12299,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1081,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -12321,7 +12321,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 434.27,
-      "latency_ms": 0.1161,
+      "latency_ms": 0.1185,
       "exception": null
     },
     {
@@ -12343,7 +12343,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1127,
+      "latency_ms": 0.1153,
       "exception": null
     },
     {
@@ -12365,7 +12365,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1082,
+      "latency_ms": 0.1075,
       "exception": null
     },
     {
@@ -12387,7 +12387,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2420.82,
-      "latency_ms": 0.1099,
+      "latency_ms": 0.1142,
       "exception": null
     },
     {
@@ -12409,7 +12409,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1115,
+      "latency_ms": 0.1088,
       "exception": null
     },
     {
@@ -12431,7 +12431,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1082,
+      "latency_ms": 0.1095,
       "exception": null
     },
     {
@@ -12453,7 +12453,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1045,
+      "latency_ms": 0.1031,
       "exception": null
     },
     {
@@ -12475,7 +12475,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0921,
+      "latency_ms": 0.0941,
       "exception": null
     },
     {
@@ -12497,7 +12497,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1184,
+      "latency_ms": 0.1197,
       "exception": null
     },
     {
@@ -12519,7 +12519,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.104,
+      "latency_ms": 0.107,
       "exception": null
     },
     {
@@ -12541,7 +12541,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 64971.47,
-      "latency_ms": 0.1091,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -12563,7 +12563,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1087,
+      "latency_ms": 0.115,
       "exception": null
     },
     {
@@ -12585,7 +12585,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.111,
+      "latency_ms": 0.1104,
       "exception": null
     },
     {
@@ -12607,7 +12607,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1128,
+      "latency_ms": 0.1162,
       "exception": null
     },
     {
@@ -12629,7 +12629,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 97627.6,
-      "latency_ms": 0.113,
+      "latency_ms": 0.1126,
       "exception": null
     },
     {
@@ -12651,7 +12651,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0935,
+      "latency_ms": 0.0952,
       "exception": null
     },
     {
@@ -12673,7 +12673,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1031,
+      "latency_ms": 0.1057,
       "exception": null
     },
     {
@@ -12695,7 +12695,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1089,
+      "latency_ms": 0.1094,
       "exception": null
     },
     {
@@ -12717,7 +12717,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1099,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -12739,7 +12739,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1209,
+      "latency_ms": 0.121,
       "exception": null
     },
     {
@@ -12761,7 +12761,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1068,
+      "latency_ms": 0.132,
       "exception": null
     },
     {
@@ -12783,7 +12783,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.111,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -12805,7 +12805,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0945,
+      "latency_ms": 0.0975,
       "exception": null
     },
     {
@@ -12827,7 +12827,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1014,
+      "latency_ms": 0.121,
       "exception": null
     },
     {
@@ -12849,7 +12849,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1152,
+      "latency_ms": 0.1215,
       "exception": null
     },
     {
@@ -12871,7 +12871,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1031,
+      "latency_ms": 0.0979,
       "exception": null
     },
     {
@@ -12893,7 +12893,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1396,
+      "latency_ms": 0.1215,
       "exception": null
     },
     {
@@ -12915,7 +12915,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1061,
+      "latency_ms": 0.1195,
       "exception": null
     },
     {
@@ -12937,7 +12937,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1123,
+      "latency_ms": 0.1266,
       "exception": null
     },
     {
@@ -12959,7 +12959,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1079,
+      "latency_ms": 0.1103,
       "exception": null
     },
     {
@@ -12981,7 +12981,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 525.56,
-      "latency_ms": 0.1102,
+      "latency_ms": 0.1136,
       "exception": null
     },
     {
@@ -13003,7 +13003,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2610.49,
-      "latency_ms": 0.122,
+      "latency_ms": 0.118,
       "exception": null
     },
     {
@@ -13025,7 +13025,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0981,
+      "latency_ms": 0.1243,
       "exception": null
     },
     {
@@ -13047,7 +13047,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1037,
+      "latency_ms": 0.1067,
       "exception": null
     },
     {
@@ -13069,7 +13069,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1048,
+      "latency_ms": 0.1069,
       "exception": null
     },
     {
@@ -13091,7 +13091,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1,
+      "latency_ms": 0.1052,
       "exception": null
     },
     {
@@ -13113,7 +13113,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1107,
+      "latency_ms": 0.106,
       "exception": null
     },
     {
@@ -13135,7 +13135,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 418.42,
-      "latency_ms": 0.1121,
+      "latency_ms": 0.1143,
       "exception": null
     },
     {
@@ -13157,7 +13157,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1142,
+      "latency_ms": 0.1172,
       "exception": null
     },
     {
@@ -13179,7 +13179,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1087,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -13201,7 +13201,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 4229.61,
-      "latency_ms": 0.1128,
+      "latency_ms": 0.1112,
       "exception": null
     },
     {
@@ -13223,7 +13223,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 1663.16,
-      "latency_ms": 0.117,
+      "latency_ms": 0.1212,
       "exception": null
     },
     {
@@ -13245,7 +13245,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1109,
+      "latency_ms": 0.1108,
       "exception": null
     },
     {
@@ -13267,7 +13267,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1018,
+      "latency_ms": 0.1063,
       "exception": null
     },
     {
@@ -13289,7 +13289,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1008,
+      "latency_ms": 0.1015,
       "exception": null
     },
     {
@@ -13311,7 +13311,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1012,
+      "latency_ms": 0.1005,
       "exception": null
     },
     {
@@ -13333,7 +13333,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1038,
+      "latency_ms": 0.1036,
       "exception": null
     },
     {
@@ -13355,7 +13355,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3151.34,
-      "latency_ms": 0.118,
+      "latency_ms": 0.1337,
       "exception": null
     },
     {
@@ -13377,7 +13377,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1127,
+      "latency_ms": 0.1126,
       "exception": null
     },
     {
@@ -13399,7 +13399,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 278.02,
-      "latency_ms": 0.1141,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -13443,7 +13443,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0976,
+      "latency_ms": 0.0979,
       "exception": null
     },
     {
@@ -13465,7 +13465,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1006,
+      "latency_ms": 0.0983,
       "exception": null
     },
     {
@@ -13487,7 +13487,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1163,
+      "latency_ms": 0.1162,
       "exception": null
     },
     {
@@ -13509,7 +13509,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1198,
+      "latency_ms": 0.1173,
       "exception": null
     },
     {
@@ -13531,7 +13531,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1151.78,
-      "latency_ms": 0.238,
+      "latency_ms": 0.2307,
       "exception": null
     },
     {
@@ -13553,7 +13553,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 397.58,
-      "latency_ms": 0.116,
+      "latency_ms": 0.1153,
       "exception": null
     },
     {
@@ -13575,7 +13575,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1079,
+      "latency_ms": 0.1061,
       "exception": null
     },
     {
@@ -13597,7 +13597,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.114,
+      "latency_ms": 0.1112,
       "exception": null
     },
     {
@@ -13619,7 +13619,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 453.77,
-      "latency_ms": 0.1208,
+      "latency_ms": 0.1197,
       "exception": null
     },
     {
@@ -13641,7 +13641,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 147.7,
-      "latency_ms": 0.1179,
+      "latency_ms": 0.1162,
       "exception": null
     },
     {
@@ -13663,7 +13663,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1143,
+      "latency_ms": 0.1132,
       "exception": null
     },
     {
@@ -13685,7 +13685,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 3135.79,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -13707,7 +13707,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1188,
+      "latency_ms": 0.1347,
       "exception": null
     },
     {
@@ -13729,7 +13729,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 73548.68,
-      "latency_ms": 0.1216,
+      "latency_ms": 0.1198,
       "exception": null
     },
     {
@@ -13751,7 +13751,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1111,
+      "latency_ms": 0.1089,
       "exception": null
     },
     {
@@ -13773,7 +13773,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 1514.7,
-      "latency_ms": 0.1291,
+      "latency_ms": 0.1296,
       "exception": null
     },
     {
@@ -13795,7 +13795,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1208,
+      "latency_ms": 0.1142,
       "exception": null
     },
     {
@@ -13817,7 +13817,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 4102.49,
-      "latency_ms": 0.1218,
+      "latency_ms": 0.1198,
       "exception": null
     },
     {
@@ -13839,7 +13839,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1013,
+      "latency_ms": 0.0985,
       "exception": null
     },
     {
@@ -13861,7 +13861,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0943,
+      "latency_ms": 0.094,
       "exception": null
     },
     {
@@ -13883,7 +13883,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 325.33,
-      "latency_ms": 0.1198,
+      "latency_ms": 0.1185,
       "exception": null
     },
     {
@@ -13905,7 +13905,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1102,
+      "latency_ms": 0.111,
       "exception": null
     },
     {
@@ -13927,7 +13927,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1055,
+      "latency_ms": 0.1047,
       "exception": null
     },
     {
@@ -13949,7 +13949,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1137,
+      "latency_ms": 0.1132,
       "exception": null
     },
     {
@@ -13971,7 +13971,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0936,
+      "latency_ms": 0.0911,
       "exception": null
     },
     {
@@ -13993,7 +13993,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1710.14,
-      "latency_ms": 0.1117,
+      "latency_ms": 0.1119,
       "exception": null
     },
     {
@@ -14015,7 +14015,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1073,
+      "latency_ms": 0.1057,
       "exception": null
     },
     {
@@ -14037,7 +14037,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1002,
+      "latency_ms": 0.1,
       "exception": null
     },
     {
@@ -14059,7 +14059,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 175.45,
-      "latency_ms": 0.112,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -14081,7 +14081,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0996,
+      "latency_ms": 0.0987,
       "exception": null
     },
     {
@@ -14103,7 +14103,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 65736.07,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -14125,7 +14125,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 157.88,
-      "latency_ms": 0.113,
+      "latency_ms": 0.1061,
       "exception": null
     },
     {
@@ -14147,7 +14147,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1155,
+      "latency_ms": 0.1136,
       "exception": null
     },
     {
@@ -14169,7 +14169,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1178,
+      "latency_ms": 0.1186,
       "exception": null
     },
     {
@@ -14213,7 +14213,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1188,
+      "latency_ms": 0.1171,
       "exception": null
     },
     {
@@ -14235,7 +14235,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1134,
+      "latency_ms": 0.1157,
       "exception": null
     },
     {
@@ -14257,7 +14257,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1078,
+      "latency_ms": 0.1047,
       "exception": null
     },
     {
@@ -14279,7 +14279,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0944,
+      "latency_ms": 0.0938,
       "exception": null
     },
     {
@@ -14301,7 +14301,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.103,
+      "latency_ms": 0.1002,
       "exception": null
     },
     {
@@ -14323,7 +14323,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0932,
+      "latency_ms": 0.0922,
       "exception": null
     },
     {
@@ -14345,7 +14345,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 53.03,
-      "latency_ms": 0.1133,
+      "latency_ms": 0.1305,
       "exception": null
     },
     {
@@ -14367,7 +14367,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1155,
+      "latency_ms": 0.1159,
       "exception": null
     },
     {
@@ -14389,7 +14389,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1063,
+      "latency_ms": 0.1053,
       "exception": null
     },
     {
@@ -14411,7 +14411,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 178.63,
-      "latency_ms": 0.1166,
+      "latency_ms": 0.1152,
       "exception": null
     },
     {
@@ -14433,7 +14433,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 81518.83,
-      "latency_ms": 0.1161,
+      "latency_ms": 0.1132,
       "exception": null
     },
     {
@@ -14455,7 +14455,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0957,
+      "latency_ms": 0.0948,
       "exception": null
     },
     {
@@ -14477,7 +14477,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 13192.71,
-      "latency_ms": 0.1179,
+      "latency_ms": 0.1174,
       "exception": null
     },
     {
@@ -14499,7 +14499,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1208,
+      "latency_ms": 0.1227,
       "exception": null
     },
     {
@@ -14521,7 +14521,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1045,
+      "latency_ms": 0.0972,
       "exception": null
     },
     {
@@ -14543,7 +14543,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1035,
+      "latency_ms": 0.1042,
       "exception": null
     },
     {
@@ -14565,7 +14565,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0912,
+      "latency_ms": 0.0896,
       "exception": null
     },
     {
@@ -14587,7 +14587,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1727.79,
-      "latency_ms": 0.124,
+      "latency_ms": 0.1264,
       "exception": null
     },
     {
@@ -14609,7 +14609,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 129.85,
-      "latency_ms": 0.1128,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -14631,7 +14631,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 2417.27,
-      "latency_ms": 0.1183,
+      "latency_ms": 0.118,
       "exception": null
     },
     {
@@ -14653,7 +14653,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0918,
+      "latency_ms": 0.0921,
       "exception": null
     },
     {
@@ -14675,7 +14675,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.105,
+      "latency_ms": 0.1045,
       "exception": null
     },
     {
@@ -14697,7 +14697,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1143,
+      "latency_ms": 0.1255,
       "exception": null
     },
     {
@@ -14719,7 +14719,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1596,
+      "latency_ms": 0.119,
       "exception": null
     },
     {
@@ -14741,7 +14741,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 453.06,
-      "latency_ms": 0.1194,
+      "latency_ms": 0.1247,
       "exception": null
     },
     {
@@ -14763,7 +14763,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1209,
+      "latency_ms": 0.1139,
       "exception": null
     },
     {
@@ -14785,7 +14785,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1025,
+      "latency_ms": 0.0993,
       "exception": null
     },
     {
@@ -14807,7 +14807,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1049,
+      "latency_ms": 0.1006,
       "exception": null
     },
     {
@@ -14829,7 +14829,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 152.32,
-      "latency_ms": 0.1375,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -14851,7 +14851,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1235,
+      "latency_ms": 0.102,
       "exception": null
     },
     {
@@ -14873,7 +14873,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 4634.8,
-      "latency_ms": 0.1387,
+      "latency_ms": 0.1241,
       "exception": null
     },
     {
@@ -14895,7 +14895,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 304.79,
-      "latency_ms": 0.113,
+      "latency_ms": 0.1114,
       "exception": null
     },
     {
@@ -14917,7 +14917,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3682.06,
-      "latency_ms": 0.1121,
+      "latency_ms": 0.1115,
       "exception": null
     },
     {
@@ -14939,7 +14939,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.2337,
+      "latency_ms": 0.2215,
       "exception": null
     },
     {
@@ -14961,7 +14961,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2655.61,
-      "latency_ms": 0.116,
+      "latency_ms": 0.1158,
       "exception": null
     },
     {
@@ -14983,7 +14983,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1011,
+      "latency_ms": 0.104,
       "exception": null
     },
     {
@@ -15005,7 +15005,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0907,
+      "latency_ms": 0.0919,
       "exception": null
     },
     {
@@ -15027,7 +15027,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 2349.87,
-      "latency_ms": 0.139,
+      "latency_ms": 0.1182,
       "exception": null
     },
     {
@@ -15049,7 +15049,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1075,
+      "latency_ms": 0.1091,
       "exception": null
     },
     {
@@ -15071,7 +15071,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0912,
+      "latency_ms": 0.0973,
       "exception": null
     },
     {
@@ -15093,7 +15093,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0937,
+      "latency_ms": 0.0939,
       "exception": null
     },
     {
@@ -15115,7 +15115,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 185.46,
-      "latency_ms": 0.113,
+      "latency_ms": 0.1179,
       "exception": null
     },
     {
@@ -15137,7 +15137,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 76808.12,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1134,
       "exception": null
     },
     {
@@ -15159,7 +15159,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 80080.6,
-      "latency_ms": 0.1077,
+      "latency_ms": 0.11,
       "exception": null
     },
     {
@@ -15181,7 +15181,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1096,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -15203,7 +15203,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1064,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -15225,7 +15225,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1268,
       "exception": null
     },
     {
@@ -15247,7 +15247,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 929.13,
-      "latency_ms": 0.1079,
+      "latency_ms": 0.1118,
       "exception": null
     },
     {
@@ -15269,7 +15269,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1097,
+      "latency_ms": 0.1285,
       "exception": null
     },
     {
@@ -15291,7 +15291,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3843.97,
-      "latency_ms": 0.1034,
+      "latency_ms": 0.1065,
       "exception": null
     },
     {
@@ -15313,7 +15313,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1078,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -15335,7 +15335,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1081,
+      "latency_ms": 0.1106,
       "exception": null
     },
     {
@@ -15357,7 +15357,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0979,
+      "latency_ms": 0.0983,
       "exception": null
     },
     {
@@ -15379,7 +15379,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 197.86,
-      "latency_ms": 0.1074,
+      "latency_ms": 0.11,
       "exception": null
     },
     {
@@ -15401,7 +15401,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1094,
+      "latency_ms": 0.1117,
       "exception": null
     },
     {
@@ -15423,7 +15423,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1183,
+      "latency_ms": 0.1216,
       "exception": null
     },
     {
@@ -15445,7 +15445,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0976,
+      "latency_ms": 0.0992,
       "exception": null
     },
     {
@@ -15467,7 +15467,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1124,
+      "latency_ms": 0.1148,
       "exception": null
     },
     {
@@ -15489,7 +15489,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 436.58,
-      "latency_ms": 0.1065,
+      "latency_ms": 0.1096,
       "exception": null
     },
     {
@@ -15511,7 +15511,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4276.05,
-      "latency_ms": 0.1102,
+      "latency_ms": 0.1258,
       "exception": null
     },
     {
@@ -15533,7 +15533,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1167,
+      "latency_ms": 0.1368,
       "exception": null
     },
     {
@@ -15555,7 +15555,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.109,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -15577,7 +15577,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0975,
+      "latency_ms": 0.1008,
       "exception": null
     },
     {
@@ -15599,7 +15599,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0888,
+      "latency_ms": 0.091,
       "exception": null
     },
     {
@@ -15621,7 +15621,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0929,
+      "latency_ms": 0.0966,
       "exception": null
     },
     {
@@ -15643,7 +15643,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1132,
+      "latency_ms": 0.115,
       "exception": null
     },
     {
@@ -15665,7 +15665,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1014,
+      "latency_ms": 0.1044,
       "exception": null
     },
     {
@@ -15687,7 +15687,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.096,
+      "latency_ms": 0.0992,
       "exception": null
     },
     {
@@ -15709,7 +15709,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4580.19,
-      "latency_ms": 0.1118,
+      "latency_ms": 0.1143,
       "exception": null
     },
     {
@@ -15731,7 +15731,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1057,
+      "latency_ms": 0.1072,
       "exception": null
     },
     {
@@ -15753,7 +15753,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1282,
+      "latency_ms": 0.1348,
       "exception": null
     },
     {
@@ -15775,7 +15775,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1188,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -15797,7 +15797,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 331.48,
-      "latency_ms": 0.1168,
+      "latency_ms": 0.1171,
       "exception": null
     },
     {
@@ -15819,7 +15819,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1198,
+      "latency_ms": 0.1217,
       "exception": null
     },
     {
@@ -15841,7 +15841,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1866.82,
-      "latency_ms": 0.1081,
+      "latency_ms": 0.1082,
       "exception": null
     },
     {
@@ -15863,7 +15863,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1244,
+      "latency_ms": 0.1148,
       "exception": null
     },
     {
@@ -15885,7 +15885,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 153.3,
-      "latency_ms": 0.1156,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -15907,7 +15907,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1494.55,
-      "latency_ms": 0.1198,
+      "latency_ms": 0.12,
       "exception": null
     },
     {
@@ -15929,7 +15929,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0979,
+      "latency_ms": 0.0995,
       "exception": null
     },
     {
@@ -15951,7 +15951,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0958,
+      "latency_ms": 0.0961,
       "exception": null
     },
     {
@@ -15973,7 +15973,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1009,
+      "latency_ms": 0.1026,
       "exception": null
     },
     {
@@ -15995,7 +15995,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1139,
+      "latency_ms": 0.1125,
       "exception": null
     },
     {
@@ -16017,7 +16017,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.12,
+      "latency_ms": 0.1211,
       "exception": null
     },
     {
@@ -16039,7 +16039,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1107,
+      "latency_ms": 0.1072,
       "exception": null
     },
     {
@@ -16061,7 +16061,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1098,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -16083,7 +16083,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1184,
+      "latency_ms": 0.1129,
       "exception": null
     },
     {
@@ -16105,7 +16105,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 487.46,
-      "latency_ms": 0.1193,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -16127,7 +16127,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.105,
+      "latency_ms": 0.1017,
       "exception": null
     },
     {
@@ -16149,7 +16149,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1179,
+      "latency_ms": 0.1163,
       "exception": null
     },
     {
@@ -16171,7 +16171,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1173,
+      "latency_ms": 0.1204,
       "exception": null
     },
     {
@@ -16193,7 +16193,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0935,
+      "latency_ms": 0.1058,
       "exception": null
     },
     {
@@ -16215,7 +16215,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 361.55,
-      "latency_ms": 0.1126,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -16237,7 +16237,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1013,
+      "latency_ms": 0.1029,
       "exception": null
     },
     {
@@ -16259,7 +16259,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 337.5,
-      "latency_ms": 0.1105,
+      "latency_ms": 0.1109,
       "exception": null
     },
     {
@@ -16303,7 +16303,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1063,
+      "latency_ms": 0.1059,
       "exception": null
     },
     {
@@ -16325,7 +16325,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2090.07,
-      "latency_ms": 0.1118,
+      "latency_ms": 0.1129,
       "exception": null
     },
     {
@@ -16347,7 +16347,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0994,
+      "latency_ms": 0.0985,
       "exception": null
     },
     {
@@ -16369,7 +16369,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1245,
+      "latency_ms": 0.1256,
       "exception": null
     },
     {
@@ -16391,7 +16391,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 119.52,
-      "latency_ms": 0.1131,
+      "latency_ms": 0.1125,
       "exception": null
     },
     {
@@ -16413,7 +16413,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1091,
+      "latency_ms": 0.11,
       "exception": null
     },
     {
@@ -16435,7 +16435,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 549.21,
-      "latency_ms": 0.1148,
+      "latency_ms": 0.114,
       "exception": null
     },
     {
@@ -16457,7 +16457,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 26786.86,
-      "latency_ms": 0.1184,
+      "latency_ms": 0.1177,
       "exception": null
     },
     {
@@ -16479,7 +16479,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1092,
+      "latency_ms": 0.1099,
       "exception": null
     },
     {
@@ -16501,7 +16501,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0928,
+      "latency_ms": 0.0915,
       "exception": null
     },
     {
@@ -16523,7 +16523,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 45697.46,
-      "latency_ms": 0.1119,
+      "latency_ms": 0.1089,
       "exception": null
     },
     {
@@ -16545,7 +16545,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 292.51,
-      "latency_ms": 0.117,
+      "latency_ms": 0.1163,
       "exception": null
     },
     {
@@ -16567,7 +16567,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2995.73,
-      "latency_ms": 0.1156,
+      "latency_ms": 0.1318,
       "exception": null
     },
     {
@@ -16589,7 +16589,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1103,
+      "latency_ms": 0.1095,
       "exception": null
     },
     {
@@ -16611,7 +16611,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1047,
+      "latency_ms": 0.104,
       "exception": null
     },
     {
@@ -16633,7 +16633,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1468,
+      "latency_ms": 0.1167,
       "exception": null
     },
     {
@@ -16655,7 +16655,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1086,
+      "latency_ms": 0.1092,
       "exception": null
     },
     {
@@ -16677,7 +16677,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0908,
+      "latency_ms": 0.0912,
       "exception": null
     },
     {
@@ -16699,7 +16699,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 117.12,
-      "latency_ms": 0.1355,
+      "latency_ms": 0.1144,
       "exception": null
     },
     {
@@ -16721,7 +16721,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1292,
+      "latency_ms": 0.1135,
       "exception": null
     },
     {
@@ -16743,7 +16743,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.116,
+      "latency_ms": 0.125,
       "exception": null
     },
     {
@@ -16765,7 +16765,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1173,
+      "latency_ms": 0.117,
       "exception": null
     },
     {
@@ -16787,7 +16787,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1113,
+      "latency_ms": 0.1109,
       "exception": null
     },
     {
@@ -16809,7 +16809,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1095,
+      "latency_ms": 0.1089,
       "exception": null
     },
     {
@@ -16831,7 +16831,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0953,
+      "latency_ms": 0.0938,
       "exception": null
     },
     {
@@ -16853,7 +16853,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1025,
+      "latency_ms": 0.1044,
       "exception": null
     },
     {
@@ -16875,7 +16875,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1178,
+      "latency_ms": 0.1184,
       "exception": null
     },
     {
@@ -16897,7 +16897,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1046,
+      "latency_ms": 0.1039,
       "exception": null
     },
     {
@@ -16919,7 +16919,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1152,
+      "latency_ms": 0.1147,
       "exception": null
     },
     {
@@ -16941,7 +16941,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1144,
+      "latency_ms": 0.1159,
       "exception": null
     },
     {
@@ -16963,7 +16963,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1048,
+      "latency_ms": 0.1038,
       "exception": null
     },
     {
@@ -16985,7 +16985,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.111,
+      "latency_ms": 0.1135,
       "exception": null
     },
     {
@@ -17007,7 +17007,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2484.72,
-      "latency_ms": 0.1155,
+      "latency_ms": 0.1337,
       "exception": null
     },
     {
@@ -17029,7 +17029,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0951,
+      "latency_ms": 0.0948,
       "exception": null
     },
     {
@@ -17051,7 +17051,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.116,
+      "latency_ms": 0.1097,
       "exception": null
     },
     {
@@ -17073,7 +17073,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0973,
+      "latency_ms": 0.0977,
       "exception": null
     },
     {
@@ -17095,7 +17095,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1098,
+      "latency_ms": 0.1091,
       "exception": null
     },
     {
@@ -17117,7 +17117,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1148,
+      "latency_ms": 0.1155,
       "exception": null
     },
     {
@@ -17139,7 +17139,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0951,
+      "latency_ms": 0.0956,
       "exception": null
     },
     {
@@ -17161,7 +17161,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1143,
+      "latency_ms": 0.1146,
       "exception": null
     },
     {
@@ -17183,7 +17183,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0963,
+      "latency_ms": 0.0947,
       "exception": null
     },
     {
@@ -17205,7 +17205,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 295.46,
-      "latency_ms": 0.1178,
+      "latency_ms": 0.1203,
       "exception": null
     },
     {
@@ -17227,7 +17227,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0996,
+      "latency_ms": 0.0988,
       "exception": null
     },
     {
@@ -17249,7 +17249,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1031,
+      "latency_ms": 0.1037,
       "exception": null
     },
     {
@@ -17271,7 +17271,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.112,
+      "latency_ms": 0.1341,
       "exception": null
     },
     {
@@ -17293,7 +17293,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1004,
+      "latency_ms": 0.101,
       "exception": null
     },
     {
@@ -17315,7 +17315,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 145.05,
-      "latency_ms": 0.1159,
+      "latency_ms": 0.1179,
       "exception": null
     },
     {
@@ -17337,7 +17337,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 3223.41,
-      "latency_ms": 0.118,
+      "latency_ms": 0.1185,
       "exception": null
     },
     {
@@ -17359,7 +17359,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0902,
+      "latency_ms": 0.0927,
       "exception": null
     },
     {
@@ -17381,7 +17381,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1144,
       "exception": null
     },
     {
@@ -17403,7 +17403,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 212.56,
-      "latency_ms": 0.1121,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -17425,7 +17425,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2600.1,
-      "latency_ms": 0.1179,
+      "latency_ms": 0.1157,
       "exception": null
     },
     {
@@ -17447,7 +17447,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 348.92,
-      "latency_ms": 0.1124,
+      "latency_ms": 0.1144,
       "exception": null
     },
     {
@@ -17469,7 +17469,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.093,
+      "latency_ms": 0.0932,
       "exception": null
     },
     {
@@ -17491,7 +17491,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 485.44,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1134,
       "exception": null
     },
     {
@@ -17513,7 +17513,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1115,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -17535,7 +17535,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 225.49,
-      "latency_ms": 0.1127,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -17557,7 +17557,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1103,
+      "latency_ms": 0.1071,
       "exception": null
     },
     {
@@ -17579,7 +17579,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0954,
+      "latency_ms": 0.0922,
       "exception": null
     },
     {
@@ -17601,7 +17601,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0933,
+      "latency_ms": 0.0936,
       "exception": null
     },
     {
@@ -17623,7 +17623,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1089,
+      "latency_ms": 0.0948,
       "exception": null
     },
     {
@@ -17645,7 +17645,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 21965.71,
-      "latency_ms": 0.2208,
+      "latency_ms": 0.1143,
       "exception": null
     },
     {
@@ -17667,7 +17667,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1241,
+      "latency_ms": 0.0922,
       "exception": null
     },
     {
@@ -17689,7 +17689,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 48375.15,
-      "latency_ms": 0.1351,
+      "latency_ms": 0.1156,
       "exception": null
     },
     {
@@ -17711,7 +17711,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1302,
+      "latency_ms": 0.1162,
       "exception": null
     },
     {
@@ -17733,7 +17733,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1506.06,
-      "latency_ms": 0.1289,
+      "latency_ms": 0.1147,
       "exception": null
     },
     {
@@ -17755,7 +17755,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.2769,
+      "latency_ms": 0.2344,
       "exception": null
     },
     {
@@ -17777,7 +17777,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1319,
+      "latency_ms": 0.116,
       "exception": null
     },
     {
@@ -17799,7 +17799,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1318,
+      "latency_ms": 0.111,
       "exception": null
     },
     {
@@ -17821,7 +17821,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1206,
+      "latency_ms": 0.1108,
       "exception": null
     },
     {
@@ -17843,7 +17843,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1143,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -17865,7 +17865,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1203,
+      "latency_ms": 0.1202,
       "exception": null
     },
     {
@@ -17887,7 +17887,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 365.9,
-      "latency_ms": 0.1187,
+      "latency_ms": 0.1157,
       "exception": null
     },
     {
@@ -17909,7 +17909,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1225,
+      "latency_ms": 0.1207,
       "exception": null
     },
     {
@@ -17953,7 +17953,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0948,
+      "latency_ms": 0.095,
       "exception": null
     },
     {
@@ -17975,7 +17975,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0981,
+      "latency_ms": 0.0994,
       "exception": null
     },
     {
@@ -17997,7 +17997,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 2528.05,
-      "latency_ms": 0.1178,
+      "latency_ms": 0.1249,
       "exception": null
     },
     {
@@ -18019,7 +18019,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 93164.94,
-      "latency_ms": 0.1147,
+      "latency_ms": 0.1137,
       "exception": null
     },
     {
@@ -18041,7 +18041,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1231,
+      "latency_ms": 0.1163,
       "exception": null
     },
     {
@@ -18063,7 +18063,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.108,
+      "latency_ms": 0.1084,
       "exception": null
     },
     {
@@ -18085,7 +18085,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1043,
+      "latency_ms": 0.1065,
       "exception": null
     },
     {
@@ -18129,7 +18129,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1,
+      "latency_ms": 0.102,
       "exception": null
     },
     {
@@ -18151,7 +18151,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 151.59,
-      "latency_ms": 0.1144,
+      "latency_ms": 0.1156,
       "exception": null
     },
     {
@@ -18173,7 +18173,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1083,
+      "latency_ms": 0.1103,
       "exception": null
     },
     {
@@ -18195,7 +18195,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0945,
+      "latency_ms": 0.1001,
       "exception": null
     },
     {
@@ -18217,7 +18217,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1112,
+      "latency_ms": 0.1262,
       "exception": null
     },
     {
@@ -18239,7 +18239,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0971,
+      "latency_ms": 0.1309,
       "exception": null
     },
     {
@@ -18261,7 +18261,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 562.95,
-      "latency_ms": 0.11,
+      "latency_ms": 0.1122,
       "exception": null
     },
     {
@@ -18283,7 +18283,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1069,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -18305,7 +18305,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 175.96,
-      "latency_ms": 0.1144,
+      "latency_ms": 0.1168,
       "exception": null
     },
     {
@@ -18327,7 +18327,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2079.51,
-      "latency_ms": 0.11,
+      "latency_ms": 0.1126,
       "exception": null
     },
     {
@@ -18349,7 +18349,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1145,
       "exception": null
     },
     {
@@ -18371,7 +18371,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 252.47,
-      "latency_ms": 0.1167,
+      "latency_ms": 0.1186,
       "exception": null
     },
     {
@@ -18393,7 +18393,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1159,
       "exception": null
     },
     {
@@ -18415,7 +18415,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 2886.89,
-      "latency_ms": 0.107,
+      "latency_ms": 0.1102,
       "exception": null
     },
     {
@@ -18437,7 +18437,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1036,
+      "latency_ms": 0.1058,
       "exception": null
     },
     {
@@ -18459,7 +18459,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3541.91,
-      "latency_ms": 0.1098,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -18481,7 +18481,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.096,
+      "latency_ms": 0.0978,
       "exception": null
     },
     {
@@ -18503,7 +18503,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0989,
+      "latency_ms": 0.1015,
       "exception": null
     },
     {
@@ -18525,7 +18525,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1056,
+      "latency_ms": 0.1048,
       "exception": null
     },
     {
@@ -18547,7 +18547,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1015,
+      "latency_ms": 0.1037,
       "exception": null
     },
     {
@@ -18569,7 +18569,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 71.23,
-      "latency_ms": 0.1168,
+      "latency_ms": 0.1229,
       "exception": null
     },
     {
@@ -18591,7 +18591,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1092,
+      "latency_ms": 0.1109,
       "exception": null
     },
     {
@@ -18613,7 +18613,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1152,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -18635,7 +18635,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1277,
+      "latency_ms": 0.0964,
       "exception": null
     },
     {
@@ -18657,7 +18657,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0947,
+      "latency_ms": 0.0927,
       "exception": null
     },
     {
@@ -18679,7 +18679,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 1599.59,
-      "latency_ms": 0.1232,
+      "latency_ms": 0.119,
       "exception": null
     },
     {
@@ -18701,7 +18701,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.11,
+      "latency_ms": 0.1099,
       "exception": null
     },
     {
@@ -18723,7 +18723,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0949,
+      "latency_ms": 0.093,
       "exception": null
     },
     {
@@ -18745,7 +18745,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.107,
+      "latency_ms": 0.1053,
       "exception": null
     },
     {
@@ -18767,7 +18767,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1215,
+      "latency_ms": 0.1209,
       "exception": null
     },
     {
@@ -18789,7 +18789,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 25479.23,
-      "latency_ms": 0.1083,
+      "latency_ms": 0.1473,
       "exception": null
     },
     {
@@ -18811,7 +18811,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0996,
+      "latency_ms": 0.0973,
       "exception": null
     },
     {
@@ -18833,7 +18833,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1025,
+      "latency_ms": 0.1024,
       "exception": null
     },
     {
@@ -18855,7 +18855,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0999,
+      "latency_ms": 0.106,
       "exception": null
     },
     {
@@ -18877,7 +18877,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0964,
+      "latency_ms": 0.1477,
       "exception": null
     },
     {
@@ -18899,7 +18899,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 114.78,
-      "latency_ms": 0.1159,
+      "latency_ms": 0.1156,
       "exception": null
     },
     {
@@ -18921,7 +18921,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0944,
+      "latency_ms": 0.094,
       "exception": null
     },
     {
@@ -18943,7 +18943,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1119,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -18965,7 +18965,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1183,
+      "latency_ms": 0.1177,
       "exception": null
     },
     {
@@ -18987,7 +18987,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 253.6,
-      "latency_ms": 0.1101,
+      "latency_ms": 0.1132,
       "exception": null
     },
     {
@@ -19009,7 +19009,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0986,
+      "latency_ms": 0.0977,
       "exception": null
     },
     {
@@ -19031,7 +19031,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1115,
       "exception": null
     },
     {
@@ -19053,7 +19053,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1244,
+      "latency_ms": 0.1172,
       "exception": null
     },
     {
@@ -19075,7 +19075,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1185,
+      "latency_ms": 0.1193,
       "exception": null
     },
     {
@@ -19097,7 +19097,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 435.7,
-      "latency_ms": 0.1118,
+      "latency_ms": 0.111,
       "exception": null
     },
     {
@@ -19119,7 +19119,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.104,
+      "latency_ms": 0.1039,
       "exception": null
     },
     {
@@ -19141,7 +19141,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 99929.0,
-      "latency_ms": 0.1174,
+      "latency_ms": 0.1135,
       "exception": null
     },
     {
@@ -19163,7 +19163,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.221,
+      "latency_ms": 0.2359,
       "exception": null
     },
     {
@@ -19185,7 +19185,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1225,
+      "latency_ms": 0.1292,
       "exception": null
     },
     {
@@ -19207,7 +19207,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 66.92,
-      "latency_ms": 0.1118,
+      "latency_ms": 0.1122,
       "exception": null
     },
     {
@@ -19229,7 +19229,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1104,
+      "latency_ms": 0.1103,
       "exception": null
     },
     {
@@ -19251,7 +19251,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4734.79,
-      "latency_ms": 0.1188,
+      "latency_ms": 0.1212,
       "exception": null
     },
     {
@@ -19273,7 +19273,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 61959.34,
-      "latency_ms": 0.114,
+      "latency_ms": 0.1156,
       "exception": null
     },
     {
@@ -19295,7 +19295,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1644.11,
-      "latency_ms": 0.1146,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -19317,7 +19317,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1141,
+      "latency_ms": 0.1161,
       "exception": null
     },
     {
@@ -19339,7 +19339,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1128,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -19361,7 +19361,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.105,
+      "latency_ms": 0.1055,
       "exception": null
     },
     {
@@ -19383,7 +19383,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1123,
       "exception": null
     },
     {
@@ -19405,7 +19405,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1127,
+      "latency_ms": 0.1121,
       "exception": null
     },
     {
@@ -19427,7 +19427,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0923,
+      "latency_ms": 0.092,
       "exception": null
     },
     {
@@ -19449,7 +19449,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1095,
+      "latency_ms": 0.1101,
       "exception": null
     },
     {
@@ -19471,7 +19471,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.099,
+      "latency_ms": 0.0987,
       "exception": null
     },
     {
@@ -19493,7 +19493,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1149,
+      "latency_ms": 0.1151,
       "exception": null
     },
     {
@@ -19515,7 +19515,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1122,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -19537,7 +19537,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1057,
+      "latency_ms": 0.1049,
       "exception": null
     },
     {
@@ -19559,7 +19559,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4699.52,
-      "latency_ms": 0.1134,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -19581,7 +19581,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1243,
+      "latency_ms": 0.1002,
       "exception": null
     },
     {
@@ -19603,7 +19603,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1,
+      "latency_ms": 0.1006,
       "exception": null
     },
     {
@@ -19625,7 +19625,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4559.13,
-      "latency_ms": 0.1138,
+      "latency_ms": 0.1147,
       "exception": null
     },
     {
@@ -19647,7 +19647,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1122,
+      "latency_ms": 0.11,
       "exception": null
     },
     {
@@ -19669,7 +19669,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4155.97,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1154,
       "exception": null
     },
     {
@@ -19691,7 +19691,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0926,
+      "latency_ms": 0.0924,
       "exception": null
     },
     {
@@ -19713,7 +19713,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2146.21,
-      "latency_ms": 0.1197,
+      "latency_ms": 0.1269,
       "exception": null
     },
     {
@@ -19735,7 +19735,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 62624.09,
-      "latency_ms": 0.1159,
+      "latency_ms": 0.1146,
       "exception": null
     },
     {
@@ -19757,7 +19757,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1705.55,
-      "latency_ms": 0.1067,
+      "latency_ms": 0.1065,
       "exception": null
     },
     {
@@ -19779,7 +19779,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0902,
+      "latency_ms": 0.1044,
       "exception": null
     },
     {
@@ -19801,7 +19801,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 210.64,
-      "latency_ms": 0.111,
+      "latency_ms": 0.1118,
       "exception": null
     },
     {
@@ -19823,7 +19823,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 197.55,
-      "latency_ms": 0.1135,
+      "latency_ms": 0.1217,
       "exception": null
     },
     {
@@ -19845,7 +19845,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 4188.37,
-      "latency_ms": 0.1201,
+      "latency_ms": 0.1356,
       "exception": null
     },
     {
@@ -19867,7 +19867,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 55.63,
-      "latency_ms": 0.1163,
+      "latency_ms": 0.1173,
       "exception": null
     },
     {
@@ -19889,7 +19889,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 18768.89,
-      "latency_ms": 0.1137,
+      "latency_ms": 0.114,
       "exception": null
     },
     {
@@ -19911,7 +19911,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0954,
+      "latency_ms": 0.0951,
       "exception": null
     },
     {
@@ -19933,7 +19933,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 53727.2,
-      "latency_ms": 0.1165,
+      "latency_ms": 0.1158,
       "exception": null
     },
     {
@@ -19955,7 +19955,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 446.57,
-      "latency_ms": 0.1096,
+      "latency_ms": 0.1172,
       "exception": null
     },
     {
@@ -19977,7 +19977,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1166,
+      "latency_ms": 0.1209,
       "exception": null
     },
     {
@@ -19999,7 +19999,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1095,
+      "latency_ms": 0.1112,
       "exception": null
     },
     {
@@ -20021,7 +20021,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 2678.1,
-      "latency_ms": 0.1153,
+      "latency_ms": 0.1133,
       "exception": null
     },
     {
@@ -20043,7 +20043,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 724.8,
-      "latency_ms": 0.1198,
+      "latency_ms": 0.1196,
       "exception": null
     },
     {
@@ -20065,7 +20065,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0943,
+      "latency_ms": 0.095,
       "exception": null
     },
     {
@@ -20087,7 +20087,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 453.47,
-      "latency_ms": 0.1136,
+      "latency_ms": 0.1157,
       "exception": null
     },
     {
@@ -20109,7 +20109,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1204,
+      "latency_ms": 0.1206,
       "exception": null
     },
     {
@@ -20131,7 +20131,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1041,
+      "latency_ms": 0.1124,
       "exception": null
     },
     {
@@ -20153,7 +20153,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1202,
+      "latency_ms": 0.1203,
       "exception": null
     },
     {
@@ -20175,7 +20175,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0975,
+      "latency_ms": 0.0981,
       "exception": null
     },
     {
@@ -20197,7 +20197,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0958,
+      "latency_ms": 0.0951,
       "exception": null
     },
     {
@@ -20219,7 +20219,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1138,
+      "latency_ms": 0.1154,
       "exception": null
     },
     {
@@ -20241,7 +20241,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0936,
+      "latency_ms": 0.093,
       "exception": null
     },
     {
@@ -20263,7 +20263,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1087,
+      "latency_ms": 0.1102,
       "exception": null
     },
     {
@@ -20285,7 +20285,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1006,
+      "latency_ms": 0.1012,
       "exception": null
     },
     {
@@ -20307,7 +20307,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0927,
+      "latency_ms": 0.0932,
       "exception": null
     },
     {
@@ -20329,7 +20329,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1128,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -20351,7 +20351,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1088,
+      "latency_ms": 0.1096,
       "exception": null
     },
     {
@@ -20373,7 +20373,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 942.85,
-      "latency_ms": 0.1169,
+      "latency_ms": 0.1164,
       "exception": null
     },
     {
@@ -20395,7 +20395,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 1421.05,
-      "latency_ms": 0.114,
+      "latency_ms": 0.1168,
       "exception": null
     },
     {
@@ -20417,7 +20417,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 267.65,
-      "latency_ms": 0.1156,
+      "latency_ms": 0.116,
       "exception": null
     },
     {
@@ -20439,7 +20439,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1053,
+      "latency_ms": 0.107,
       "exception": null
     },
     {
@@ -20461,7 +20461,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1049,
+      "latency_ms": 0.1053,
       "exception": null
     },
     {
@@ -20483,7 +20483,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2917.52,
-      "latency_ms": 0.1164,
+      "latency_ms": 0.1173,
       "exception": null
     },
     {
@@ -20505,7 +20505,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0967,
+      "latency_ms": 0.0972,
       "exception": null
     },
     {
@@ -20527,7 +20527,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1062,
+      "latency_ms": 0.1079,
       "exception": null
     },
     {
@@ -20549,7 +20549,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0987,
+      "latency_ms": 0.0996,
       "exception": null
     },
     {
@@ -20571,7 +20571,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1088,
+      "latency_ms": 0.1039,
       "exception": null
     },
     {
@@ -20593,7 +20593,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1124,
+      "latency_ms": 0.1156,
       "exception": null
     },
     {
@@ -20615,7 +20615,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0987,
+      "latency_ms": 0.1007,
       "exception": null
     },
     {
@@ -20637,7 +20637,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1036,
+      "latency_ms": 0.1057,
       "exception": null
     },
     {
@@ -20659,7 +20659,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4273.57,
-      "latency_ms": 0.1166,
+      "latency_ms": 0.1164,
       "exception": null
     },
     {
@@ -20681,7 +20681,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0965,
+      "latency_ms": 0.0972,
       "exception": null
     },
     {
@@ -20703,7 +20703,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3287.8,
-      "latency_ms": 0.1078,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -20725,7 +20725,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0934,
+      "latency_ms": 0.0933,
       "exception": null
     },
     {
@@ -20747,7 +20747,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1059,
+      "latency_ms": 0.095,
       "exception": null
     },
     {
@@ -20769,7 +20769,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 59.25,
-      "latency_ms": 0.1552,
+      "latency_ms": 0.112,
       "exception": null
     },
     {
@@ -20791,7 +20791,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1286,
+      "latency_ms": 0.1164,
       "exception": null
     },
     {
@@ -20813,7 +20813,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1293,
+      "latency_ms": 0.1439,
       "exception": null
     },
     {
@@ -20835,7 +20835,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1226,
+      "latency_ms": 0.1284,
       "exception": null
     },
     {
@@ -20857,7 +20857,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1206,
+      "latency_ms": 0.1034,
       "exception": null
     },
     {
@@ -20879,7 +20879,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1367,
+      "latency_ms": 0.1113,
       "exception": null
     },
     {
@@ -20901,7 +20901,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 63.25,
-      "latency_ms": 0.1218,
+      "latency_ms": 0.114,
       "exception": null
     },
     {
@@ -20923,7 +20923,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 92.45,
-      "latency_ms": 0.1165,
+      "latency_ms": 0.1142,
       "exception": null
     },
     {
@@ -20945,7 +20945,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1036,
+      "latency_ms": 0.1025,
       "exception": null
     },
     {
@@ -20967,7 +20967,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": 133.39,
-      "latency_ms": 0.1188,
+      "latency_ms": 0.1145,
       "exception": null
     },
     {
@@ -20989,7 +20989,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4908.39,
-      "latency_ms": 0.1167,
+      "latency_ms": 0.1142,
       "exception": null
     },
     {
@@ -21011,7 +21011,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1174,
+      "latency_ms": 0.1148,
       "exception": null
     },
     {
@@ -21033,7 +21033,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1165,
+      "latency_ms": 0.1163,
       "exception": null
     },
     {
@@ -21055,7 +21055,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1208,
+      "latency_ms": 0.1186,
       "exception": null
     },
     {
@@ -21077,7 +21077,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1275,
+      "latency_ms": 0.1148,
       "exception": null
     },
     {
@@ -21099,7 +21099,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": -3.0,
-      "latency_ms": 0.1118,
+      "latency_ms": 0.1109,
       "exception": null
     },
     {
@@ -21121,7 +21121,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 401.19,
-      "latency_ms": 0.1159,
+      "latency_ms": 0.1136,
       "exception": null
     },
     {
@@ -21143,7 +21143,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 1476.83,
-      "latency_ms": 0.1105,
+      "latency_ms": 0.1145,
       "exception": null
     },
     {
@@ -21165,7 +21165,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1161,
+      "latency_ms": 0.1263,
       "exception": null
     },
     {
@@ -21187,7 +21187,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1087,
+      "latency_ms": 0.1104,
       "exception": null
     },
     {
@@ -21209,7 +21209,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0971,
+      "latency_ms": 0.0987,
       "exception": null
     },
     {
@@ -21231,7 +21231,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 15783.64,
-      "latency_ms": 0.1166,
+      "latency_ms": 0.1179,
       "exception": null
     },
     {
@@ -21253,7 +21253,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1119,
+      "latency_ms": 0.1151,
       "exception": null
     },
     {
@@ -21275,7 +21275,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0971,
+      "latency_ms": 0.0974,
       "exception": null
     },
     {
@@ -21297,7 +21297,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2378.96,
-      "latency_ms": 0.1125,
+      "latency_ms": 0.1165,
       "exception": null
     },
     {
@@ -21319,7 +21319,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0901,
+      "latency_ms": 0.0915,
       "exception": null
     },
     {
@@ -21341,7 +21341,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 368.44,
-      "latency_ms": 0.1133,
+      "latency_ms": 0.1116,
       "exception": null
     },
     {
@@ -21363,7 +21363,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2192.81,
-      "latency_ms": 0.111,
+      "latency_ms": 0.1141,
       "exception": null
     },
     {
@@ -21385,7 +21385,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0914,
+      "latency_ms": 0.0935,
       "exception": null
     },
     {
@@ -21407,7 +21407,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1093,
+      "latency_ms": 0.1112,
       "exception": null
     },
     {
@@ -21429,7 +21429,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 2596.58,
-      "latency_ms": 0.1138,
+      "latency_ms": 0.1145,
       "exception": null
     },
     {
@@ -21451,7 +21451,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1001,
+      "latency_ms": 0.102,
       "exception": null
     },
     {
@@ -21495,7 +21495,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1091,
+      "latency_ms": 0.1122,
       "exception": null
     },
     {
@@ -21517,7 +21517,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1183,
+      "latency_ms": 0.1134,
       "exception": null
     },
     {
@@ -21539,7 +21539,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.114,
+      "latency_ms": 0.0963,
       "exception": null
     },
     {
@@ -21561,7 +21561,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.1086,
+      "latency_ms": 0.11,
       "exception": null
     },
     {
@@ -21583,7 +21583,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": 92237.32,
-      "latency_ms": 0.1095,
+      "latency_ms": 0.1096,
       "exception": null
     },
     {
@@ -21605,7 +21605,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4902.98,
-      "latency_ms": 0.1129,
+      "latency_ms": 0.1161,
       "exception": null
     },
     {
@@ -21627,7 +21627,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 4530.44,
-      "latency_ms": 0.1078,
+      "latency_ms": 0.113,
       "exception": null
     },
     {
@@ -21649,7 +21649,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1148,
+      "latency_ms": 0.117,
       "exception": null
     },
     {
@@ -21671,7 +21671,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0948,
+      "latency_ms": 0.0967,
       "exception": null
     },
     {
@@ -21693,7 +21693,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0951,
+      "latency_ms": 0.0957,
       "exception": null
     },
     {
@@ -21715,7 +21715,7 @@
       "friction_cost": 4.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1173,
+      "latency_ms": 0.121,
       "exception": null
     },
     {
@@ -21737,7 +21737,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1037,
+      "latency_ms": 0.1008,
       "exception": null
     },
     {
@@ -21759,7 +21759,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1051,
+      "latency_ms": 0.1079,
       "exception": null
     },
     {
@@ -21781,7 +21781,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 2934.27,
-      "latency_ms": 0.1124,
+      "latency_ms": 0.1376,
       "exception": null
     },
     {
@@ -21803,7 +21803,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 4733.94,
-      "latency_ms": 0.1163,
+      "latency_ms": 0.1211,
       "exception": null
     },
     {
@@ -21825,7 +21825,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 189.29,
-      "latency_ms": 0.1094,
+      "latency_ms": 0.1135,
       "exception": null
     },
     {
@@ -21847,7 +21847,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": -8.0,
-      "latency_ms": 0.1077,
+      "latency_ms": 0.1086,
       "exception": null
     },
     {
@@ -21869,7 +21869,7 @@
       "friction_cost": 3.0,
       "total_cost": 8.0,
       "net_recovered": 3589.22,
-      "latency_ms": 0.1055,
+      "latency_ms": 0.1094,
       "exception": null
     },
     {
@@ -21891,7 +21891,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0921,
+      "latency_ms": 0.1105,
       "exception": null
     },
     {
@@ -21913,7 +21913,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1041,
+      "latency_ms": 0.1063,
       "exception": null
     },
     {
@@ -21935,7 +21935,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.0942,
+      "latency_ms": 0.1145,
       "exception": null
     },
     {
@@ -21957,7 +21957,7 @@
       "friction_cost": 1.0,
       "total_cost": 3.0,
       "net_recovered": 1982.9,
-      "latency_ms": 0.1136,
+      "latency_ms": 0.1154,
       "exception": null
     },
     {
@@ -21979,7 +21979,7 @@
       "friction_cost": 2.0,
       "total_cost": 5.5,
       "net_recovered": -5.5,
-      "latency_ms": 0.2211,
+      "latency_ms": 0.2297,
       "exception": null
     },
     {
@@ -22001,7 +22001,7 @@
       "friction_cost": 0.0,
       "total_cost": 0.0,
       "net_recovered": 0.0,
-      "latency_ms": 0.1021,
+      "latency_ms": 0.1048,
       "exception": null
     }
   ]
