@@ -16,7 +16,7 @@ from __future__ import annotations
 import logging
 import os
 import time
-from typing import Any, Optional, Protocol
+from typing import Any, Protocol
 
 import httpx
 
@@ -26,10 +26,10 @@ logger = logging.getLogger(__name__)
 class LLMClientProtocol(Protocol):
     """Protocol defining the required interface for LLM diagnosis clients."""
 
-    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
+    def generate(self, prompt: str, system_prompt: str | None = None) -> str:
         ...
 
-    async def generate_async(self, prompt: str, system_prompt: Optional[str] = None) -> str:
+    async def generate_async(self, prompt: str, system_prompt: str | None = None) -> str:
         ...
 
 
@@ -38,7 +38,7 @@ class GeminiClient:
 
     def __init__(
         self,
-        api_key: Optional[str] = None,
+        api_key: str | None = None,
         model: str = "gemini-2.5-flash",
         timeout_seconds: float = 5.0,
         max_retries: int = 2,
@@ -60,7 +60,7 @@ class GeminiClient:
         """Check if an API key is present."""
         return bool(self.api_key and self.api_key.strip())
 
-    def _build_payload(self, prompt: str, system_prompt: Optional[str] = None) -> dict[str, Any]:
+    def _build_payload(self, prompt: str, system_prompt: str | None = None) -> dict[str, Any]:
         """Construct Gemini generateContent request payload."""
         payload: dict[str, Any] = {
             "contents": [
@@ -98,12 +98,12 @@ class GeminiClient:
 
         return str(parts[0]["text"]).strip()
 
-    def generate(self, prompt: str, system_prompt: Optional[str] = None) -> str:
+    def generate(self, prompt: str, system_prompt: str | None = None) -> str:
         """Synchronous text generation with retries on transient errors."""
         url = self._build_url()
         payload = self._build_payload(prompt, system_prompt)
 
-        last_err: Optional[Exception] = None
+        last_err: Exception | None = None
         for attempt in range(self.max_retries + 1):
             try:
                 with httpx.Client(timeout=self.timeout_seconds) as client:
@@ -143,14 +143,14 @@ class GeminiClient:
             raise last_err
         raise RuntimeError("Gemini generate completed without response or exception")
 
-    async def generate_async(self, prompt: str, system_prompt: Optional[str] = None) -> str:
+    async def generate_async(self, prompt: str, system_prompt: str | None = None) -> str:
         """Asynchronous text generation with retries on transient errors."""
         import asyncio
 
         url = self._build_url()
         payload = self._build_payload(prompt, system_prompt)
 
-        last_err: Optional[Exception] = None
+        last_err: Exception | None = None
         for attempt in range(self.max_retries + 1):
             try:
                 async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:

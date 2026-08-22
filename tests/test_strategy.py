@@ -17,14 +17,11 @@ Comprehensive unit tests for the RevPilot Strategy Engine (Segmented Thompson Sa
 
 from __future__ import annotations
 
-import random
 import pytest
 
-from backend.bandit.state import ArmState, BanditState
+from backend.bandit.state import ArmState
 from backend.bandit.thompson import (
-    ActionEconomics,
     CANDIDATE_ACTIONS,
-    DEFAULT_ACTION_ECONOMICS,
     ThompsonSamplingBandit,
 )
 from backend.models.schemas import FailureClass, StrategyDecision, ValueTier
@@ -261,11 +258,12 @@ class TestPriorIndependence:
     def test_strategy_independent_of_ground_truth(self) -> None:
         # 1. Assert that bandit/thompson.py does not import ground_truth
         import inspect
+
         from backend.bandit import thompson
         source = inspect.getsource(thompson)
         assert "ground_truth" not in source
         assert "GroundTruth" not in source
-        
+
         # 2. Prior initialization is independent of hidden reward probabilities
         bandit = ThompsonSamplingBandit()
         for arm_key, arm_dict in bandit.state.arms.items():
@@ -279,7 +277,7 @@ class TestPriorIndependence:
         arm = bandit.state.get_arm(context, action)
         assert arm.alpha == 1.0
         assert arm.beta == 1.0
-        
+
         bandit.observe_outcome(context, action, success=True)
         assert arm.alpha == 2.0
         assert arm.beta == 1.0

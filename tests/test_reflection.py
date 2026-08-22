@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import tempfile
 from pathlib import Path
+
 import pytest
 
 from backend.agents.reflection import (
@@ -24,7 +25,7 @@ from backend.agents.reflection import (
     StatisticalUpdater,
 )
 from backend.bandit.thompson import ThompsonSamplingBandit
-from backend.models.schemas import BatchReflectionRecord, ContextReflection
+from backend.models.schemas import BatchReflectionRecord
 from backend.simulator.types import SimAction
 
 

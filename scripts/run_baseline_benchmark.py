@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import sys
-from pathlib import Path
 
 from backend.simulator.benchmark import (
     execute_benchmark,
@@ -83,7 +82,7 @@ def main() -> int:
     # 4. Print clean summary table
     table_str = format_summary_table(result.metrics)
     print("\n" + table_str + "\n")
-    print(f"Artifacts successfully generated:")
+    print("Artifacts successfully generated:")
     print(f"  • Raw Events Batch : {args.data_file}")
     print(f"  • Summary Metrics  : {args.metrics_file}")
     print(f"  • Decision Log CSV : {args.events_csv}\n")

@@ -17,11 +17,9 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
 from fastapi.testclient import TestClient
 
 from backend.main import app
-from backend.models.schemas import FailureClass
 
 client = TestClient(app)
 
@@ -113,7 +111,7 @@ class TestDynamicDataLoading:
         assert "comparison" in data
 
         if Path("output/revpilot_metrics.json").exists():
-            with open("output/revpilot_metrics.json", "r", encoding="utf-8") as f:
+            with open("output/revpilot_metrics.json", encoding="utf-8") as f:
                 saved_metrics = json.load(f)
             # Ensure API matches the actual file on disk
             assert data["revpilot"]["financial"]["gross_recovered_revenue_inr"] == saved_metrics["financial"]["gross_recovered_revenue_inr"]
@@ -238,27 +236,27 @@ class TestJudgeModeApi:
         response = client.post("/api/v1/judge/run_first")
         assert response.status_code == 200
         data = response.json()
-        
+
         assert "event" in data
         assert data["event"]["payment_id"] == "pay_judge_999"
-        
+
         assert "pipeline_result" in data
         assert data["pipeline_result"]["stage_reached"] == "completed"
-        
+
         assert "bandit_before" in data
         assert "bandit_after" in data
         assert "audit_trail" in data
-        
+
         # Verify real learning happened (arm alpha/beta updated)
         selected = data["pipeline_result"]["selected_action"]
         assert selected is not None
-        
+
         before_arm = data["bandit_before"][selected]
         after_arm = data["bandit_after"][selected]
-        
+
         # Successful or failed outcome will increment either alpha or beta
         assert (after_arm["alpha"] + after_arm["beta"]) == (before_arm["alpha"] + before_arm["beta"] + 1)
-        
+
         # Verify audit trail contains stage records
         stages = [a["stage"] for a in data["audit_trail"]]
         assert "diagnosis" in stages
@@ -270,26 +268,26 @@ class TestJudgeModeApi:
         # Re-run after running first to test idempotency duplicate block
         client.post("/api/v1/judge/reset")
         client.post("/api/v1/judge/run_first")
-        
+
         response = client.post("/api/v1/judge/run_second")
         assert response.status_code == 200
         data = response.json()
-        
+
         assert "event" in data
         assert data["event"]["payment_id"] == "pay_judge_999"
-        
+
         assert "pipeline_result" in data
         res = data["pipeline_result"]
-        
+
         # Guardrail verdict must be blocked
         assert res["guardrail_verdict"] == "blocked"
         assert res["success"] is False
         assert res["amount_recovered"] == 0.0
-        
+
         # Audit trail must show duplicate block
         stages = [a["stage"] for a in data["audit_trail"]]
         assert "guardrail" in stages
-        
+
         # Final outcome stage status should be abandoned (blocked by guardrails)
         assert res["outcome"] is not None
         assert res["outcome"]["status"] == "abandoned"

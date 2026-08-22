@@ -13,23 +13,14 @@ policy autonomously.
 
 from __future__ import annotations
 
-import json
-from dataclasses import asdict, dataclass
-from typing import Any, Optional
+from pydantic import BaseModel
 
-from pydantic import BaseModel, Field
-
-from backend.agents.reflection import OutcomeObservation, ReflectionAgent
-from backend.bandit.thompson import ThompsonSamplingBandit
+from backend.agents.reflection import OutcomeObservation
 from backend.models.schemas import FailureClass, ValueTier
-from backend.services.execution import ExecutionService
-from backend.services.guardrail import GuardrailEngine
 from backend.services.pipeline import RevPilotPipeline
-from backend.simulator.event_generator import EventGenerator
 from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.outcome_engine import OutcomeEngine
 from backend.simulator.types import CustomerSegment, SimAction, SimEvent, SimPaymentMethod
-
 
 # ---------------------------------------------------------------------------
 # Non-Stationary Data Models
@@ -86,7 +77,7 @@ def run_non_stationary_experiment(
     phase_a_records: int = 150,
     phase_b_records: int = 150,
     seed: int = 20260821,
-    shift_config: Optional[EnvironmentShiftConfig] = None,
+    shift_config: EnvironmentShiftConfig | None = None,
 ) -> NonStationaryBenchmarkReport:
     """Execute a chronological non-stationary experiment over Phase A and Phase B."""
     shift = shift_config or EnvironmentShiftConfig()

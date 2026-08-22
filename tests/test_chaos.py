@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import pytest
 
-from backend.models.schemas import GuardrailVerdict, OutcomeStatus
+from backend.models.schemas import OutcomeStatus
 from backend.services.chaos import ChaosScenarioResult, ChaosSuite
 from backend.services.pipeline import RevPilotPipeline
 

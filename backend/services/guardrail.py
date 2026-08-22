@@ -16,10 +16,8 @@ from __future__ import annotations
 
 import threading
 import time
-import uuid
 from collections import defaultdict
 from datetime import UTC, datetime
-from typing import Any, Optional
 
 from backend.models.schemas import (
     DiagnosisResult,
@@ -55,7 +53,7 @@ class GuardrailEngine:
         self,
         event: PaymentFailureEvent,
         decision: StrategyDecision,
-        diagnosis: Optional[DiagnosisResult] = None,
+        diagnosis: DiagnosisResult | None = None,
     ) -> GuardrailDecision:
         """Evaluate strategy decision against all deterministic safety rules.
 
@@ -159,7 +157,7 @@ class GuardrailEngine:
             else:
                 self._seen_idempotency_keys.add(idemp_key)
                 is_dup = False
-        
+
         if is_dup:
             triggered_rules.append(rule_8)
             block_reasons.append("Duplicate execution request detected for same payment/attempt.")

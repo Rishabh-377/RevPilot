@@ -20,9 +20,8 @@ from __future__ import annotations
 
 import time
 import uuid
-from dataclasses import dataclass, field
 from datetime import UTC, datetime
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel, Field, ValidationError
 
@@ -47,8 +46,7 @@ from backend.models.schemas import (
 from backend.services.audit import AuditService
 from backend.services.execution import ExecutionService
 from backend.services.guardrail import GuardrailEngine
-from backend.simulator.types import SimAction, SimEvent
-
+from backend.simulator.types import SimEvent
 
 # ---------------------------------------------------------------------------
 # Pipeline Result & Batch Summary Models
@@ -59,23 +57,23 @@ class EventPipelineResult(BaseModel):
     """Result of processing a single payment failure event through the full pipeline."""
 
     event_id: str
-    event: Optional[PaymentFailureEvent] = None
+    event: PaymentFailureEvent | None = None
     stage_reached: str
     success: bool
     status: str
-    failure_class: Optional[FailureClass] = None
-    context: Optional[str] = None
-    selected_action: Optional[str] = None
-    guardrail_verdict: Optional[GuardrailVerdict] = None
+    failure_class: FailureClass | None = None
+    context: str | None = None
+    selected_action: str | None = None
+    guardrail_verdict: GuardrailVerdict | None = None
     amount_recovered: float = 0.0
     execution_cost: float = 0.0
     net_value: float = 0.0
-    diagnosis: Optional[DiagnosisResult] = None
-    strategy: Optional[StrategyDecision] = None
-    guardrail: Optional[GuardrailDecision] = None
-    outcome: Optional[OutcomeResult] = None
+    diagnosis: DiagnosisResult | None = None
+    strategy: StrategyDecision | None = None
+    guardrail: GuardrailDecision | None = None
+    outcome: OutcomeResult | None = None
     audit_events: list[AuditEvent] = Field(default_factory=list)
-    error_message: Optional[str] = None
+    error_message: str | None = None
     total_latency_ms: float = 0.0
 
 
@@ -97,8 +95,8 @@ class PipelineBatchSummary(BaseModel):
     net_recovered_revenue: float = 0.0
     avg_latency_ms: float = 0.0
     throughput_eps: float = 0.0
-    reflection_summary: Optional[str] = None
-    reflection_record: Optional[BatchReflectionRecord] = None
+    reflection_summary: str | None = None
+    reflection_record: BatchReflectionRecord | None = None
     timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
@@ -112,13 +110,13 @@ class RevPilotPipeline:
 
     def __init__(
         self,
-        diagnosis_agent: Optional[DiagnosisAgent] = None,
-        bandit: Optional[ThompsonSamplingBandit] = None,
-        guardrail_engine: Optional[GuardrailEngine] = None,
-        execution_service: Optional[ExecutionService] = None,
-        reflection_agent: Optional[ReflectionAgent] = None,
-        audit_service: Optional[AuditService] = None,
-        seed: Optional[int] = None,
+        diagnosis_agent: DiagnosisAgent | None = None,
+        bandit: ThompsonSamplingBandit | None = None,
+        guardrail_engine: GuardrailEngine | None = None,
+        execution_service: ExecutionService | None = None,
+        reflection_agent: ReflectionAgent | None = None,
+        audit_service: AuditService | None = None,
+        seed: int | None = None,
     ) -> None:
         self.diagnosis_agent = diagnosis_agent or DiagnosisAgent()
         self.bandit = bandit or ThompsonSamplingBandit(seed=seed)
@@ -139,13 +137,13 @@ class RevPilotPipeline:
         # Helper to emit structured audit event at each stage
         def audit_stage(
             stage: str,
-            input_ref: Optional[str],
-            output_ref: Optional[str],
-            decision: Optional[str],
-            reason: Optional[str],
+            input_ref: str | None,
+            output_ref: str | None,
+            decision: str | None,
+            reason: str | None,
             status: str,
             start_time: float,
-            details: Optional[dict[str, Any]] = None,
+            details: dict[str, Any] | None = None,
         ) -> AuditEvent:
             latency = (time.perf_counter() - start_time) * 1000.0
             ae = AuditEvent(
@@ -171,7 +169,7 @@ class RevPilotPipeline:
         # — so that the simulator/outcome layer can later evaluate outcomes
         # against the actual ground-truth environment, not the model's prediction.
         # This variable must NEVER be passed to DiagnosisAgent or StrategyEngine.
-        _true_failure_class: Optional[Any] = None  # stays None for raw PFE/dict inputs
+        _true_failure_class: Any | None = None  # stays None for raw PFE/dict inputs
 
         t_s1 = time.perf_counter()
         if isinstance(event_data, PaymentFailureEvent):
@@ -421,7 +419,7 @@ class RevPilotPipeline:
     def process_batch(
         self,
         events: list[PaymentFailureEvent | SimEvent | dict[str, Any]],
-        batch_id: Optional[str] = None,
+        batch_id: str | None = None,
     ) -> PipelineBatchSummary:
         """Process a batch of events (e.g. 500 records) resiliently, generating batch reflection and summary."""
         bid = batch_id or f"batch_{uuid.uuid4().hex[:8]}"
@@ -464,7 +462,7 @@ class RevPilotPipeline:
         wall_elapsed_s = time.perf_counter() - wall_start
 
         # Stage 9: Batch Reflection (if observations were executed)
-        reflection_record: Optional[BatchReflectionRecord] = None
+        reflection_record: BatchReflectionRecord | None = None
         if observations_for_reflection:
             reflection_record = self.reflection_agent.reflect_batch(
                 observations=observations_for_reflection,

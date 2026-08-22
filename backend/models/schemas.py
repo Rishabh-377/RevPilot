@@ -13,10 +13,9 @@ from __future__ import annotations
 import uuid
 from datetime import UTC, datetime
 from enum import Enum
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel, Field, model_validator
-
 
 # ---------------------------------------------------------------------------
 # Enums
@@ -144,14 +143,14 @@ class PaymentFailureEvent(BaseModel):
         default=FailureReason.bank_declined, description="Classified failure reason"
     )
     failure_code: str = Field(..., description="Raw error code from payment gateway")
-    raw_gateway_error: Optional[str] = Field(
+    raw_gateway_error: str | None = Field(
         default=None, description="Optional raw error string if different from failure_code"
     )
-    card_last4: Optional[str] = Field(default=None, description="Last 4 digits of card number")
-    card_network: Optional[str] = Field(
+    card_last4: str | None = Field(default=None, description="Last 4 digits of card number")
+    card_network: str | None = Field(
         default=None, description="Card network (visa, mastercard, rupay, etc.)"
     )
-    bank_code: Optional[str] = Field(default=None, description="Issuing bank IFSC or code")
+    bank_code: str | None = Field(default=None, description="Issuing bank IFSC or code")
     attempt_number: int = Field(..., ge=1, description="Which attempt this is (1 = first try)")
     timestamp: datetime = Field(
         default_factory=lambda: datetime.now(UTC), description="When the failure occurred"
@@ -190,10 +189,10 @@ class DiagnosisResult(BaseModel):
         default="DETERMINISTIC_RULE",
         description="Source of diagnosis: 'LLM' | 'DETERMINISTIC_FALLBACK' | 'DETERMINISTIC_RULE'",
     )
-    model_provider: Optional[str] = Field(
+    model_provider: str | None = Field(
         default=None, description="Model and provider identifier if LLM was used"
     )
-    fallback_reason: Optional[str] = Field(
+    fallback_reason: str | None = Field(
         default=None, description="Reason for fallback if LLM failed"
     )
     latency_ms: float = Field(
@@ -205,13 +204,13 @@ class DiagnosisResult(BaseModel):
     )
 
     # Backwards-compatibility fields & aliases
-    failure_category: Optional[FailureReason] = Field(
+    failure_category: FailureReason | None = Field(
         default=None, description="Legacy FailureReason mapping"
     )
-    is_retryable: Optional[bool] = Field(
+    is_retryable: bool | None = Field(
         default=None, description="Legacy alias for retryability"
     )
-    reasoning: Optional[str] = Field(
+    reasoning: str | None = Field(
         default=None, description="Legacy alias for explanation"
     )
     context_signals: dict = Field(
@@ -276,16 +275,16 @@ class StrategyDecision(BaseModel):
     )
 
     # Backwards-compatibility aliases
-    diagnosis_id: Optional[str] = Field(
+    diagnosis_id: str | None = Field(
         default=None, description="Legacy diagnosis ID reference"
     )
-    selected_strategy: Optional[RetryStrategy] = Field(
+    selected_strategy: RetryStrategy | None = Field(
         default=None, description="Legacy alias for selected_action"
     )
-    exploration: Optional[bool] = Field(
+    exploration: bool | None = Field(
         default=None, description="Legacy alias for exploration_flag"
     )
-    arm_probabilities: Optional[dict[str, float]] = Field(
+    arm_probabilities: dict[str, float] | None = Field(
         default=None, description="Legacy alias for sampled_probabilities"
     )
     context_used: dict = Field(
@@ -386,7 +385,7 @@ class OutcomeResult(BaseModel):
         default=0.0, ge=0, description="Amount successfully recovered"
     )
     latency_ms: int = Field(default=0, ge=0, description="End-to-end latency in milliseconds")
-    gateway_response_code: Optional[str] = Field(
+    gateway_response_code: str | None = Field(
         default=None, description="Response code from the payment gateway"
     )
     completed_at: datetime = Field(
@@ -410,16 +409,16 @@ class AuditEvent(BaseModel):
         default="pipeline",
         description="Pipeline stage (e.g. schema_validation, diagnosis, context_creation, strategy, guardrail, execution, outcome, statistical_update, reflection)",
     )
-    input_reference: Optional[str] = Field(
+    input_reference: str | None = Field(
         default=None, description="Identifier or summary of the stage input"
     )
-    output_reference: Optional[str] = Field(
+    output_reference: str | None = Field(
         default=None, description="Identifier or summary of the stage output"
     )
-    decision: Optional[str] = Field(
+    decision: str | None = Field(
         default=None, description="Decision made at this stage (e.g. APPROVED, BLOCKED, STRATEGY_SELECTED)"
     )
-    reason: Optional[str] = Field(
+    reason: str | None = Field(
         default=None, description="Rationale or explanation for the decision"
     )
     latency_ms: float = Field(
@@ -431,7 +430,7 @@ class AuditEvent(BaseModel):
     )
 
     # Backwards-compatibility fields & aliases
-    action: Optional[AuditAction] = Field(
+    action: AuditAction | None = Field(
         default=None, description="Legacy action enum category"
     )
     actor: str = Field(
@@ -443,10 +442,10 @@ class AuditEvent(BaseModel):
         default_factory=lambda: str(uuid.uuid4()),
         description="Ensures this audit event is not duplicated",
     )
-    parent_audit_id: Optional[str] = Field(
+    parent_audit_id: str | None = Field(
         default=None, description="Links to a parent audit entry for event chaining"
     )
-    created_at: Optional[datetime] = Field(
+    created_at: datetime | None = Field(
         default=None, description="Legacy alias for timestamp"
     )
 
@@ -503,18 +502,18 @@ class ExceptionRecord(BaseModel):
         default_factory=lambda: str(uuid.uuid4()),
         description="Unique exception record identifier",
     )
-    event_id: Optional[str] = Field(
+    event_id: str | None = Field(
         default=None, description="Payment event ID if the exception is event-related"
     )
     component: str = Field(..., description="System component where the exception occurred")
     exception_type: str = Field(..., description="Exception class name")
     message: str = Field(..., description="Human-readable error message")
-    stack_trace: Optional[str] = Field(default=None, description="Full stack trace if available")
+    stack_trace: str | None = Field(default=None, description="Full stack trace if available")
     severity: str = Field(
         default="error", description="Severity level: error, warning, or critical"
     )
     handled: bool = Field(default=True, description="Whether the exception was handled gracefully")
-    fallback_action: Optional[str] = Field(
+    fallback_action: str | None = Field(
         default=None, description="What fallback action was taken, if any"
     )
     occurred_at: datetime = Field(

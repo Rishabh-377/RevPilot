@@ -29,7 +29,7 @@ IMPORTANT
 from __future__ import annotations
 
 import time
-from typing import Callable
+from collections.abc import Callable
 
 from backend.simulator.outcome_engine import OutcomeEngine
 from backend.simulator.types import (

@@ -14,9 +14,6 @@ autonomous Strategy Engine adaptation under hidden environmental shifts:
 
 from __future__ import annotations
 
-import pytest
-
-from backend.bandit.thompson import ThompsonSamplingBandit
 from backend.models.schemas import FailureClass, ValueTier
 from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.non_stationary import (

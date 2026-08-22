@@ -10,9 +10,7 @@ from __future__ import annotations
 
 import threading
 import time
-import uuid
 from datetime import UTC, datetime
-from typing import Optional
 
 from backend.models.schemas import (
     GuardrailDecision,
@@ -30,7 +28,6 @@ from backend.simulator.types import (
     FailureClass,
     SimAction,
     SimEvent,
-    SimOutcome,
     SimPaymentMethod,
     ValueTier,
 )
@@ -57,8 +54,8 @@ class ExecutionService:
 
     def __init__(
         self,
-        outcome_engine: Optional[OutcomeEngine] = None,
-        seed: Optional[int] = None,
+        outcome_engine: OutcomeEngine | None = None,
+        seed: int | None = None,
         enforce_idempotency: bool = False,
     ) -> None:
         self.ground_truth = GroundTruth()
@@ -72,7 +69,7 @@ class ExecutionService:
         event: PaymentFailureEvent,
         decision: StrategyDecision,
         guardrail: GuardrailDecision,
-        true_failure_class: Optional[FailureClass] = None,
+        true_failure_class: FailureClass | None = None,
     ) -> OutcomeResult:
         """Execute recovery action strictly if Guardrail approved.
 
@@ -98,7 +95,7 @@ class ExecutionService:
         event: PaymentFailureEvent,
         decision: StrategyDecision,
         guardrail: GuardrailDecision,
-        true_failure_class: Optional[FailureClass] = None,
+        true_failure_class: FailureClass | None = None,
     ) -> OutcomeResult:
         """Synchronous execution implementation with fail-closed authorization.
 
@@ -290,7 +287,7 @@ class ExecutionService:
                 else:
                     self._executed_keys.add(idemp_key)
                     is_dup = False
-            
+
             if is_dup:
                 latency_ms = int((time.perf_counter() - t_start) * 1000)
                 return OutcomeResult(

@@ -33,8 +33,6 @@ Design goals
 
 from __future__ import annotations
 
-from typing import Optional
-
 from backend.simulator.types import FailureClass, SimAction, SimEvent, ValueTier
 
 # ---------------------------------------------------------------------------
@@ -316,7 +314,7 @@ class GroundTruth:
     def __init__(
         self,
         drift_factor: float = 1.0,
-        probability_overrides: Optional[dict[tuple[FailureClass, ValueTier, SimAction], float]] = None,
+        probability_overrides: dict[tuple[FailureClass, ValueTier, SimAction], float] | None = None,
     ) -> None:
         if drift_factor <= 0:
             raise ValueError(f"drift_factor must be > 0, got {drift_factor}")
@@ -431,6 +429,6 @@ class GroundTruth:
     # Environmental drift
     # ------------------------------------------------------------------
 
-    def with_drift(self, drift_factor: float) -> "GroundTruth":
+    def with_drift(self, drift_factor: float) -> GroundTruth:
         """Return a new GroundTruth instance with a different drift factor."""
         return GroundTruth(drift_factor=drift_factor)

@@ -10,10 +10,9 @@ execution, outcome, and statistical learning with full trace context.
 from __future__ import annotations
 
 import json
+import threading
 from collections import defaultdict
 from pathlib import Path
-import threading
-from typing import Any, Optional
 
 from backend.models.schemas import AuditEvent
 
@@ -21,7 +20,7 @@ from backend.models.schemas import AuditEvent
 class AuditService:
     """Append-only audit trail for the RevPilot recovery pipeline."""
 
-    def __init__(self, persistence_path: Optional[Path | str] = None) -> None:
+    def __init__(self, persistence_path: Path | str | None = None) -> None:
         self.persistence_path = Path(persistence_path) if persistence_path else None
         self._events: list[AuditEvent] = []
         self._event_index: dict[str, list[AuditEvent]] = defaultdict(list)

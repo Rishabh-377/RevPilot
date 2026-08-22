@@ -20,12 +20,12 @@ from __future__ import annotations
 import json
 import uuid
 from collections import defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
-from backend.bandit.state import ArmState, BanditState
+from backend.bandit.state import ArmState
 from backend.bandit.thompson import ThompsonSamplingBandit
 from backend.models.schemas import (
     BatchReflectionRecord,
@@ -33,7 +33,6 @@ from backend.models.schemas import (
     OutcomeResult,
 )
 from backend.simulator.types import SimAction, SimOutcome
-
 
 # ---------------------------------------------------------------------------
 # Outcome Observation Input
@@ -50,7 +49,7 @@ class OutcomeObservation:
     success: bool
     recovered_value: float = 0.0
     cost: float = 0.0
-    outcome_id: Optional[str] = None
+    outcome_id: str | None = None
 
     @classmethod
     def from_sim_outcome(
@@ -169,8 +168,8 @@ class ReflectionAgent:
 
     def __init__(
         self,
-        bandit: Optional[ThompsonSamplingBandit] = None,
-        persistence_path: Optional[Path | str] = "data/reflections.json",
+        bandit: ThompsonSamplingBandit | None = None,
+        persistence_path: Path | str | None = "data/reflections.json",
     ) -> None:
         self.bandit = bandit or ThompsonSamplingBandit()
         self.updater = StatisticalUpdater(self.bandit)
@@ -180,10 +179,10 @@ class ReflectionAgent:
     def reflect_batch(
         self,
         observations: list[OutcomeObservation],
-        batch_id: Optional[str] = None,
+        batch_id: str | None = None,
         apply_updates: bool = True,
         decay_factor: float = 1.0,
-        metadata: Optional[dict[str, Any]] = None,
+        metadata: dict[str, Any] | None = None,
     ) -> BatchReflectionRecord:
         """Execute reflection workflow on a completed outcome batch.
 
@@ -397,7 +396,7 @@ class ReflectionAgent:
         records = []
         if self.persistence_path.exists():
             try:
-                with open(self.persistence_path, "r", encoding="utf-8") as f:
+                with open(self.persistence_path, encoding="utf-8") as f:
                     records = json.load(f)
             except Exception:
                 records = []
@@ -410,7 +409,7 @@ class ReflectionAgent:
         if not self.persistence_path or not self.persistence_path.exists():
             return self._history
         try:
-            with open(self.persistence_path, "r", encoding="utf-8") as f:
+            with open(self.persistence_path, encoding="utf-8") as f:
                 data = json.load(f)
             self._history = [BatchReflectionRecord(**item) for item in data]
         except Exception:

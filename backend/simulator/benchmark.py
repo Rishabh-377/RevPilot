@@ -22,16 +22,14 @@ from __future__ import annotations
 
 import csv
 import json
-import os
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 from backend.simulator.baseline import PolicyFn, StaticBaselinePolicy
-from backend.simulator.event_generator import EventGenerator
 from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.outcome_engine import OutcomeEngine
 from backend.simulator.types import (
@@ -41,7 +39,6 @@ from backend.simulator.types import (
     SimEvent,
     SimOutcome,
 )
-
 
 # ---------------------------------------------------------------------------
 # Decision Log Model
@@ -80,9 +77,9 @@ class BenchmarkExecutionResult(BaseModel):
 
 def execute_benchmark(
     events: list[SimEvent],
-    policy: Optional[PolicyFn] = None,
-    ground_truth: Optional[GroundTruth] = None,
-    seed: Optional[int] = 20260821,
+    policy: PolicyFn | None = None,
+    ground_truth: GroundTruth | None = None,
+    seed: int | None = 20260821,
     policy_name: str = "static_baseline",
 ) -> BenchmarkExecutionResult:
     """Execute a deterministic benchmark over an event batch.

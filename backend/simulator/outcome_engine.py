@@ -19,7 +19,6 @@ from __future__ import annotations
 
 import random
 import time
-from typing import Optional
 
 from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.types import SimAction, SimEvent, SimOutcome
@@ -38,8 +37,8 @@ class OutcomeEngine:
 
     def __init__(
         self,
-        ground_truth: Optional[GroundTruth] = None,
-        seed: Optional[int] = None,
+        ground_truth: GroundTruth | None = None,
+        seed: int | None = None,
     ) -> None:
         self.ground_truth = ground_truth or GroundTruth()
         self._rng = random.Random(seed)

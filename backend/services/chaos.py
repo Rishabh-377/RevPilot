@@ -21,9 +21,9 @@ from __future__ import annotations
 
 import datetime
 from datetime import UTC, datetime, timedelta
-from typing import Any, Callable, Optional
+from typing import Any
 
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field
 
 from backend.models.schemas import (
     FailureClass,
@@ -32,8 +32,7 @@ from backend.models.schemas import (
     PaymentFailureEvent,
     PaymentMethod,
 )
-from backend.services.pipeline import EventPipelineResult, RevPilotPipeline
-
+from backend.services.pipeline import RevPilotPipeline
 
 # ---------------------------------------------------------------------------
 # Chaos Result Contract
@@ -53,7 +52,7 @@ class ChaosScenarioResult(BaseModel):
     exception_handled: bool
     audit_emitted: bool
     pipeline_status: str
-    guardrail_decision: Optional[str] = None
+    guardrail_decision: str | None = None
     financial_mutation: bool = False
     audit_recorded: bool = True
     details: dict[str, Any] = Field(default_factory=dict)
@@ -376,6 +375,7 @@ class ChaosSuite:
             attempt_number=1,
         )
         from unittest.mock import patch
+
         from backend.services.execution import NetworkTimeoutException
 
         with patch.object(pipeline.execution_service.outcome_engine, "simulate_outcome", side_effect=NetworkTimeoutException("Simulated chaos timeout")):

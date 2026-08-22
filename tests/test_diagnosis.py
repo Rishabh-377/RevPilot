@@ -26,17 +26,17 @@ Covers the 15 required verification scenarios:
 from __future__ import annotations
 
 import json
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
+
 import httpx
 import pytest
-from pydantic import ValidationError
 
 from backend.agents.diagnosis import DiagnosisAgent, LLMDiagnosisPayload
-from backend.agents.llm_client import GeminiClient
 from backend.agents.evaluation_dataset import (
     DEV_DATASET,
     HELDOUT_EVALUATION_DATASET,
 )
+from backend.agents.llm_client import GeminiClient
 from backend.bandit.thompson import ThompsonSamplingBandit
 from backend.models.schemas import (
     DiagnosisResult,

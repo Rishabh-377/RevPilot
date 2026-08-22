@@ -21,17 +21,14 @@ from pathlib import Path
 
 import pytest
 
-from backend.simulator.baseline import StaticBaselinePolicy
 from backend.simulator.benchmark import (
     BenchmarkExecutionResult,
-    EventDecisionLog,
     execute_benchmark,
     export_benchmark_artifacts,
     format_summary_table,
 )
 from backend.simulator.event_generator import EventGenerator
-from backend.simulator.ground_truth import GroundTruth
-from backend.simulator.types import SimAction, SimEvent
+from backend.simulator.types import SimEvent
 
 
 @pytest.fixture(scope="module")
@@ -178,19 +175,19 @@ class TestArtifactExports:
             assert csv_file.exists()
 
             # Verify JSON events batch
-            with open(data_file, "r", encoding="utf-8") as f:
+            with open(data_file, encoding="utf-8") as f:
                 loaded_events = json.load(f)
             assert len(loaded_events) == 500
             assert loaded_events[0]["event_id"] == fixed_seed_events[0].event_id
 
             # Verify JSON metrics
-            with open(metrics_file, "r", encoding="utf-8") as f:
+            with open(metrics_file, encoding="utf-8") as f:
                 loaded_metrics = json.load(f)
             assert loaded_metrics["total_events"] == 500
             assert loaded_metrics["recovery_rate"] == benchmark_result.metrics["recovery_rate"]
 
             # Verify CSV decision log
-            with open(csv_file, "r", encoding="utf-8") as f:
+            with open(csv_file, encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 rows = list(reader)
             assert len(rows) == 500

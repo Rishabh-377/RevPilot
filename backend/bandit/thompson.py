@@ -16,18 +16,15 @@ from __future__ import annotations
 
 import random
 from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any
 
-from backend.bandit.state import ArmState, BanditState
+from backend.bandit.state import BanditState
 from backend.models.schemas import (
     FailureClass,
-    PaymentFailureEvent,
-    RetryStrategy,
     StrategyDecision,
     ValueTier,
 )
 from backend.simulator.types import SimAction
-
 
 # ---------------------------------------------------------------------------
 # Action Economics Configuration
@@ -85,11 +82,11 @@ class ThompsonSamplingBandit:
 
     def __init__(
         self,
-        state: Optional[BanditState] = None,
-        economics: Optional[dict[str, ActionEconomics]] = None,
-        informed_priors: Optional[dict[str, dict[str, tuple[float, float]]]] = None,
-        candidate_actions: Optional[list[str]] = None,
-        seed: Optional[int] = None,
+        state: BanditState | None = None,
+        economics: dict[str, ActionEconomics] | None = None,
+        informed_priors: dict[str, dict[str, tuple[float, float]]] | None = None,
+        candidate_actions: list[str] | None = None,
+        seed: int | None = None,
     ) -> None:
         self.state = state or BanditState()
         self.economics = economics or DEFAULT_ACTION_ECONOMICS
@@ -130,11 +127,11 @@ class ThompsonSamplingBandit:
         where friction_cost_inr = friction_units * INR_PER_FRICTION_UNIT
         """
         econ = self.economics.get(action, ActionEconomics(api_cost=5.0, friction_cost=2.0, time_discount=0.95))
-        
+
         # Unify non-monetary customer friction with monetary INR terms
         INR_PER_FRICTION_UNIT = 1.0  # Conversion rate: 1.0 INR per dimensionless friction unit
         friction_cost_inr = econ.friction_cost * INR_PER_FRICTION_UNIT
-        
+
         ev = (sampled_prob * transaction_amount * econ.time_discount) - econ.api_cost - friction_cost_inr
         return ev
 
@@ -144,7 +141,7 @@ class ThompsonSamplingBandit:
         failure_class: str | FailureClass,
         value_tier: str | ValueTier,
         amount: float,
-        diagnosis_id: Optional[str] = None,
+        diagnosis_id: str | None = None,
     ) -> StrategyDecision:
         """Perform Thompson Sampling and select optimal recovery strategy.
 
@@ -265,7 +262,7 @@ class ThompsonSamplingBandit:
         arm = self.state.get_arm(context, act_str)
         arm.update(success=success, decay_factor=decay_factor)
 
-    def update(self, decision_id: str, reward: float, context: Optional[str] = None, action: Optional[str] = None) -> None:
+    def update(self, decision_id: str, reward: float, context: str | None = None, action: str | None = None) -> None:
         """Update arm given reward (1.0 for success, 0.0 for failure)."""
         if context and action:
             self.observe_outcome(context=context, action=action, success=(reward > 0.5))

@@ -14,13 +14,11 @@ No strategy-engine code should import from this module directly.
 
 from __future__ import annotations
 
+import uuid
 from datetime import UTC, datetime
 from enum import Enum
-from typing import Optional
-import uuid
 
 from pydantic import BaseModel, Field
-
 
 # ---------------------------------------------------------------------------
 # Simulator Enums
@@ -211,6 +209,6 @@ class SimBenchmarkReport(BaseModel):
     unresolved_exceptions: int = Field(..., ge=0)
     throughput_eps: float = Field(..., ge=0, description="Events processed per second")
     avg_processing_latency_ms: float = Field(..., ge=0)
-    seed: Optional[int] = Field(default=None, description="RNG seed used for reproducibility")
+    seed: int | None = Field(default=None, description="RNG seed used for reproducibility")
     n_events: int = Field(..., ge=0, description="Batch size that was benchmarked")
     run_at: datetime = Field(default_factory=lambda: datetime.now(UTC))

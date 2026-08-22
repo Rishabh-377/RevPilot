@@ -6,7 +6,7 @@ Centralized settings using pydantic-settings.
 All values can be overridden via environment variables prefixed with REVPILOT_.
 """
 
-from typing import Optional
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     # LLM configuration (for semantic failure diagnosis — never for financial decisions)
     llm_provider: str = "gemini"
     llm_model: str = "gemini-2.5-flash"
-    gemini_api_key: Optional[str] = None
+    gemini_api_key: str | None = None
     llm_timeout_seconds: float = 5.0
     llm_max_retries: int = 2
     llm_enabled: bool = False

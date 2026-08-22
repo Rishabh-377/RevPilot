@@ -18,23 +18,34 @@ preserved _true_failure_class to execute_sync().
 DiagnosisAgent and StrategyEngine never receive _true_failure_class.
 """
 from __future__ import annotations
+
 import inspect
-import pytest
+
 from backend.models.schemas import (
-    FailureClass, GuardrailDecision, GuardrailVerdict,
-    OutcomeStatus, PaymentFailureEvent, PaymentMethod, StrategyDecision,
+    FailureClass,
+    GuardrailDecision,
+    GuardrailVerdict,
+    OutcomeStatus,
+    PaymentFailureEvent,
+    PaymentMethod,
+    StrategyDecision,
 )
 from backend.services.execution import ExecutionService
 from backend.services.pipeline import RevPilotPipeline
 from backend.simulator.event_generator import EventGenerator
-from backend.simulator.ground_truth import GroundTruth, _P as GROUND_TRUTH_P
+from backend.simulator.ground_truth import _P as GROUND_TRUTH_P
+from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.outcome_engine import OutcomeEngine
 from backend.simulator.types import (
     CustomerSegment,
-    FailureClass as SimFailureClass,
-    SimAction, SimEvent, SimPaymentMethod, ValueTier,
+    SimAction,
+    SimEvent,
+    SimPaymentMethod,
+    ValueTier,
 )
-
+from backend.simulator.types import (
+    FailureClass as SimFailureClass,
+)
 
 
 def _make_sim_event(true_class, raw_error, amount=1500.0, attempt=0):

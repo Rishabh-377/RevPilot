@@ -10,27 +10,19 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 from fastapi import APIRouter, HTTPException, Query
-from pydantic import BaseModel
 
 from backend.agents.diagnosis import DiagnosisAgent
 from backend.models.schemas import (
     AuditEvent,
-    BenchmarkResult,
     DiagnosisResult,
-    ExceptionRecord,
-    OutcomeResult,
     PaymentFailureEvent,
 )
-from backend.services.chaos import ChaosScenarioResult, ChaosSuite
+from backend.services.chaos import ChaosSuite
 from backend.services.pipeline import EventPipelineResult, RevPilotPipeline
 from backend.simulator.event_generator import EventGenerator
-from backend.simulator.non_stationary import (
-    NonStationaryBenchmarkReport,
-    run_non_stationary_experiment,
-)
 
 router = APIRouter(prefix="/api/v1", tags=["revpilot"])
 
@@ -77,7 +69,7 @@ async def get_audit_trail(event_id: str) -> list[AuditEvent]:
         audit_file = Path("output/audit_log.jsonl")
         if audit_file.exists():
             matched = []
-            with open(audit_file, "r", encoding="utf-8") as f:
+            with open(audit_file, encoding="utf-8") as f:
                 for line in f:
                     if line.strip():
                         data = json.loads(line)
@@ -94,7 +86,7 @@ async def get_benchmark_results() -> dict[str, Any]:
     """Retrieve the latest benchmark metrics and comparison data."""
     comp_file = Path("output/comparison.json")
     if comp_file.exists():
-        with open(comp_file, "r", encoding="utf-8") as f:
+        with open(comp_file, encoding="utf-8") as f:
             return json.load(f)
 
     # Fallback: run quick benchmark
@@ -181,11 +173,11 @@ async def get_dashboard_overview() -> dict[str, Any]:
     comp_metrics: dict[str, Any] = {}
 
     if rev_path.exists() and base_path.exists() and comp_path.exists():
-        with open(rev_path, "r", encoding="utf-8") as f:
+        with open(rev_path, encoding="utf-8") as f:
             rev_metrics = json.load(f)
-        with open(base_path, "r", encoding="utf-8") as f:
+        with open(base_path, encoding="utf-8") as f:
             base_metrics = json.load(f)
-        with open(comp_path, "r", encoding="utf-8") as f:
+        with open(comp_path, encoding="utf-8") as f:
             comp_metrics = json.load(f)
     else:
         # Compute on the fly via actual simulation if files not pre-generated
@@ -215,7 +207,7 @@ async def get_dashboard_overview() -> dict[str, Any]:
 async def get_dashboard_transactions(
     limit: int = Query(default=100, ge=1, le=500),
     offset: int = Query(default=0, ge=0),
-    status_filter: Optional[str] = Query(default=None),
+    status_filter: str | None = Query(default=None),
 ) -> dict[str, Any]:
     """Provide transaction records with detailed decision chains for DECISION EXPLORER."""
     # Generate reproducible batch for explorer
@@ -282,7 +274,7 @@ async def get_dashboard_learning() -> dict[str, Any]:
     ns_report = None
     if ns_file.exists():
         try:
-            with open(ns_file, "r", encoding="utf-8") as f:
+            with open(ns_file, encoding="utf-8") as f:
                 ns_report = json.load(f)
         except Exception:
             ns_report = None
@@ -305,7 +297,7 @@ async def get_dashboard_exceptions() -> list[dict[str, Any]]:
     exc_file = Path("output/exceptions.json")
     if exc_file.exists():
         try:
-            with open(exc_file, "r", encoding="utf-8") as f:
+            with open(exc_file, encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, list):
                     return data
@@ -332,8 +324,8 @@ async def run_dashboard_chaos() -> dict[str, Any]:
 
 @router.get("/dashboard/audit")
 async def get_dashboard_audit(
-    stage: Optional[str] = None,
-    status: Optional[str] = None,
+    stage: str | None = None,
+    status: str | None = None,
     limit: int = Query(default=100, ge=1, le=500),
 ) -> list[dict[str, Any]]:
     """Retrieve full audit log entries for AUDIT view."""
@@ -343,7 +335,7 @@ async def get_dashboard_audit(
         audit_file = Path("output/audit_log.jsonl")
         if audit_file.exists():
             records = []
-            with open(audit_file, "r", encoding="utf-8") as f:
+            with open(audit_file, encoding="utf-8") as f:
                 for line in f:
                     if line.strip():
                         records.append(json.loads(line))
@@ -386,7 +378,7 @@ async def run_first_transaction() -> dict[str, Any]:
         raw_gateway_error="bank response timed out after 30s",
         attempt_number=1,
     )
-    
+
     # Capture bandit arm state BEFORE the transaction is processed (for Scene 8)
     context_key = "TIMEOUT_TRANSIENT+MID" # 4500 is MID value tier
     bandit_state_before = {}
@@ -397,10 +389,10 @@ async def run_first_transaction() -> dict[str, Any]:
             "beta": arm.beta,
             "posterior_mean": round(arm.posterior_mean, 4),
         }
-        
+
     # Execute the event through the real pipeline
     result = _pipeline.process_event(event)
-    
+
     # Capture bandit arm state AFTER the transaction is processed (for Scene 8)
     bandit_state_after = {}
     for act in _pipeline.bandit.candidate_actions:
@@ -410,10 +402,10 @@ async def run_first_transaction() -> dict[str, Any]:
             "beta": arm.beta,
             "posterior_mean": round(arm.posterior_mean, 4),
         }
-        
+
     # Retrieve the audit trail for this event
     audit_trail = _pipeline.audit_service.get_trail("evt_judge_001")
-    
+
     return {
         "event": event.model_dump(mode="json"),
         "pipeline_result": result.model_dump(mode="json"),
@@ -437,10 +429,10 @@ async def run_second_transaction() -> dict[str, Any]:
         raw_gateway_error="bank response timed out after 30s",
         attempt_number=1, # Same attempt_number
     )
-    
+
     result = _pipeline.process_event(event)
     audit_trail = _pipeline.audit_service.get_trail("evt_judge_001_replay")
-    
+
     return {
         "event": event.model_dump(mode="json"),
         "pipeline_result": result.model_dump(mode="json"),

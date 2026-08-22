@@ -9,10 +9,10 @@ per (context, action) pair. Supports serialization and persistent state.
 from __future__ import annotations
 
 import json
-from dataclasses import asdict, dataclass, field
-from pathlib import Path
-from typing import Any, Optional
 import random
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
 
 
 @dataclass
@@ -41,7 +41,7 @@ class ArmState:
             return 0.0
         return (self.alpha * self.beta) / ((total ** 2) * (total + 1))
 
-    def sample_probability(self, rng: Optional[random.Random] = None) -> float:
+    def sample_probability(self, rng: random.Random | None = None) -> float:
         """Sample a success probability theta ~ Beta(alpha, beta)."""
         # random.Random.betavariate(alpha, beta)
         r = rng or random
@@ -94,7 +94,7 @@ class ArmState:
 class BanditState:
     """Repository and persistence manager for segmented bandit arms."""
 
-    def __init__(self, persistence_path: Optional[Path | str] = None) -> None:
+    def __init__(self, persistence_path: Path | str | None = None) -> None:
         self.persistence_path = Path(persistence_path) if persistence_path else None
         # Nested structure: self.arms[context][action] = ArmState
         self.arms: dict[str, dict[str, ArmState]] = {}
@@ -128,11 +128,11 @@ class BanditState:
             },
         }
 
-    def load(self, data: Optional[dict[str, Any]] = None) -> dict[str, Any]:
+    def load(self, data: dict[str, Any] | None = None) -> dict[str, Any]:
         """Load state from dictionary or persistence file."""
         source_data = data
         if source_data is None and self.persistence_path and self.persistence_path.exists():
-            with open(self.persistence_path, "r", encoding="utf-8") as f:
+            with open(self.persistence_path, encoding="utf-8") as f:
                 source_data = json.load(f)
 
         if not source_data:
@@ -147,7 +147,7 @@ class BanditState:
 
         return source_data
 
-    def save(self, target_path: Optional[Path | str] = None) -> None:
+    def save(self, target_path: Path | str | None = None) -> None:
         """Save bandit state to JSON file."""
         dest = Path(target_path) if target_path else self.persistence_path
         if not dest:

@@ -10,9 +10,9 @@ from pathlib import Path
 from typing import Any
 
 from backend.agents.diagnosis import DiagnosisAgent
-from backend.models.schemas import FailureClass, GuardrailVerdict, OutcomeStatus
+from backend.models.schemas import FailureClass, GuardrailVerdict
 from backend.services.pipeline import RevPilotPipeline
-from backend.simulator.baseline import StaticBaselinePolicy, _KEYWORD_RULES
+from backend.simulator.baseline import _KEYWORD_RULES, StaticBaselinePolicy
 from backend.simulator.event_generator import EventGenerator
 from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.outcome_engine import OutcomeEngine
@@ -440,18 +440,18 @@ def format_side_by_side_table(baseline: dict[str, Any], revpilot: dict[str, Any]
         "---------------------------------------------------------------------------------",
         "Metric Category             | Static Baseline       | RevPilot Adaptive     | Delta",
         "----------------------------+-----------------------+-----------------------+--------",
-        f"1. OPERATIONAL              |                       |                       |",
+        "1. OPERATIONAL              |                       |                       |",
         f"   • Events Processed       | {b_op['processed']:<21} | {r_op['processed']:<21} | Equal",
         f"   • Throughput (eps)       | {b_op['throughput_eps']:>18,.0f} eps | {r_op['throughput_eps']:>18,.0f} eps |",
         f"   • Avg Latency (ms)       | {b_op['latency_ms']:>19.4f} ms | {r_op['latency_ms']:>19.4f} ms |",
         f"   • Exceptions             | {b_op['unresolved_exceptions']:<21} | {r_op['unresolved_exceptions']:<21} | 0 Unresolved",
         "----------------------------+-----------------------+-----------------------+--------",
-        f"2. DIAGNOSIS                |                       |                       |",
+        "2. DIAGNOSIS                |                       |                       |",
         f"   • Accuracy               | {baseline['diagnosis']['accuracy']*100:>19.2f} % | {revpilot['diagnosis']['accuracy']*100:>19.2f} % |",
         f"   • Unknown Rate           | {baseline['diagnosis']['unknown_rate']*100:>19.2f} % | {revpilot['diagnosis']['unknown_rate']*100:>19.2f} % |",
         f"   • Low Confidence Rate    | {baseline['diagnosis']['low_confidence_rate']*100:>19.2f} % | {revpilot['diagnosis']['low_confidence_rate']*100:>19.2f} % |",
         "----------------------------+-----------------------+-----------------------+--------",
-        f"3. FINANCIAL (RECONCILED)   |                       |                       |",
+        "3. FINANCIAL (RECONCILED)   |                       |                       |",
         f"   • Recovery Rate          | {b_fin['recovery_rate']*100:>19.2f} % | {r_fin['recovery_rate']*100:>19.2f} % |",
         f"   • Recoveries Count       | {b_fin['successful_recoveries']:<21} | {r_fin['successful_recoveries']:<21} |",
         f"   • Gross Revenue (INR)    | Rs.{b_fin['gross_recovered_revenue_inr']:>17,.2f} | Rs.{r_fin['gross_recovered_revenue_inr']:>17,.2f} |",
@@ -459,7 +459,7 @@ def format_side_by_side_table(baseline: dict[str, Any], revpilot: dict[str, Any]
         f"   • Friction Cost (INR)    | Rs.{b_fin['friction_cost_inr']:>17,.2f} | Rs.{r_fin['friction_cost_inr']:>17,.2f} |",
         f"   • Net Revenue (INR)      | Rs.{b_fin['net_recovered_revenue_inr']:>17,.2f} | Rs.{r_fin['net_recovered_revenue_inr']:>17,.2f} |",
         "----------------------------+-----------------------+-----------------------+--------",
-        f"4. SAFETY & COMPLIANCE      |                       |                       |",
+        "4. SAFETY & COMPLIANCE      |                       |                       |",
         f"   • Allowed Actions        | {b_saf['allowed']:<21} | {r_saf['allowed']:<21} |",
         f"   • Human Escalations      | {b_saf['human_review']:<21} | {r_saf['human_review']:<21} |",
         f"   • Blocked (Safety)       | {b_saf['blocked']:<21} | {r_saf['blocked']:<21} |",

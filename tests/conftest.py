@@ -2,16 +2,11 @@
 Shared pytest fixtures for RevPilot tests.
 """
 
-from datetime import datetime
 
 import pytest
 
 from backend.models.schemas import (
-    AuditAction,
-    AuditEvent,
-    BenchmarkResult,
     DiagnosisResult,
-    ExceptionRecord,
     FailureReason,
     GuardrailDecision,
     GuardrailVerdict,

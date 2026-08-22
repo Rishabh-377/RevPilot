@@ -21,16 +21,15 @@ ARCHITECTURAL PRINCIPLES & BOUNDARIES
 
 from __future__ import annotations
 
-import json
 import logging
 import os
 import re
 import uuid
-from typing import Any, Optional
+from typing import Any
 
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, Field
 
-from backend.agents.llm_client import GeminiClient, LLMClientProtocol
+from backend.agents.llm_client import GeminiClient
 from backend.config import Settings, get_settings
 from backend.models.schemas import (
     DiagnosisResult,
@@ -263,9 +262,9 @@ class DiagnosisAgent:
 
     def __init__(
         self,
-        use_llm: Optional[bool] = None,
-        llm_client: Optional[Any] = None,
-        config: Optional[Settings] = None,
+        use_llm: bool | None = None,
+        llm_client: Any | None = None,
+        config: Settings | None = None,
     ) -> None:
         cfg = config or get_settings()
         self.config = cfg
@@ -315,8 +314,8 @@ class DiagnosisAgent:
     def diagnose_raw(
         self,
         raw_error: str,
-        event_id: Optional[str] = None,
-        metadata: Optional[dict[str, Any]] = None,
+        event_id: str | None = None,
+        metadata: dict[str, Any] | None = None,
     ) -> DiagnosisResult:
         """Diagnose a raw gateway error string directly.
 
@@ -405,9 +404,9 @@ class DiagnosisAgent:
         self,
         raw_error: str,
         event_id: str,
-        metadata: Optional[dict[str, Any]] = None,
-        t_start: Optional[float] = None,
-    ) -> Optional[DiagnosisResult]:
+        metadata: dict[str, Any] | None = None,
+        t_start: float | None = None,
+    ) -> DiagnosisResult | None:
         """Invoke LLM and strictly validate output schema via Pydantic."""
         import time
 
@@ -457,9 +456,9 @@ class DiagnosisAgent:
         self,
         raw_error: str,
         event_id: str,
-        metadata: Optional[dict[str, Any]] = None,
+        metadata: dict[str, Any] | None = None,
         diagnosis_source: str = "DETERMINISTIC_RULE",
-        fallback_reason: Optional[str] = None,
+        fallback_reason: str | None = None,
         latency_ms: float = 0.0,
     ) -> DiagnosisResult:
         """Robust deterministic rule-based classifier with evidence extraction."""

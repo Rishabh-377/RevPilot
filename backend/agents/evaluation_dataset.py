@@ -12,7 +12,6 @@ Total: 40 real-world style messy payment failure records.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Optional
 
 from backend.models.schemas import FailureClass, RiskLevel
 

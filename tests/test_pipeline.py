@@ -25,8 +25,6 @@ from backend.models.schemas import (
     OutcomeStatus,
     PaymentFailureEvent,
     PaymentMethod,
-    RiskLevel,
-    ValueTier,
 )
 from backend.services.pipeline import (
     EventPipelineResult,
@@ -34,7 +32,7 @@ from backend.services.pipeline import (
     RevPilotPipeline,
 )
 from backend.simulator.event_generator import EventGenerator
-from backend.simulator.types import SimAction, SimEvent
+from backend.simulator.types import SimAction
 
 
 @pytest.fixture
@@ -201,6 +199,7 @@ class TestFiveExecutionPaths:
             attempt_number=1,
         )
         from unittest.mock import patch
+
         from backend.services.execution import NetworkTimeoutException
 
         with patch.object(pipeline.execution_service.outcome_engine, "simulate_outcome", side_effect=NetworkTimeoutException("Simulated execution timeout")):
@@ -267,11 +266,11 @@ class TestBatchProcessingAndResilience:
 
 class TestAuditIdempotency:
     def test_audit_idempotency_deduplication(self) -> None:
-        from backend.services.audit import AuditService
         from backend.models.schemas import AuditEvent
+        from backend.services.audit import AuditService
 
         service = AuditService()
-        
+
         # 1. Separate stages for the same event must remain distinct
         event1_diag = AuditEvent(
             event_id="event_test_001",
@@ -289,11 +288,11 @@ class TestAuditIdempotency:
             decision="APPROVED",
             reason="All checks pass",
         )
-        
+
         service.log(event1_diag)
         service.log(event1_gr)
         assert service.count() == 2
-        
+
         # 2. Duplicate stage emission for the same event must be deduplicated
         event1_diag_duplicate = AuditEvent(
             event_id="event_test_001",
@@ -305,7 +304,7 @@ class TestAuditIdempotency:
         )
         service.log(event1_diag_duplicate)
         assert service.count() == 2  # Deduplicated!
-        
+
         # 3. Same stage for a different event must remain distinct
         event2_diag = AuditEvent(
             event_id="event_test_002",
@@ -317,7 +316,7 @@ class TestAuditIdempotency:
         )
         service.log(event2_diag)
         assert service.count() == 3  # Distinct!
-        
+
         # 4. Verify append-only behavior is intact (unique events continue to append)
         assert [e.event_id for e in service.get_all()] == ["event_test_001", "event_test_001", "event_test_002"]
         assert [e.stage for e in service.get_all()] == ["diagnosis", "guardrail", "diagnosis"]

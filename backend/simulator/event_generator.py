@@ -20,7 +20,6 @@ import random
 import string
 import uuid
 from datetime import UTC, datetime, timedelta
-from typing import Optional
 
 from backend.simulator.types import (
     CustomerSegment,
@@ -196,9 +195,9 @@ class EventGenerator:
 
     def __init__(
         self,
-        seed: Optional[int] = 42,
+        seed: int | None = 42,
         n: int = 500,
-        start_time: Optional[datetime] = None,
+        start_time: datetime | None = None,
     ) -> None:
         self.seed = seed
         self.n = n
@@ -208,7 +207,7 @@ class EventGenerator:
     # Public API
     # ------------------------------------------------------------------
 
-    def generate(self, n: Optional[int] = None, seed: Optional[int] = None) -> list[SimEvent]:
+    def generate(self, n: int | None = None, seed: int | None = None) -> list[SimEvent]:
         """Generate ``n`` synthetic failure events.
 
         Parameters

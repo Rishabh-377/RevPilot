@@ -20,28 +20,21 @@ Comprehensive security, authorization, and fail-closed gate tests for C-4:
 
 from __future__ import annotations
 
-import uuid
-from datetime import UTC, datetime
 from unittest.mock import MagicMock
 
 import pytest
 
 from backend.models.schemas import (
-    FailureClass,
     GuardrailDecision,
     GuardrailVerdict,
-    OutcomeResult,
     OutcomeStatus,
     PaymentFailureEvent,
     PaymentMethod,
-    RetryStrategy,
     StrategyDecision,
 )
 from backend.services.execution import ExecutionService
-from backend.simulator.ground_truth import GroundTruth
 from backend.simulator.outcome_engine import OutcomeEngine
-from backend.simulator.types import SimAction, SimEvent, SimOutcome
-
+from backend.simulator.types import SimAction, SimOutcome
 
 # ---------------------------------------------------------------------------
 # Test Helpers & Fixtures
@@ -570,9 +563,10 @@ class TestInvalidActionValidation:
 class TestConcurrencyIdempotency:
     def test_concurrent_guardrail_requests(self) -> None:
         import concurrent.futures
-        from backend.services.guardrail import GuardrailEngine
+
         from backend.models.schemas import StrategyDecision
-        
+        from backend.services.guardrail import GuardrailEngine
+
         engine = GuardrailEngine()
         ev = make_event(payment_id="pay_dup_001")
         dec = StrategyDecision(
@@ -581,14 +575,14 @@ class TestConcurrencyIdempotency:
             candidate_actions=[SimAction.IMMEDIATE_RETRY.value],
             selected_action=SimAction.IMMEDIATE_RETRY.value,
         )
-        
+
         num_threads = 10
         with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
             futures = [executor.submit(engine.evaluate, ev, dec) for _ in range(num_threads)]
             results = [f.result() for f in futures]
-            
+
         approved_count = sum(1 for r in results if r.verdict == GuardrailVerdict.approved)
         blocked_count = sum(1 for r in results if r.verdict == GuardrailVerdict.blocked)
-        
+
         assert approved_count == 1
         assert blocked_count == num_threads - 1

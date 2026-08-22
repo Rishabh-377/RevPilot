@@ -18,7 +18,6 @@ import sys
 from pathlib import Path
 
 from backend.simulator.non_stationary import (
-    EnvironmentShiftConfig,
     NonStationaryBenchmarkReport,
     run_non_stationary_experiment,
 )
@@ -37,16 +36,16 @@ def format_non_stationary_table(report: NonStationaryBenchmarkReport) -> str:
         "╠═══════════════════════════════════════════════════════════════════════════════════════╣",
         "║  Phase / Metric           │ Action / Parameter    │ Probability / Stats   │ EV (₹1,500)   ║",
         "╟───────────────────────────┼───────────────────────┼───────────────────────┼───────────────╢",
-        f"║  1. PHASE A (Normal)      │                       │                       │               ║",
+        "║  1. PHASE A (Normal)      │                       │                       │               ║",
         f"║     • Ground Truth P(Win) │ {shift.action_degraded.value:<21} │ P = {shift.prob_before:<17.2f} │ Ground Truth  ║",
         f"║     • Learned Posterior   │ {p_before.preferred_action:<21} │ μ = {p_before.posterior_mean:<6.4f} (α={p_before.alpha:4.1f},β={p_before.beta:4.1f})│ ₹{p_before.expected_value:>11,.2f}  ║",
         f"║     • Preferred Policy    │ {p_before.preferred_action:<21} │ OPTIMAL EXPLOIT       │ HIGHEST EV    ║",
         "╟───────────────────────────┼───────────────────────┼───────────────────────┼───────────────╢",
-        f"║  2. HIDDEN SHIFT (Phase B)│                       │                       │               ║",
+        "║  2. HIDDEN SHIFT (Phase B)│                       │                       │               ║",
         f"║     • Shift Description   │ Gateway queue drop    │ {shift.action_degraded.value} {shift.prob_before:.2f} -> {shift.prob_after:.2f} │ Hidden Reality║",
-        f"║     • Strategy Awareness  │ ZERO (Information Bar)│ Observes binary 0/1   │ No Hint Given ║",
+        "║     • Strategy Awareness  │ ZERO (Information Bar)│ Observes binary 0/1   │ No Hint Given ║",
         "╟───────────────────────────┼───────────────────────┼───────────────────────┼───────────────╢",
-        f"║  3. PHASE B (Adapted)     │                       │                       │               ║",
+        "║  3. PHASE B (Adapted)     │                       │                       │               ║",
         f"║     • Posterior Shift     │ {shift.action_degraded.value:<21} │ Δμ = {report.posterior_delta:<16.4f} │ Posterior Drop║",
         f"║     • Adapted Policy      │ {p_after.preferred_action:<21} │ μ = {p_after.posterior_mean:<6.4f} (α={p_after.alpha:4.1f},β={p_after.beta:4.1f})│ ₹{p_after.expected_value:>11,.2f}  ║",
         f"║     • Policy Change       │ {p_before.preferred_action} -> {p_after.preferred_action:<10} │ AUTONOMOUS SHIFT      │ No Code Change║",
