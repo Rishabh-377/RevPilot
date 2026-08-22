@@ -1,9 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "revpilot"
 version = "0.1.0"
 description = "Adaptive AI revenue recovery controller for failed payments"
 requires-python = ">=3.12"
 readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["backend*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
