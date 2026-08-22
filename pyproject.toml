@@ -10,7 +10,9 @@ requires-python = ">=3.12"
 readme = "README.md"
 
 [tool.setuptools.packages.find]
-include = ["backend*", "scripts*"]
+where = ["."]
+include = ["backend*"]
+exclude = ["data*", "output*", "frontend*", "docs*", "tests*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
