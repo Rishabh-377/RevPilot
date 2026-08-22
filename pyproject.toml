@@ -9,10 +9,17 @@ description = "Adaptive AI revenue recovery controller for failed payments"
 requires-python = ">=3.12"
 readme = "README.md"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["backend*"]
-exclude = ["data*", "output*", "frontend*", "docs*", "tests*", "scripts*"]
+[tool.setuptools]
+packages = [
+    "backend",
+    "backend.agents",
+    "backend.api",
+    "backend.bandit",
+    "backend.models",
+    "backend.services",
+    "backend.simulator",
+    "backend.taxonomy",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
