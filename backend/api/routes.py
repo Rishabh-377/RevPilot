@@ -226,11 +226,27 @@ async def get_dashboard_transactions(
         ]
 
     paged = results[offset : offset + limit]
+    items = []
+    for r in paged:
+        d = r.model_dump(mode="json")
+        d["amount"] = r.event.amount if r.event else r.amount_recovered
+        d["payment_method"] = (
+            r.event.payment_method.value
+            if r.event and hasattr(r.event.payment_method, "value")
+            else (str(r.event.payment_method) if r.event else "UPI")
+        )
+        d["failure_code"] = (
+            r.event.failure_code
+            if r.event
+            else (r.failure_class.value if r.failure_class else "UNKNOWN")
+        )
+        items.append(d)
+
     return {
         "total": len(results),
         "limit": limit,
         "offset": offset,
-        "items": [r.model_dump(mode="json") for r in paged],
+        "items": items,
     }
 
 
@@ -343,9 +359,9 @@ async def get_dashboard_audit(
 
     filtered = all_audits
     if stage:
-        filtered = [a for a in filtered if a.stage == stage]
+        filtered = [a for a in filtered if a.stage.lower() == stage.lower()]
     if status:
-        filtered = [a for a in filtered if a.status == status]
+        filtered = [a for a in filtered if a.status.lower() == status.lower()]
 
     return [a.model_dump(mode="json") for a in filtered[:limit]]
 

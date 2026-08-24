@@ -331,3 +331,94 @@ class TestJudgeModeApi:
         assert res["outcome"] is not None
         assert res["outcome"]["status"] == "abandoned"
         assert res["outcome"]["gateway_response_code"] == "GUARDRAIL_BLOCKED"
+
+
+class TestProductCredibilityHardening:
+    """Comprehensive regression suite for product credibility and demo hardening."""
+
+    def test_financial_formatting_helpers_in_frontend(self) -> None:
+        """Verify centralized formatting helpers exist and prevent NaN in dashboard."""
+        response = client.get("/dashboard")
+        assert response.status_code == 200
+        html = response.text
+
+        assert "function formatCurrency(val, fallback = 'N/A')" in html
+        assert "function formatINR(val, fallback = 'N/A')" in html
+        assert "function formatLakhs(val, fallback = 'N/A')" in html
+        assert "function formatPercent(val, fallback = '—')" in html
+
+    def test_blocked_vs_executed_semantic_invariants(self) -> None:
+        """Verify blocked actions have execution_called = false and 0 financial leakage."""
+        client.post("/api/v1/judge/reset")
+        client.post("/api/v1/judge/run_first")
+        res_dup = client.post("/api/v1/judge/run_second")
+        assert res_dup.status_code == 200
+        data = res_dup.json()
+
+        pipeline_res = data["pipeline_result"]
+        assert pipeline_res["guardrail_verdict"] == "blocked"
+        assert pipeline_res["amount_recovered"] == 0.0
+        assert pipeline_res["net_value"] == 0.0
+        assert pipeline_res["success"] is False
+
+    def test_all_audit_stage_filters(self) -> None:
+        """Verify audit trail endpoint filters accurately by every valid pipeline stage."""
+        stages = [
+            "schema_validation",
+            "diagnosis",
+            "context_creation",
+            "strategy",
+            "guardrail",
+            "execution",
+            "statistical_update",
+        ]
+        for st in stages:
+            resp = client.get(f"/api/v1/dashboard/audit?stage={st}")
+            assert resp.status_code == 200
+            items = resp.json()
+            for item in items:
+                assert item["stage"].lower() == st.lower()
+
+            # Test uppercase parameter as well
+            resp_upper = client.get(f"/api/v1/dashboard/audit?stage={st.upper()}")
+            assert resp_upper.status_code == 200
+
+    def test_chaos_suite_real_backend_execution(self) -> None:
+        """Verify chaos suite executes real adversarial attacks with 10/10 containment."""
+        resp = client.post("/api/v1/dashboard/chaos/run")
+        assert resp.status_code == 200
+        data = resp.json()
+
+        assert data["total_scenarios"] == 10
+        assert data["scenarios_passed"] == 10
+        assert data["all_safe"] is True
+
+        # Check duplicate attack scenario
+        sc_dup = next((s for s in data["scenarios"] if s["scenario_id"] == "CHAOS_01_DUPLICATE_TXN"), None)
+        assert sc_dup is not None
+        assert sc_dup["safe"] is True
+        assert sc_dup["execution_called"] is False
+        assert sc_dup["financial_mutation"] is False
+        assert sc_dup["audit_recorded"] is True
+
+        # Check API timeout scenario
+        sc_timeout = next((s for s in data["scenarios"] if s["scenario_id"] == "CHAOS_08_API_TIMEOUT"), None)
+        assert sc_timeout is not None
+        assert sc_timeout["safe"] is True
+        assert sc_timeout["execution_called"] is True
+        assert sc_timeout["financial_mutation"] is False
+
+    def test_dashboard_transactions_include_normalized_amounts(self) -> None:
+        """Verify transaction items return valid numeric amounts without null/undefined."""
+        resp = client.get("/api/v1/dashboard/transactions?limit=10")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "items" in data
+        assert len(data["items"]) > 0
+
+        for it in data["items"]:
+            assert "amount" in it
+            assert it["amount"] is not None
+            assert isinstance(it["amount"], (int, float))
+            assert it["amount"] > 0
+
