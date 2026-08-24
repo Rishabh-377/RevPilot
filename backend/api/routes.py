@@ -342,20 +342,34 @@ async def run_dashboard_chaos() -> dict[str, Any]:
 async def get_dashboard_audit(
     stage: str | None = None,
     status: str | None = None,
-    limit: int = Query(default=100, ge=1, le=500),
+    limit: int = Query(default=200, ge=1, le=5000),
 ) -> list[dict[str, Any]]:
-    """Retrieve full audit log entries for AUDIT view."""
-    all_audits = _pipeline.audit_service.get_all()
-    if not all_audits:
-        # Read from output/audit_log.jsonl
-        audit_file = Path("output/audit_log.jsonl")
-        if audit_file.exists():
-            records = []
+    """Retrieve full audit log entries for AUDIT view with persistent and live audit merging."""
+    all_audits: list[AuditEvent] = []
+    seen_keys: set[str] = set()
+
+    # 1. Read persistent audit log file if available
+    audit_file = Path("output/audit_log.jsonl")
+    if audit_file.exists():
+        try:
             with open(audit_file, encoding="utf-8") as f:
                 for line in f:
                     if line.strip():
-                        records.append(json.loads(line))
-            all_audits = [AuditEvent(**r) for r in records]
+                        r = json.loads(line)
+                        ae = AuditEvent(**r)
+                        key = ae.idempotency_key or ae.audit_id
+                        if key not in seen_keys:
+                            seen_keys.add(key)
+                            all_audits.append(ae)
+        except Exception:
+            pass
+
+    # 2. Append live in-memory audits from current pipeline
+    for ae in _pipeline.audit_service.get_all():
+        key = ae.idempotency_key or ae.audit_id
+        if key not in seen_keys:
+            seen_keys.add(key)
+            all_audits.append(ae)
 
     filtered = all_audits
     if stage:

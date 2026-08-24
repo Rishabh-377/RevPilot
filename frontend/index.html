@@ -1548,7 +1548,7 @@
         container.innerHTML = "";
         if (cachedTransactions.length === 0) {
           container.innerHTML = '<div class="p-6 text-center text-slate-600 font-mono font-medium text-xs">No transactions match the selected filter.</div>';
-          document.getElementById("tx-detail-panel").innerHTML = '<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transaction data available.</div>';
+          setInnerHtml("tx-detail-panel", '<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transaction data available.</div>');
           return;
         }
 
@@ -1584,7 +1584,7 @@
         }
       } catch (err) {
         console.error("Error loading transactions:", err);
-        document.getElementById("tx-list-container").innerHTML = `<div class="p-6 text-center text-rose-400 font-mono text-xs">⚠️ Error loading transactions: ${err.message}</div>`;
+        setInnerHtml("tx-list-container", `<div class="p-6 text-center text-rose-400 font-mono text-xs">⚠️ Error loading transactions: ${err.message}</div>`);
       }
     }
 
@@ -1879,6 +1879,17 @@
       `;
     }
 
+        // Safe DOM manipulation helpers with defensive null guards
+    function setInnerText(id, text) {
+      const el = document.getElementById(id);
+      if (el) el.innerText = text;
+    }
+
+    function setInnerHtml(id, html) {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    }
+
     // =========================================================================
     // 5. LEARNING & POSTERIOR PROBABILITY MATRIX
     // =========================================================================
@@ -1889,77 +1900,133 @@
         const res = await fetch("/api/v1/dashboard/learning");
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
+        const ns = data.non_stationary_shift;
         cachedLearningArms = data.arms || {};
 
-        const matrixContainer = document.getElementById("learning-matrix-grid");
-        matrixContainer.innerHTML = "";
+        const badge = document.getElementById("learning-run-status-badge");
 
-        const failureClasses = [
-          "TIMEOUT_TRANSIENT", "HARD_FUNDS_ISSUE", "ISSUER_DECLINE",
-          "AUTH_BLOCKED", "INFRA_OUTAGE", "DUPLICATE",
-          "CUSTOMER_ABANDONMENT", "FRAUD_SUSPECTED", "UNKNOWN"
-        ];
-        const valueTiers = ["LOW", "MID", "HIGH"];
+        if (!ns) {
+          if (badge) {
+            badge.innerText = "NO RUN AVAILABLE";
+            badge.className = "text-xs font-mono px-2.5 py-0.5 bg-slate-100 text-slate-700 border border-slate-200 rounded font-bold";
+          }
+          setInnerText("ns-phase-a-context", "NO RUN AVAILABLE");
+          setInnerText("ns-phase-a-prob", "—");
+          setInnerText("ns-phase-a-post", "—");
+          setInnerText("ns-phase-a-policy", "NO RUN AVAILABLE");
 
-        let firstContextKey = null;
+          setInnerText("ns-phase-b-shift-desc", "Trigger: NO RUN AVAILABLE");
+          setInnerText("ns-phase-b-degraded", "—");
+          setInnerText("ns-phase-b-prob-shift", "—");
 
-        failureClasses.forEach(fc => {
-          valueTiers.forEach(vt => {
-            const ctxKey = `${fc}+${vt}`;
-            if (!firstContextKey) firstContextKey = ctxKey;
-            const actDict = cachedLearningArms[ctxKey] || {};
+          setInnerText("ns-phase-b-obs", "Observed Outcomes: NO RUN AVAILABLE");
+          setInnerText("ns-phase-b-delta", "—");
+          setInnerText("ns-phase-b-new-arm", "—");
+          setInnerText("ns-phase-b-policy", "NO RUN AVAILABLE");
 
-            let totalObs = 0;
-            let bestAct = "—";
-            let maxMean = -1;
-            let bestAlpha = 1.0;
-            let bestBeta = 1.0;
+          setInnerHtml("learning-reflection-box", '<strong class="text-slate-900">Experiment Status:</strong> <span class="text-slate-800">NO RUN AVAILABLE. Execute non-stationary adaptation benchmark to view live posterior shifts.</span>');
+        } else {
+          const pBefore = ns.policy_before || {};
+          const shift = ns.environment_shift || {};
+          const pAfter = ns.policy_after || {};
 
-            Object.entries(actDict).forEach(([act, st]) => {
-              totalObs += (st.attempt_count || 0);
-              if (st.posterior_mean > maxMean) {
-                maxMean = st.posterior_mean;
-                bestAct = act;
-                bestAlpha = st.alpha || 1.0;
-                bestBeta = st.beta || 1.0;
-              }
+          if (badge) {
+            badge.innerText = "EXPERIMENT VERIFIED";
+            badge.className = "text-xs font-mono px-2.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded font-bold";
+          }
+
+          // Phase A Card
+          setInnerText("ns-phase-a-context", pBefore.context || ns.target_context || "—");
+          setInnerText("ns-phase-a-prob", shift.prob_before !== undefined ? shift.prob_before.toFixed(2) : "—");
+          setInnerText("ns-phase-a-post", pBefore.posterior_mean !== undefined ? "μ = " + pBefore.posterior_mean.toFixed(4) : "—");
+          setInnerText("ns-phase-a-policy", pBefore.preferred_action ? `${pBefore.preferred_action} (EV: ${formatCurrency(pBefore.expected_value || 0)})` : "—");
+
+          // Shift Trigger Card
+          setInnerText("ns-phase-b-shift-desc", "Trigger: " + (shift.description || "—"));
+          setInnerText("ns-phase-b-degraded", shift.action_degraded || "—");
+          setInnerText("ns-phase-b-prob-shift", (shift.prob_before !== undefined && shift.prob_after !== undefined) ? `${shift.prob_before.toFixed(2)} ➔ ${shift.prob_after.toFixed(2)}` : "—");
+
+          // Phase B Card
+          setInnerText("ns-phase-b-obs", shift.action_degraded ? `Degraded ${shift.action_degraded} failure outcomes observed` : "Observed Outcomes: Streamed failures");
+          setInnerText("ns-phase-b-delta", ns.posterior_delta !== undefined ? "Δμ = " + ns.posterior_delta.toFixed(4) : "—");
+          setInnerText("ns-phase-b-new-arm", pAfter.preferred_action ? `${pAfter.preferred_action} (μ = ${(pAfter.posterior_mean || 0).toFixed(3)})` : "—");
+          setInnerText("ns-phase-b-policy", pAfter.preferred_action ? `${pAfter.preferred_action} (EV: ${formatCurrency(pAfter.expected_value || 0)})` : "—");
+
+          setInnerHtml("learning-reflection-box", `<strong class="text-slate-900 font-bold">Reflection Agent Insight:</strong> <span class="text-slate-800 font-medium">${ns.learning_statement || "—"}</span>`);
+        }
+
+        // Render 27-Cell Context Matrix Grid
+        const matrixContainer = document.getElementById("matrix-27-cells-container");
+        if (matrixContainer) {
+          matrixContainer.innerHTML = "";
+
+          const failureClasses = [
+            "TIMEOUT_TRANSIENT", "HARD_FUNDS_ISSUE", "ISSUER_DECLINE",
+            "AUTH_BLOCKED", "INFRA_OUTAGE", "DUPLICATE",
+            "CUSTOMER_ABANDONMENT", "FRAUD_SUSPECTED", "UNKNOWN"
+          ];
+          const valueTiers = ["LOW", "MID", "HIGH"];
+
+          let firstContextKey = null;
+
+          failureClasses.forEach(fc => {
+            valueTiers.forEach(vt => {
+              const ctxKey = `${fc}+${vt}`;
+              if (!firstContextKey) firstContextKey = ctxKey;
+              const actDict = cachedLearningArms[ctxKey] || {};
+
+              let totalObs = 0;
+              let bestAct = "—";
+              let maxMean = -1;
+              let bestAlpha = 1.0;
+              let bestBeta = 1.0;
+
+              Object.entries(actDict).forEach(([act, st]) => {
+                totalObs += (st.attempt_count || 0);
+                if (st.posterior_mean > maxMean) {
+                  maxMean = st.posterior_mean;
+                  bestAct = act;
+                  bestAlpha = st.alpha || 1.0;
+                  bestBeta = st.beta || 1.0;
+                }
+              });
+
+              const totalAB = bestAlpha + bestBeta;
+              const variance = (bestAlpha * bestBeta) / (totalAB * totalAB * (totalAB + 1));
+              const uncertaintyStd = Math.sqrt(variance);
+
+              const cellCard = document.createElement("div");
+              cellCard.id = `ctx-cell-${ctxKey}`;
+              cellCard.className = "p-3 bg-white hover:bg-rose-50/40 border border-slate-200 hover:border-rose-400 rounded-xl cursor-pointer transition flex flex-col justify-between space-y-2 font-mono shadow-sm";
+              cellCard.onclick = () => selectContextCell(ctxKey);
+
+              cellCard.innerHTML = `
+                <div>
+                  <div class="flex items-center justify-between gap-1">
+                    <span class="text-xs font-bold text-slate-900 uppercase truncate">${fc}</span>
+                    <span class="px-1.5 py-0.2 rounded text-[10px] font-bold ${
+                      vt === "HIGH" ? "bg-purple-50 text-purple-700 border border-purple-200" :
+                      vt === "MID" ? "bg-rose-50 text-rose-700 border border-rose-200" :
+                      "bg-slate-100 text-slate-700 border border-slate-200"
+                    }">${vt}</span>
+                  </div>
+                  <div class="text-xs text-slate-700 mt-1 flex justify-between font-medium">
+                    <span>Obs: <strong class="text-slate-900 font-bold">${totalObs}</strong></span>
+                    <span>Uncertainty: <strong class="text-amber-800 font-bold">±${uncertaintyStd.toFixed(3)}</strong></span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-[10px] text-slate-600 font-bold">POLICY:</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200 truncate max-w-[130px]">${bestAct}</span>
+                </div>
+              `;
+              matrixContainer.appendChild(cellCard);
             });
-
-            const totalAB = bestAlpha + bestBeta;
-            const variance = (bestAlpha * bestBeta) / (totalAB * totalAB * (totalAB + 1));
-            const uncertaintyStd = Math.sqrt(variance);
-
-            const cellCard = document.createElement("div");
-            cellCard.id = `ctx-cell-${ctxKey}`;
-            cellCard.className = "p-3 bg-white hover:bg-rose-50/40 border border-slate-200 hover:border-rose-400 rounded-xl cursor-pointer transition flex flex-col justify-between space-y-2 font-mono shadow-sm";
-            cellCard.onclick = () => selectContextCell(ctxKey);
-
-            cellCard.innerHTML = `
-              <div>
-                <div class="flex items-center justify-between gap-1">
-                  <span class="text-xs font-bold text-slate-900 uppercase truncate">${fc}</span>
-                  <span class="px-1.5 py-0.2 rounded text-[10px] font-bold ${
-                    vt === "HIGH" ? "bg-purple-50 text-purple-700 border border-purple-200" :
-                    vt === "MID" ? "bg-rose-50 text-rose-700 border border-rose-200" :
-                    "bg-slate-100 text-slate-700 border border-slate-200"
-                  }">${vt}</span>
-                </div>
-                <div class="text-xs text-slate-700 mt-1 flex justify-between font-medium">
-                  <span>Obs: <strong class="text-slate-900 font-bold">${totalObs}</strong></span>
-                  <span>Uncertainty: <strong class="text-amber-800 font-bold">±${uncertaintyStd.toFixed(3)}</strong></span>
-                </div>
-              </div>
-              <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
-                <span class="text-[10px] text-slate-600 font-bold">POLICY:</span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200 truncate max-w-[130px]">${bestAct}</span>
-              </div>
-            `;
-            matrixContainer.appendChild(cellCard);
           });
-        });
 
-        if (firstContextKey) {
-          selectContextCell("TIMEOUT_TRANSIENT+MID" in cachedLearningArms ? "TIMEOUT_TRANSIENT+MID" : firstContextKey);
+          if (firstContextKey) {
+            selectContextCell("TIMEOUT_TRANSIENT+MID" in cachedLearningArms ? "TIMEOUT_TRANSIENT+MID" : firstContextKey);
+          }
         }
 
         // Render All Context Arms Table
@@ -1968,59 +2035,66 @@
         const totalArms = Object.keys(cachedLearningArms).length;
         if (armsBadge) armsBadge.innerText = `${totalArms} Context Segments (${totalArms * 5} Arms)`;
 
-        let rows = "";
-        Object.entries(cachedLearningArms).forEach(([ctx, actDict]) => {
-          Object.entries(actDict).forEach(([act, st]) => {
-            const totalAB = (st.alpha || 1.0) + (st.beta || 1.0);
-            const variance = ((st.alpha || 1.0) * (st.beta || 1.0)) / (totalAB * totalAB * (totalAB + 1));
-            const std = Math.sqrt(variance);
+        if (container) {
+          let rows = "";
+          Object.entries(cachedLearningArms).forEach(([ctx, actDict]) => {
+            Object.entries(actDict).forEach(([act, st]) => {
+              const totalAB = (st.alpha || 1.0) + (st.beta || 1.0);
+              const variance = ((st.alpha || 1.0) * (st.beta || 1.0)) / (totalAB * totalAB * (totalAB + 1));
+              const std = Math.sqrt(variance);
 
-            rows += `
-              <tr class="text-xs font-mono hover:bg-slate-50 transition">
-                <td class="py-2.5 px-4 font-bold text-slate-900">${ctx}</td>
-                <td class="py-2.5 px-4 text-purple-700 font-semibold">${act}</td>
-                <td class="py-2.5 px-4 text-right font-bold text-emerald-700">${st.posterior_mean}</td>
-                <td class="py-2.5 px-4 text-right font-bold text-amber-800">±${std.toFixed(3)}</td>
-                <td class="py-2.5 px-4 text-right text-slate-800 font-medium">α=${st.alpha !== undefined ? st.alpha.toFixed(1) : "—"}</td>
-                <td class="py-2.5 px-4 text-right text-slate-800 font-medium">β=${st.beta !== undefined ? st.beta.toFixed(1) : "—"}</td>
-                <td class="py-2.5 px-4 text-right text-slate-900 font-bold">${st.attempt_count !== undefined ? st.attempt_count : "—"}</td>
-                <td class="py-2.5 px-4 text-right text-emerald-700 font-bold">${st.success_count !== undefined ? st.success_count : "—"}</td>
-                <td class="py-2.5 px-4 text-right text-rose-700 font-bold">${st.failure_count !== undefined ? st.failure_count : "—"}</td>
-              </tr>
-            `;
+              rows += `
+                <tr class="text-xs font-mono hover:bg-slate-50 transition">
+                  <td class="py-2.5 px-4 font-bold text-slate-900">${ctx}</td>
+                  <td class="py-2.5 px-4 text-purple-700 font-semibold">${act}</td>
+                  <td class="py-2.5 px-4 text-right font-bold text-emerald-700">${st.posterior_mean}</td>
+                  <td class="py-2.5 px-4 text-right font-bold text-amber-800">±${std.toFixed(3)}</td>
+                  <td class="py-2.5 px-4 text-right text-slate-800 font-medium">α=${st.alpha !== undefined ? st.alpha.toFixed(1) : "—"}</td>
+                  <td class="py-2.5 px-4 text-right text-slate-800 font-medium">β=${st.beta !== undefined ? st.beta.toFixed(1) : "—"}</td>
+                  <td class="py-2.5 px-4 text-right text-slate-900 font-bold">${st.attempt_count !== undefined ? st.attempt_count : "—"}</td>
+                  <td class="py-2.5 px-4 text-right text-emerald-700 font-bold">${st.success_count !== undefined ? st.success_count : "—"}</td>
+                  <td class="py-2.5 px-4 text-right text-rose-700 font-bold">${st.failure_count !== undefined ? st.failure_count : "—"}</td>
+                </tr>
+              `;
+            });
           });
-        });
 
-        container.innerHTML = `
-          <table class="w-full text-left font-mono text-xs">
-            <thead class="bg-slate-50 text-slate-700 font-bold border-b border-slate-200 text-xs sticky top-0">
-              <tr>
-                <th class="py-2.5 px-4">CONTEXT (FAILURE+TIER)</th>
-                <th class="py-2.5 px-4">ACTION</th>
-                <th class="py-2.5 px-4 text-right">POSTERIOR μ</th>
-                <th class="py-2.5 px-4 text-right">UNCERTAINTY σ</th>
-                <th class="py-2.5 px-4 text-right">ALPHA</th>
-                <th class="py-2.5 px-4 text-right">BETA</th>
-                <th class="py-2.5 px-4 text-right">ATTEMPTS</th>
-                <th class="py-2.5 px-4 text-right">SUCCESS</th>
-                <th class="py-2.5 px-4 text-right">FAILURES</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100 text-slate-800">
-              ${rows || '<tr><td colspan="9" class="py-4 text-center text-slate-600 font-medium">No arm statistics available</td></tr>'}
-            </tbody>
-          </table>
-        `;
+          container.innerHTML = `
+            <table class="w-full text-left font-mono text-xs">
+              <thead class="bg-slate-50 text-slate-700 font-bold border-b border-slate-200 text-xs sticky top-0">
+                <tr>
+                  <th class="py-2.5 px-4">CONTEXT (FAILURE+TIER)</th>
+                  <th class="py-2.5 px-4">ACTION</th>
+                  <th class="py-2.5 px-4 text-right">POSTERIOR μ</th>
+                  <th class="py-2.5 px-4 text-right">UNCERTAINTY σ</th>
+                  <th class="py-2.5 px-4 text-right">ALPHA</th>
+                  <th class="py-2.5 px-4 text-right">BETA</th>
+                  <th class="py-2.5 px-4 text-right">ATTEMPTS</th>
+                  <th class="py-2.5 px-4 text-right">SUCCESS</th>
+                  <th class="py-2.5 px-4 text-right">FAILURES</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-800">
+                ${rows || '<tr><td colspan="9" class="py-4 text-center text-slate-600 font-medium">No arm statistics available</td></tr>'}
+              </tbody>
+            </table>
+          `;
+        }
       } catch (err) {
         console.error("Error loading learning data:", err);
-        document.getElementById("bandit-arms-table-container").innerHTML = `<div class="p-6 text-center text-rose-700 font-mono text-xs font-bold">⚠️ Error loading learning state: ${err.message}</div>`;
+        const container = document.getElementById("bandit-arms-table-container");
+        if (container) {
+          container.innerHTML = `<div class="p-6 text-center text-rose-700 font-mono text-xs font-bold">⚠️ Error loading learning state: ${err.message}</div>`;
+        }
       }
     }
 
     function selectContextCell(ctxKey) {
       document.querySelectorAll('[id^="ctx-cell-"]').forEach(el => {
-        el.classList.remove("border-rose-500", "bg-rose-50/80", "shadow-md");
-        el.classList.add("border-slate-200");
+        if (el) {
+          el.classList.remove("border-rose-500", "bg-rose-50/80", "shadow-md");
+          el.classList.add("border-slate-200");
+        }
       });
       const selectedEl = document.getElementById(`ctx-cell-${ctxKey}`);
       if (selectedEl) {
@@ -2029,6 +2103,8 @@
       }
 
       const panel = document.getElementById("context-inspector-panel");
+      if (!panel) return;
+
       const actDict = cachedLearningArms[ctxKey] || {};
 
       let totalObs = 0;
@@ -2190,7 +2266,7 @@
         `).join("");
       } catch (err) {
         console.error("Error loading exceptions:", err);
-        document.getElementById("exceptions-table-body").innerHTML = `<tr><td colspan="6" class="py-6 text-center text-rose-700 font-mono font-bold">⚠️ Error loading exceptions registry: ${err.message}</td></tr>`;
+        setInnerHtml("exceptions-table-body", `<tr><td colspan="6" class="py-6 text-center text-rose-700 font-mono font-bold">⚠️ Error loading exceptions registry: ${err.message}</td></tr>`);
       }
     }
 
@@ -2481,12 +2557,12 @@
     // =========================================================================
     async function loadAuditLogs() {
       const stage = document.getElementById("audit-filter-stage") ? document.getElementById("audit-filter-stage").value : "";
-      const url = `/api/v1/dashboard/audit?limit=100${stage ? `&stage=${stage}` : ""}`;
+      const url = `/api/v1/dashboard/audit?limit=250${stage ? `&stage=${stage}` : ""}`;
       try {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const audits = await res.json();
-        document.getElementById("audit-count-badge").innerText = `${audits.length} stage records shown`;
+        setInnerText("audit-count-badge", `${audits.length} stage records shown`);
 
         const tbody = document.getElementById("audit-table-body");
         if (audits.length === 0) {
@@ -2511,7 +2587,7 @@
         `).join("");
       } catch (err) {
         console.error("Error loading audit logs:", err);
-        document.getElementById("audit-table-body").innerHTML = `<tr><td colspan="7" class="py-6 text-center text-rose-700 font-mono font-bold">⚠️ Error loading audit logs: ${err.message}</td></tr>`;
+        setInnerHtml("audit-table-body", `<tr><td colspan="7" class="py-6 text-center text-rose-700 font-mono font-bold">⚠️ Error loading audit logs: ${err.message}</td></tr>`);
       }
     }
 
