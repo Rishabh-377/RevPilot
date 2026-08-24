@@ -472,4 +472,10 @@ class TestProductCredibilityHardening:
         assert "Proposed Candidate Action (Max EV)" in html
         assert "FINAL AUTHORIZATION GATE (FAIL-CLOSED)" in html
 
+        # Verify Judge Demo Scene 12 Title & Fallbacks
+        assert "Benchmark Reconciliation &amp; Net Recovered Revenue" in html or "Benchmark Reconciliation & Net Recovered Revenue" in html
+        assert '30.40%"' in html
+        assert '₹15.51L")' in html
+
+
 
