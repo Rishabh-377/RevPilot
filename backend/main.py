@@ -53,3 +53,25 @@ async def dashboard():
     if html_file.exists():
         return FileResponse(html_file)
     return JSONResponse(status_code=404, content={"error": "Dashboard template not found"})
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon_ico():
+    """Serve the RevPilot binary ICO brand favicon."""
+    ico_file = FRONTEND_DIR / "favicon.ico"
+    if ico_file.exists():
+        return FileResponse(ico_file, media_type="image/x-icon")
+    svg_file = FRONTEND_DIR / "favicon.svg"
+    if svg_file.exists():
+        return FileResponse(svg_file, media_type="image/svg+xml")
+    return JSONResponse(status_code=404, content={"error": "Favicon not found"})
+
+
+@app.get("/favicon.svg", include_in_schema=False)
+async def favicon_svg():
+    """Serve the RevPilot SVG brand favicon."""
+    svg_file = FRONTEND_DIR / "favicon.svg"
+    if svg_file.exists():
+        return FileResponse(svg_file, media_type="image/svg+xml")
+    return JSONResponse(status_code=404, content={"error": "Favicon not found"})
+

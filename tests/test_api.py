@@ -116,6 +116,26 @@ class TestDashboardHtmlNoHardcodedMetrics:
         assert "function renderComparisonTable(" in html
         assert "switchTab('control_room')" in html
 
+    def test_favicon_endpoints_return_200(self) -> None:
+        """Verify /favicon.ico and /favicon.svg endpoints return HTTP 200 with valid content."""
+        res_ico = client.get("/favicon.ico")
+        assert res_ico.status_code == 200
+        assert "image/x-icon" in res_ico.headers.get("content-type", "")
+        assert len(res_ico.content) > 0
+
+        res_svg = client.get("/favicon.svg")
+        assert res_svg.status_code == 200
+        assert "image/svg+xml" in res_svg.headers.get("content-type", "")
+        assert b"<svg" in res_svg.content
+
+    def test_dashboard_html_contains_favicon_links(self) -> None:
+        """Verify dashboard HTML includes favicon link elements."""
+        response = client.get("/dashboard")
+        assert response.status_code == 200
+        assert 'href="/favicon.svg"' in response.text
+        assert 'href="/favicon.ico"' in response.text
+
+
 
 class TestDynamicDataLoading:
     """Verify that API responses originate dynamically from actual output files."""
