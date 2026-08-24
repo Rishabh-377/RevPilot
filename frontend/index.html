@@ -1547,8 +1547,8 @@
         const container = document.getElementById("tx-list-container");
         container.innerHTML = "";
         if (cachedTransactions.length === 0) {
-          container.innerHTML = "<div class="p-6 text-center text-slate-600 font-mono font-medium text-xs">No transactions match the selected filter.</div>";
-          document.getElementById("tx-detail-panel").innerHTML = "<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transaction data available.</div>";
+          container.innerHTML = '<div class="p-6 text-center text-slate-600 font-mono font-medium text-xs">No transactions match the selected filter.</div>';
+          document.getElementById("tx-detail-panel").innerHTML = '<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transaction data available.</div>';
           return;
         }
 
@@ -1801,7 +1801,7 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
-                  ${candidateRows || "<tr><td colspan="9" class="py-3 text-center text-slate-600">No candidate actions recorded</td></tr>"}
+                  ${candidateRows || '<tr><td colspan="9" class="py-3 text-center text-slate-600">No candidate actions recorded</td></tr>'}
                 </tbody>
               </table>
             </div>
@@ -2007,7 +2007,7 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-100 text-slate-800">
-              ${rows || "<tr><td colspan="9" class="py-4 text-center text-slate-600 font-medium">No arm statistics available</td></tr>"}
+              ${rows || '<tr><td colspan="9" class="py-4 text-center text-slate-600 font-medium">No arm statistics available</td></tr>'}
             </tbody>
           </table>
         `;
@@ -2018,7 +2018,7 @@
     }
 
     function selectContextCell(ctxKey) {
-      document.querySelectorAll("[id^="ctx-cell-"]").forEach(el => {
+      document.querySelectorAll('[id^="ctx-cell-"]').forEach(el => {
         el.classList.remove("border-rose-500", "bg-rose-50/80", "shadow-md");
         el.classList.add("border-slate-200");
       });
@@ -2117,7 +2117,7 @@
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
-                  ${armRows || "<tr><td colspan="6" class="py-3 text-center text-slate-600 font-medium">No arm posteriors</td></tr>"}
+                  ${armRows || '<tr><td colspan="6" class="py-3 text-center text-slate-600 font-medium">No arm posteriors</td></tr>'}
                 </tbody>
               </table>
             </div>
@@ -2268,7 +2268,7 @@
 
       container.innerHTML = "";
       if (scenarios.length === 0) {
-        container.innerHTML = "<div class="p-6 text-center text-slate-600 font-mono text-xs font-medium">No chaos scenario results available.</div>";
+        container.innerHTML = '<div class="p-6 text-center text-slate-600 font-mono text-xs font-medium">No chaos scenario results available.</div>';
         return;
       }
 
@@ -2284,7 +2284,7 @@
         item.innerHTML = `
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-1.5 truncate">
-              ${isDup ? "<span class="px-1.5 py-0.2 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[9px] font-bold">RECOMMENDED</span>" : ""}
+              ${isDup ? '<span class="px-1.5 py-0.2 bg-rose-50 text-rose-700 border border-rose-200 rounded text-[9px] font-bold">RECOMMENDED</span>' : ""}
               <span class="font-bold text-slate-900 text-xs truncate">${sc.name}</span>
             </div>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
@@ -2304,7 +2304,7 @@
     }
 
     function renderChaosDetail(sc) {
-      document.querySelectorAll("[id^="chaos-item-"]").forEach(el => {
+      document.querySelectorAll('[id^="chaos-item-"]').forEach(el => {
         el.classList.remove("border-rose-500", "bg-rose-50/40", "shadow-md");
         el.classList.add("border-slate-200");
       });
@@ -2380,9 +2380,9 @@
             </div>
             <div class="text-slate-800 text-xs font-medium">
               ${
-                isMalformed ? "<span class="text-rose-700 font-bold">REJECTED</span>: Pydantic ValidationError raised (non-numeric string rejected)." :
-                isNegative ? "<span class="text-rose-700 font-bold">REJECTED</span>: Field validation error amount > 0 constraint violated." :
-                "<span class="text-emerald-700 font-bold">ACCEPTED</span>: Valid JSON schema structure passed to core pipeline."
+                isMalformed ? '<span class="text-rose-700 font-bold">REJECTED</span>: Pydantic ValidationError raised (non-numeric string rejected).' :
+                isNegative ? '<span class="text-rose-700 font-bold">REJECTED</span>: Field validation error amount > 0 constraint violated.' :
+                '<span class="text-emerald-700 font-bold">ACCEPTED</span>: Valid JSON schema structure passed to core pipeline.'
               }
             </div>
           </div>
@@ -2395,9 +2395,9 @@
             </div>
             <div class="text-slate-800 text-xs font-medium">
               ${
-                isCorrupt ? "<span class="text-amber-800 font-bold">UNKNOWN (CONFIDENCE < 0.60)</span>: Isolated unparseable hex buffer safely." :
-                isMalformed || isNegative ? "<span class="text-slate-600 font-semibold">SKIPPED</span>: Ingress validation aborted prior to diagnosis." :
-                "<span class="text-purple-700 font-bold">COMPLETED</span>: Mapped gateway error to failure category without information leakage."
+                isCorrupt ? '<span class="text-amber-800 font-bold">UNKNOWN (CONFIDENCE < 0.60)</span>: Isolated unparseable hex buffer safely.' :
+                isMalformed || isNegative ? '<span class="text-slate-600 font-semibold">SKIPPED</span>: Ingress validation aborted prior to diagnosis.' :
+                '<span class="text-purple-700 font-bold">COMPLETED</span>: Mapped gateway error to failure category without information leakage.'
               }
             </div>
           </div>
@@ -2410,8 +2410,8 @@
             </div>
             <div class="text-slate-800 text-xs font-medium">
               ${
-                isMalformed || isNegative ? "<span class="text-slate-600 font-semibold">SKIPPED</span>: No strategy evaluated for invalid ingress payload." :
-                "<span class="text-rose-700 font-bold">EVALUATED</span>: Candidate arms ranked by expected value net of cost parameters."
+                isMalformed || isNegative ? '<span class="text-slate-600 font-semibold">SKIPPED</span>: No strategy evaluated for invalid ingress payload.' :
+                '<span class="text-rose-700 font-bold">EVALUATED</span>: Candidate arms ranked by expected value net of cost parameters.'
               }
             </div>
           </div>
@@ -2424,11 +2424,11 @@
             </div>
             <div class="text-slate-800 text-xs font-medium">
               ${
-                isDup ? "<span class="text-rose-700 font-bold">BLOCKED by rule_idempotency</span>: Duplicate payment attempt recognized and intercepted." :
-                isCurrency ? "<span class="text-rose-700 font-bold">BLOCKED by rule_supported_currency</span>: BTC rejected (only INR supported)." :
-                isOOO ? "<span class="text-rose-700 font-bold">BLOCKED by rule_max_retries_per_payment</span>: Attempt count > 3 threshold reached." :
-                isMalformed || isNegative ? "<span class="text-rose-700 font-bold">VALIDATION_REJECTED</span>: Fail-closed before guardrail execution." :
-                "<span class="text-emerald-700 font-bold">APPROVED</span>: All deterministic safety invariants satisfied."
+                isDup ? '<span class="text-rose-700 font-bold">BLOCKED by rule_idempotency</span>: Duplicate payment attempt recognized and intercepted.' :
+                isCurrency ? '<span class="text-rose-700 font-bold">BLOCKED by rule_supported_currency</span>: BTC rejected (only INR supported).' :
+                isOOO ? '<span class="text-rose-700 font-bold">BLOCKED by rule_max_retries_per_payment</span>: Attempt count > 3 threshold reached.' :
+                isMalformed || isNegative ? '<span class="text-rose-700 font-bold">VALIDATION_REJECTED</span>: Fail-closed before guardrail execution.' :
+                '<span class="text-emerald-700 font-bold">APPROVED</span>: All deterministic safety invariants satisfied.'
               }
             </div>
           </div>
@@ -2442,10 +2442,10 @@
             <div class="text-slate-800 text-xs font-medium">
               ${
                 sc.execution_called ?
-                (isTimeout ? "<span class="text-amber-800 font-bold">TIMEOUT HANDLED</span>: NetworkTimeoutException caught safely; zero false recovery." :
-                 isExecFail ? "<span class="text-amber-800 font-bold">DECLINE OBSERVED</span>: Bank decline recorded accurately in posterior state." :
-                 "<span class="text-emerald-700 font-bold">EXECUTED SAFELY</span>: Test execution adapter dispatched payload.") :
-                "<span class="text-emerald-700 font-bold">GATE CLOSED</span>: ExecutionService was strictly NOT invoked. Zero financial risk."
+                (isTimeout ? '<span class="text-amber-800 font-bold">TIMEOUT HANDLED</span>: NetworkTimeoutException caught safely; zero false recovery.' :
+                 isExecFail ? '<span class="text-amber-800 font-bold">DECLINE OBSERVED</span>: Bank decline recorded accurately in posterior state.' :
+                 '<span class="text-emerald-700 font-bold">EXECUTED SAFELY</span>: Test execution adapter dispatched payload.') :
+                '<span class="text-emerald-700 font-bold">GATE CLOSED</span>: ExecutionService was strictly NOT invoked. Zero financial risk.'
               }
             </div>
           </div>
@@ -2490,7 +2490,7 @@
 
         const tbody = document.getElementById("audit-table-body");
         if (audits.length === 0) {
-          tbody.innerHTML = "<tr><td colspan="7" class="py-6 text-center text-slate-600 font-mono font-medium">No audit entries found for the selected stage filter.</td></tr>";
+          tbody.innerHTML = '<tr><td colspan="7" class="py-6 text-center text-slate-600 font-mono font-medium">No audit entries found for the selected stage filter.</td></tr>';
           return;
         }
 
