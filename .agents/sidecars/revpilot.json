@@ -1,0 +1,16 @@
+{
+  "name": "revpilot-dev-server",
+  "displayName": "RevPilot Dev Server",
+  "description": "RevPilot FastAPI development server with live reload",
+  "command": "uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload",
+  "cwd": ".",
+  "restartOnFailure": true,
+  "healthCheck": {
+    "url": "http://127.0.0.1:8000/api/v1/health",
+    "intervalSeconds": 5,
+    "timeoutSeconds": 3
+  },
+  "env": {
+    "PYTHONUNBUFFERED": "1"
+  }
+}
