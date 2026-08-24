@@ -1537,29 +1537,37 @@
 
     async function loadExplorerTransactions() {
       try {
-        const filterVal = document.getElementById("tx-filter-status") ? document.getElementById("tx-filter-status").value : "";
-        const url = `/api/v1/dashboard/transactions?limit=150${filterVal ? `&status_filter=${filterVal}` : ""}`;
+        const filterSelect = document.getElementById("explorer-filter-status");
+        const filterVal = filterSelect ? filterSelect.value : "";
+        const url = `/api/v1/dashboard/transactions?limit=150${filterVal ? `&status_filter=${encodeURIComponent(filterVal)}` : ""}`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         cachedTransactions = data.items || [];
 
+        const countBadge = document.getElementById("tx-stream-count");
+        if (countBadge) {
+          const filterLabel = filterVal ? `FILTER: ${filterVal.toUpperCase()} (${cachedTransactions.length})` : `${cachedTransactions.length} TOTAL`;
+          countBadge.innerText = filterLabel;
+        }
+
         const container = document.getElementById("tx-list-container");
         container.innerHTML = "";
         if (cachedTransactions.length === 0) {
-          container.innerHTML = '<div class="p-6 text-center text-slate-600 font-mono font-medium text-xs">No transactions match the selected filter.</div>';
-          setInnerHtml("tx-detail-panel", '<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transaction data available.</div>');
+          container.innerHTML = '<div class="p-6 text-center text-slate-600 font-mono font-medium text-xs">No transactions match this status.</div>';
+          setInnerHtml("tx-detail-panel", '<div class="text-slate-600 font-mono font-medium text-xs text-center py-20">No transactions match this status.</div>');
           return;
         }
 
         cachedTransactions.forEach((tx) => {
           const item = document.createElement("div");
+          item.id = `tx-stream-item-${tx.event_id}`;
           item.className = "p-3 hover:bg-slate-50 cursor-pointer transition flex items-center justify-between text-xs font-mono border-l-2 border-transparent";
-          item.onclick = () => renderTransactionDetail(tx);
+          item.onclick = () => selectTransactionInStream(tx);
 
           const statusColor = tx.status === "success" ? "text-emerald-700 bg-emerald-50 border-emerald-100" :
                               tx.status === "failure" ? "text-rose-700 bg-rose-50 border-rose-100" :
-                              tx.status === "abandoned" ? "text-amber-700 bg-amber-50 border-amber-100" :
+                              (tx.status === "abandoned" || (tx.guardrail && tx.guardrail.verdict === "blocked")) ? "text-amber-700 bg-amber-50 border-amber-100" :
                               "text-indigo-700 bg-indigo-50 border-indigo-100";
 
           const evObj = tx.event || {};
@@ -1578,14 +1586,27 @@
           container.appendChild(item);
         });
 
-        // Automatically select the first transaction
+        // Automatically select and highlight the first transaction
         if (cachedTransactions.length > 0) {
-          renderTransactionDetail(cachedTransactions[0]);
+          selectTransactionInStream(cachedTransactions[0]);
         }
       } catch (err) {
         console.error("Error loading transactions:", err);
         setInnerHtml("tx-list-container", `<div class="p-6 text-center text-rose-400 font-mono text-xs">⚠️ Error loading transactions: ${err.message}</div>`);
       }
+    }
+
+    function selectTransactionInStream(tx) {
+      document.querySelectorAll('[id^="tx-stream-item-"]').forEach(el => {
+        el.classList.remove("border-rose-500", "bg-rose-50/40");
+        el.classList.add("border-transparent");
+      });
+      const selectedEl = document.getElementById(`tx-stream-item-${tx.event_id}`);
+      if (selectedEl) {
+        selectedEl.classList.remove("border-transparent");
+        selectedEl.classList.add("border-rose-500", "bg-rose-50/40");
+      }
+      renderTransactionDetail(tx);
     }
 
     function renderTransactionDetail(tx) {

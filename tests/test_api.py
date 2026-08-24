@@ -478,4 +478,110 @@ class TestProductCredibilityHardening:
         assert '₹15.51L")' in html
 
 
+class TestDecisionExplorerStatusFilter:
+    """Regression test suite for Decision Explorer status filtering."""
+
+    def test_filter_all_statuses(self) -> None:
+        """Verify omitting or passing empty status_filter returns full 150 transactions."""
+        resp = client.get("/api/v1/dashboard/transactions?limit=150")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["total"] == 150
+        assert len(data["items"]) == 150
+
+    def test_filter_success_only(self) -> None:
+        """Verify status_filter=success returns only successful recoveries."""
+        resp = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=success")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["total"] == 35
+        assert len(data["items"]) == 35
+        for item in data["items"]:
+            assert item["status"] == "success"
+
+    def test_filter_failure_only(self) -> None:
+        """Verify status_filter=failure returns only failed execution attempts."""
+        resp = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=failure")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["total"] == 64
+        assert len(data["items"]) == 64
+        for item in data["items"]:
+            assert item["status"] == "failure"
+
+    def test_filter_blocked_abandoned(self) -> None:
+        """Verify status_filter=abandoned and status_filter=blocked return blocked events."""
+        resp_ab = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=abandoned")
+        assert resp_ab.status_code == 200
+        data_ab = resp_ab.json()
+        assert data_ab["total"] == 41
+        for item in data_ab["items"]:
+            assert item["status"] == "abandoned" or (item.get("guardrail") and item["guardrail"]["verdict"] == "blocked")
+
+        resp_bl = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=blocked")
+        assert resp_bl.status_code == 200
+        data_bl = resp_bl.json()
+        assert data_bl["total"] == 41
+
+    def test_filter_escalated_pending(self) -> None:
+        """Verify status_filter=pending and status_filter=escalated return human escalation events."""
+        resp_pe = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=pending")
+        assert resp_pe.status_code == 200
+        data_pe = resp_pe.json()
+        assert data_pe["total"] == 10
+        for item in data_pe["items"]:
+            assert item["status"] == "pending" or (item.get("guardrail") and item["guardrail"]["verdict"] == "escalate")
+
+        resp_es = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=escalated")
+        assert resp_es.status_code == 200
+        data_es = resp_es.json()
+        assert data_es["total"] == 10
+
+    def test_filter_empty_result_set(self) -> None:
+        """Verify unknown status filter returns 0 items cleanly."""
+        resp = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=non_existent_status")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["total"] == 0
+        assert len(data["items"]) == 0
+
+    def test_filter_switch_and_reset(self) -> None:
+        """Verify switching filters back and forth cleanly restores full set."""
+        # 1. Success
+        r1 = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=success")
+        assert r1.json()["total"] == 35
+
+        # 2. Failure
+        r2 = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=failure")
+        assert r2.json()["total"] == 64
+
+        # 3. Abandoned
+        r3 = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=abandoned")
+        assert r3.json()["total"] == 41
+
+        # 4. Reset to all
+        r_all = client.get("/api/v1/dashboard/transactions?limit=150&status_filter=")
+        assert r_all.json()["total"] == 150
+
+    def test_frontend_filter_bindings_and_ux_contract(self) -> None:
+        """Verify DOM elements and JavaScript functions for status filtering are properly wired."""
+        resp = client.get("/dashboard")
+        assert resp.status_code == 200
+        html = resp.text
+
+        # Verify element ID and onchange handler match
+        assert 'id="explorer-filter-status"' in html
+        assert 'onchange="loadExplorerTransactions()"' in html
+
+        # Verify JS correctly queries explorer-filter-status
+        assert 'document.getElementById("explorer-filter-status")' in html
+        assert 'status_filter=' in html
+
+        # Verify count badge and empty state text
+        assert 'id="tx-stream-count"' in html
+        assert "No transactions match this status." in html
+        assert "selectTransactionInStream" in html
+
+
+
 

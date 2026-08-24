@@ -218,12 +218,24 @@ async def get_dashboard_transactions(
     results = [explorer_pipeline.process_event(ev) for ev in events]
 
     if status_filter:
-        results = [
-            r
-            for r in results
-            if r.status == status_filter
-            or (r.guardrail_verdict and r.guardrail_verdict.value == status_filter)
-        ]
+        s_lower = status_filter.strip().lower()
+
+        def match_status(r: Any) -> bool:
+            st = (r.status or "").lower()
+            gv = (r.guardrail_verdict.value if r.guardrail_verdict else "").lower()
+            if s_lower in ("", "all", "all statuses"):
+                return True
+            if s_lower == "success":
+                return st == "success"
+            if s_lower == "failure":
+                return st == "failure"
+            if s_lower in ("abandoned", "blocked"):
+                return st == "abandoned" or gv == "blocked"
+            if s_lower in ("pending", "escalated", "escalate"):
+                return st == "pending" or gv == "escalate"
+            return st == s_lower or gv == s_lower
+
+        results = [r for r in results if match_status(r)]
 
     paged = results[offset : offset + limit]
     items = []
