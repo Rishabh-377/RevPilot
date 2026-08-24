@@ -334,9 +334,9 @@
               <!-- Card 1: Net Recovered -->
               <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-card relative overflow-hidden flex flex-col justify-between">
                 <div>
-                  <div class="text-[11px] font-mono font-bold text-slate-700 uppercase tracking-wider" title="Gross recovered revenue minus gateway API costs and customer friction penalties (Synthetic simulation)">NET RECOVERED ℹ️</div>
+                  <div class="text-[11px] font-mono font-bold text-slate-700 uppercase tracking-wider" title="Gross recovered revenue minus modeled gateway API fees and customer friction cost (500 records)">NET SIMULATED BENCHMARK REVENUE ℹ️</div>
                   <div id="kpi-net-revenue" class="text-2xl font-bold font-mono text-emerald-400 mt-1">—</div>
-                  <div id="kpi-net-revenue-sub" class="text-xs text-slate-600 mt-0.5 font-medium">Net Simulated Revenue</div>
+                  <div id="kpi-net-revenue-sub" class="text-xs text-slate-600 mt-0.5 font-medium">500 records (Synthetic simulation)</div>
                 </div>
                 <!-- Sparkline SVG -->
                 <div class="h-6 w-full mt-2">
@@ -514,7 +514,7 @@
               <!-- Card A: REVENUE FLOW (Funnel visualization) -->
               <div class="bg-white border border-slate-200/80 rounded-2xl p-4 shadow-card flex flex-col justify-between font-mono text-xs">
                 <div class="flex items-center justify-between pb-2 border-b border-slate-100">
-                  <span class="font-bold text-slate-900 text-[11px]">REVENUE FLOW <span class="text-[10px] text-slate-600 font-medium">(Simulated)</span></span>
+                  <span class="font-bold text-slate-900 text-[11px]">CONCEPTUAL GMV FLOW <span class="text-[10px] text-slate-600 font-medium">(ILLUSTRATIVE)</span></span>
                 </div>
                 
                 <!-- Funnel Shapes & Values -->
@@ -532,12 +532,12 @@
                     <span class="font-bold text-rose-600">₹20.37L</span>
                   </div>
                   <div class="p-2 bg-emerald-50/80 border border-emerald-100 rounded-lg flex items-center justify-between text-[11px]">
-                    <span class="text-emerald-900 font-medium">Recoverable (RevPilot)</span>
+                    <span class="text-emerald-900 font-medium">Simulated Recovery Potential</span>
                     <span class="font-bold text-emerald-600">₹27.03L</span>
                   </div>
                 </div>
 
-                <div class="text-xs text-slate-600 text-center font-medium">Net Lift: +₹27.03 Lakhs recovered</div>
+                <div class="text-xs text-slate-600 text-center font-medium">Illustrative Merchant Opportunity: ₹27.03L</div>
               </div>
 
               <!-- Card B: TODAY'S CONTROL EVENTS -->
@@ -827,11 +827,11 @@
               <!-- Strategy Decision Box -->
               <div class="p-3 bg-slate-50 border border-slate-200/70 rounded-xl space-y-2">
                 <div class="flex items-center justify-between">
-                  <span class="text-[11px] text-slate-700 uppercase font-bold">STRATEGY DECISION</span>
+                  <span class="text-[11px] text-slate-700 uppercase font-bold">MODEL RECOMMENDATION (THOMPSON SAMPLING PROPOSAL)</span>
                   <span class="px-1.5 py-0.5 bg-indigo-50 text-indigo-600 border border-indigo-100 rounded text-[9px] font-bold">THOMPSON SAMPLING</span>
                 </div>
                 <div class="flex items-center justify-between text-[11px]">
-                  <span class="text-slate-500">Selected Action:</span>
+                  <span class="text-slate-500">Proposed Candidate Action (Max EV):</span>
                   <span class="font-bold text-indigo-600" id="rt-strat-action">IMMEDIATE_RETRY</span>
                 </div>
                 <div class="flex items-center justify-between text-[10px] text-slate-600">
@@ -846,7 +846,7 @@
               <!-- Guardrail Verdict Box -->
               <div class="p-3 bg-emerald-50/60 border border-emerald-100 rounded-xl space-y-1">
                 <div class="flex items-center justify-between">
-                  <span class="text-[10px] text-emerald-800 uppercase font-bold">GUARDRAIL VERDICT</span>
+                  <span class="text-[10px] text-emerald-800 uppercase font-bold">FINAL AUTHORIZATION GATE (FAIL-CLOSED)</span>
                   <span class="px-1.5 py-0.5 bg-emerald-500 text-white rounded text-[9px] font-bold" id="rt-guard-verdict">✓ APPROVED</span>
                 </div>
                 <div class="text-[10px] text-emerald-700" id="rt-guard-rules">All deterministic safety rules passed.</div>
@@ -1688,7 +1688,7 @@
       let guardrailRuleClass = "text-emerald-700 font-medium";
       if (isBlocked) {
         const violatedRule = (guard.rules_triggered && guard.rules_triggered.length) ? guard.rules_triggered.join(", ") : (diag.normalized_failure_class === "FRAUD_SUSPECTED" ? "FRAUD_SUSPECTED" : "IDEMPOTENCY / VELOCITY");
-        guardrailRuleText = `Execution blocked by deterministic safety rule. Rule: ${violatedRule} | Result: FAIL | Final decision: BLOCK`;
+        guardrailRuleText = `Model recommendation: ${strat.selected_action || "IMMEDIATE_RETRY"} | Final authorization: BLOCKED (Rule: ${violatedRule}) | Execution: NOT EXECUTED`;
         guardrailRuleClass = "text-rose-700 font-bold";
       } else if (guard.verdict === "escalate") {
         guardrailRuleText = "Automatic execution withheld; human approval required.";
@@ -1711,13 +1711,13 @@
             </div>
           </div>
           <div class="space-y-1">
-            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">3. WHY THIS WIN?</div>
+            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">3. PROPOSED RECOVERY?</div>
             <div class="text-emerald-700 font-bold leading-tight truncate">
-              Max EV (${formatCurrency(strat.ev_scores && strat.ev_scores[strat.selected_action] !== undefined ? strat.ev_scores[strat.selected_action] : 0.0)})
+              Max EV Proposed (${formatCurrency(strat.ev_scores && strat.ev_scores[strat.selected_action] !== undefined ? strat.ev_scores[strat.selected_action] : 0.0)})
             </div>
           </div>
           <div class="space-y-1">
-            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">4. VERDICT STATE?</div>
+            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">4. FINAL AUTHORIZATION?</div>
             <div class="${isApproved ? "text-emerald-700" : "text-rose-700"} font-bold leading-tight uppercase">
               ${guard.verdict || (isApproved ? "APPROVED" : "BLOCKED")}
             </div>
@@ -1784,7 +1784,7 @@
 
           <!-- HIERARCHY 4: CANDIDATE ACTIONS -->
           <div class="p-4 bg-white border border-slate-200 rounded-xl space-y-3 font-mono text-xs">
-            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">CANDIDATE ACTIONS & PARAMETERS</div>
+            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">MODEL RECOMMENDATION (CANDIDATE ACTIONS & EXPECTED VALUE)</div>
             <div class="overflow-x-auto border border-slate-200 rounded-lg">
               <table class="w-full text-left text-xs">
                 <thead class="bg-slate-50 text-slate-700 font-bold border-b border-slate-200 text-[11px]">
@@ -1810,7 +1810,7 @@
           <!-- HIERARCHY 5: EV COMPARISON -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="p-4 bg-emerald-50/70 border border-emerald-200 rounded-xl font-mono text-xs space-y-2">
-              <div class="text-emerald-800 font-bold flex items-center gap-1 uppercase text-[10px] tracking-wider">🟢 WHY THIS WON</div>
+              <div class="text-emerald-800 font-bold flex items-center gap-1 uppercase text-[10px] tracking-wider">🟢 PROPOSED ACTION REASONING (MAX EXPECTED VALUE)</div>
               <p class="text-slate-800 leading-relaxed text-xs font-medium">${strat.reasoning || "—"}</p>
             </div>
             <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs space-y-2">
@@ -1823,7 +1823,7 @@
 
           <!-- HIERARCHY 6: GUARDRAIL -->
           <div class="p-4 bg-white border border-slate-200 rounded-xl space-y-2 font-mono text-xs">
-            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">GUARDRAIL (AUTHORIZATION GATING)</div>
+            <div class="text-slate-600 text-[10px] font-bold uppercase tracking-wider">FINAL AUTHORIZATION GATE (FAIL-CLOSED GUARDRAIL)</div>
             <div class="flex flex-wrap items-center gap-6 mt-1 text-slate-800">
               <div>Verdict: <span class="px-2 py-0.5 rounded text-xs font-bold ${
                 isApproved ? "bg-emerald-50 text-emerald-700 border border-emerald-200" :
@@ -2444,7 +2444,7 @@
             </div>
             <div class="text-slate-900 font-bold text-xs">${sc.injected_fault}</div>
             <div class="text-slate-700 text-xs mt-1 font-medium">
-              Expected Protection: <span class="text-slate-900 font-semibold">${sc.expected_defense}</span>
+              Expected Protection: <span class="text-slate-900 font-semibold">${sc.expected_safe_behavior || sc.expected_defense || "—"}</span>
             </div>
           </div>
 

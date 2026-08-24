@@ -422,3 +422,54 @@ class TestProductCredibilityHardening:
             assert isinstance(it["amount"], (int, float))
             assert it["amount"] > 0
 
+    def test_chaos_expected_protection_never_undefined(self) -> None:
+        """Verify every chaos scenario returns a non-empty expected_safe_behavior and frontend renders it."""
+        resp = client.post("/api/v1/dashboard/chaos/run")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert len(data["scenarios"]) == 10
+
+        expected_map = {
+            "CHAOS_01_DUPLICATE_TXN": "Guardrail BLOCK on idempotency; execution not called; audit entry written.",
+            "CHAOS_02_MALFORMED_AMOUNT": "Schema validation rejects event; no execution; audit logged.",
+            "CHAOS_03_NEGATIVE_AMOUNT": "Validation/Guardrail blocks negative amount; no execution.",
+            "CHAOS_04_UNKNOWN_CURRENCY": "Guardrail BLOCK on unsupported currency; execution not called.",
+            "CHAOS_05_CORRUPTED_ERROR": "Diagnosis classifies as UNKNOWN with low confidence; pipeline operates safely.",
+            "CHAOS_06_DELAYED_WEBHOOK": "Handled through standard pipeline without state corruption; audit logged.",
+            "CHAOS_07_OUT_OF_ORDER": "Guardrail BLOCK on max attempts limit; execution not called.",
+            "CHAOS_08_API_TIMEOUT": "Execution marked failure; no false success; zero amount recovered.",
+            "CHAOS_09_EXECUTION_FAILURE": "Failure recorded accurately; statistical model observes failure.",
+            "CHAOS_10_STALE_EVENT": "Guardrail BLOCK on event staleness; execution not called.",
+        }
+
+        for sc in data["scenarios"]:
+            sid = sc["scenario_id"]
+            assert "expected_safe_behavior" in sc
+            assert sc["expected_safe_behavior"] is not None
+            assert sc["expected_safe_behavior"] != ""
+            assert sc["expected_safe_behavior"] != "undefined"
+            assert sc["expected_safe_behavior"] == expected_map[sid]
+
+        # Verify frontend template binds to expected_safe_behavior
+        dash_res = client.get("/dashboard")
+        assert dash_res.status_code == 200
+        assert "${sc.expected_safe_behavior" in dash_res.text
+
+    def test_revenue_and_strategy_terminology_clarity(self) -> None:
+        """Verify clear distinction between conceptual GMV flow, benchmark KPIs, and strategy recommendation vs guardrail."""
+        dash_res = client.get("/dashboard")
+        assert dash_res.status_code == 200
+        html = dash_res.text
+
+        # Verify Revenue Terminology
+        assert "CONCEPTUAL GMV FLOW" in html
+        assert "Simulated Recovery Potential" in html
+        assert "Illustrative Merchant Opportunity" in html
+        assert "NET SIMULATED BENCHMARK REVENUE" in html
+
+        # Verify Strategy vs Guardrail Nomenclature
+        assert "MODEL RECOMMENDATION (THOMPSON SAMPLING PROPOSAL)" in html
+        assert "Proposed Candidate Action (Max EV)" in html
+        assert "FINAL AUTHORIZATION GATE (FAIL-CLOSED)" in html
+
+
